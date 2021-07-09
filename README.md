@@ -1,6 +1,6 @@
 # www.tlip.io
 
-Web site for TMEA TLIP project <www.tlip.io>.
+Web site for TMEA TLIP project [www.tlip.io](www.tlip.io).
 
 ## VSCode
 

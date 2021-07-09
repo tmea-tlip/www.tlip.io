@@ -63,11 +63,10 @@
         "stylelint-scss": "^3.19.0",
         "svelte": "^3.38.3",
         "svelte-check": "^2.2.0",
-        "svelte-preprocess": "^4.7.3",
+        "svelte-preprocess": "^4.7.4",
         "tailwindcss": "^2.2.4",
         "tslib": "^2.0.0",
         "typescript": "^4.0.0"
     },
-    "dependencies": {},
     "type": "module"
 }
