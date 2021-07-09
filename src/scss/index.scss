@@ -1,0 +1,10 @@
+@tailwind components;
+@tailwind base;
+@tailwind utilities;
+
+html,
+body,
+#svelte {
+    @apply h-full;
+    @apply overflow-x-hidden;
+}
