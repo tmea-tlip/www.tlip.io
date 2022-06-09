@@ -1,7 +1,36 @@
 <script lang="ts">
+    import { Button } from "../../../components";
+    import type { Button as ButtonType } from "$lib/types/components";
+
+    const HEADINGS = {
+        title: "Trade and Logistics Information Pipeline",
+        description:
+            "Creating paperless trade throgh a trusted infrastructure that enables secure and efficient cross-border collaboration between multiple parties."
+    };
+    const BUTTONS: ButtonType[] = [
+        {
+            title: "Contact us",
+            url: "https://www.iota.org/",
+            isExternal: true
+        }
+    ];
 </script>
 
-<section class="container py-72">
-    <div>Hero</div>
-    <hr />
+<section class="bg-green-2 w-full h-screen">
+    <div class="container flex flex-col lg:flex-row items-center justify-center w-full h-full">
+        <div class="lg:w-1/2 lg:mr-36">
+            <h1 class="text-white mb-6">{HEADINGS.title}</h1>
+            <h4 class="text-white">{HEADINGS.description}</h4>
+            <div class="flex jmt-12 lg:mt-10">
+                {#each BUTTONS as button}
+                    <div class="mr-6 last:mr-0">
+                        <Button {...button} />
+                    </div>
+                {/each}
+            </div>
+        </div>
+        <div class="lg:w-1/2">
+            <img src="/assets/dummy-hero-image.png" alt="testing" class="image-shadow w-full" />
+        </div>
+    </div>
 </section>
