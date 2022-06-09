@@ -8,3 +8,23 @@ body,
     @apply h-full;
     @apply overflow-x-hidden;
 }
+
+h1 {
+    @apply text-32;
+    @apply font-bold;
+    @apply leading-130;
+    @screen lg {
+        @apply text-48;
+    }
+}
+
+h4 {
+    @apply text-20;
+    @apply leading-120;
+    @apply tracking-0.02;
+}
+
+.image-shadow {
+    box-shadow: 5px 5px 0px 2px #333333;
+    @apply rounded;
+}
