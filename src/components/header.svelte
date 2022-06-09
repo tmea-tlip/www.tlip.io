@@ -1,17 +1,33 @@
 <script lang="ts">
-    export let title: string = "unknown app";
-    export let to: string | undefined;
-    let classes: string = "";
+    import { page } from "$app/stores";
+    export let items = [];
     export { classes as class };
+
+    let classes: string = "";
 </script>
 
-<header class="flex flex-row items-center justify-between p-5 bg-green-500 {classes}">
-    <h1 class="text-white dark:text-gray-800">
-        {#if to}
-            <a href={to}>{title}</a>
-        {:else}
-            {title}
+<nav class="fixed container flex justify-between {classes}">
+    <a href="/">
+        <img src="/assets/logo-TLIP.svg" alt="TLIP logo" />
+    </a>
+    <div class="flex flex-row">
+        {#if items}
+            <!-- Desktop -->
+            <ul class="hidden lg:flex items-center flex-row col-9 w-full">
+                {#each items as { title, url, id, onClick }}
+                    {#if title}
+                        {#if id && url === $page.path}
+                            <li class="px-4">
+                                <a href={id} on:click|preventDefault={onClick}>{title}</a>
+                            </li>
+                        {:else if url || (id && url != $page.path)}
+                            <li class="px-4">
+                                <a href={url}>{title}</a>
+                            </li>
+                        {/if}
+                    {/if}
+                {/each}
+            </ul>
         {/if}
-    </h1>
-    <slot name="right" />
-</header>
+    </div>
+</nav>

@@ -1,19 +1,30 @@
-<script lang="ts" context="module">
-    import Footer from "../components/footer.svelte";
-    import Header from "../components/header.svelte";
+<script lang="ts">
+    import { Footer, Header } from "../components";
     import "../scss/index.scss";
+
+    function scrollIntoView({ target }) {
+        const el = document.querySelector(target.getAttribute("href"));
+        if (!el) return;
+        el.scrollIntoView({
+            behavior: "smooth"
+        });
+    }
+
+    const SITE_PAGES = [
+        { title: "What is TLIP", url: "/", id: "#WhatIsTLIP", onClick: scrollIntoView },
+        { title: "Who are we", url: "/", id: "#WhoAreWe", onClick: scrollIntoView },
+        { title: "Benefits", url: "/", id: "#Benefits", onClick: scrollIntoView },
+        { title: "Technology", url: "/", id: "#Technology", onClick: scrollIntoView },
+        { title: "FAQ", url: "/faq" }
+    ];
 </script>
 
 <svelte:head>
     <title>TMEA / TLIP</title>
 </svelte:head>
 
-<div class="flex flex-col h-full bg-gray-100 dark:bg-gray-800">
-    <Header title="TMEA / TLIP" to="/" />
-
-    <section class="flex flex-1 flex-col p-5">
-        <slot />
-    </section>
-
-    <Footer />
-</div>
+<Header items={SITE_PAGES} />
+<main>
+    <slot />
+</main>
+<Footer />
