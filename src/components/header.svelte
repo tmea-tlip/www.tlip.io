@@ -51,7 +51,7 @@
             <div class="flex lg:hidden pt-3">
                 <Burger bind:open={sideMenuOpen} onClick={toggleMenu} {sideMenuOpen}/>
             </div>
-            <aside class="h-screen w-0 absolute right-0 top-0 lg:hidden {sideMenuOpen ? 'open' : ''}">
+            <aside class="bg-green-200 h-screen w-0 absolute right-0 top-0 lg:hidden {sideMenuOpen ? 'open' : ''}">
                 <ul class="h-screen pt-20 text-{($darkModeNavbar && !sideMenuOpen) ? 'white' : 'black'} border-t-2 px-4">
                     {#each items as { title, url, id, onClick }}
                         {#if title}
@@ -87,7 +87,6 @@
             }
         }
         aside {
-            background-color: #C3D5C2;
             z-index: -1;
             @apply flex-wrap;
             transition: width .3s ease-in-out;
