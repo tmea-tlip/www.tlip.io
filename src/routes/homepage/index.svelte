@@ -1,6 +1,6 @@
 <script context="module" lang="ts">
     import type { Section } from "$lib/types/components";
-    import { Hero, WhatIsTLIP, WhoAreWe, Benefits, Technology } from "./sections";
+    import { Hero, WhatIsTLIP, WhyTLIP, HowDoesTLIPWork, Benefits, WhoAreWe } from "./sections";
 
     export const prerender = true;
 </script>
@@ -16,17 +16,21 @@
             id: "WhatIsTLIP"
         },
         {
-            component: WhoAreWe,
-            id: "WhoAreWe",
+            component: WhyTLIP,
+            id: "WhyTLIP",
             darkModeNavbar: true
+        },
+        {
+            component: HowDoesTLIPWork,
+            id: "HowDoesTLIPWork"
+        },
+        {
+            component: WhoAreWe,
+            id: "WhoAreWe"
         },
         {
             component: Benefits,
             id: "Benefits"
-        },
-        {
-            component: Technology,
-            id: "Technology"
         }
     ];
 </script>
