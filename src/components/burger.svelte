@@ -7,7 +7,7 @@
 
     const stroke = "currentColor"
     $: stroke_current = $darkModeNavbar ? 'white' : 'black'
-    $: color = ($darkModeNavbar && !sideMenuOpen) ? 'white' : 'black'
+    $: color = (!$darkModeNavbar && !sideMenuOpen) ? 'white' : 'black'
 
 </script>
 

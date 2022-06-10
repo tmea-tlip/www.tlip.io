@@ -12,9 +12,8 @@
 
     const SITE_PAGES = [
         { title: "What is TLIP", url: "/", id: "#WhatIsTLIP", onClick: scrollIntoView },
-        { title: "Wy TLIP", url: "/", id: "#WhyTLIP", onClick: scrollIntoView },
+        { title: "Why TLIP", url: "/", id: "#WhyTLIP", onClick: scrollIntoView },
         { title: "How does TLIP work", url: "/", id: "#HowDoesTLIPWork", onClick: scrollIntoView },
-        { title: "Wy TLIP", url: "/", id: "#WhyTLIP", onClick: scrollIntoView },
         { title: "Who are we", url: "/", id: "#WhoAreWe", onClick: scrollIntoView },
         { title: "Benefits", url: "/", id: "#Benefits", onClick: scrollIntoView },
         { title: "FAQ", url: "/faq" }
