@@ -6,10 +6,13 @@
 </script>
 
 <script lang="ts">
+import { ObservedRoute } from "../../components";
+
     const sections: Section[] = [
         {
             component: Hero,
-            id: "hero"
+            id: "hero",
+            darkModeNavbar: true
         },
         {
             component: WhatIsTLIP,
@@ -35,6 +38,4 @@
     ];
 </script>
 
-{#each sections as { component, id }}
-    <svelte:component this={component} {id} />
-{/each}
+<ObservedRoute {sections}/>
