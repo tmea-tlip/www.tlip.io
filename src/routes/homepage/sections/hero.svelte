@@ -16,8 +16,9 @@
     ];
 </script>
 
-<section class="bg-green-2 w-full h-screen">
-    <div class="container flex flex-col lg:flex-row items-center justify-center w-full h-full">
+<section class="bg-green-2 w-full h-screen relative">
+    <img src="/assets/background-hero.png" alt="background" class="absolute bottom-0 right-0 lg:w-4/5 lg:h-2/3 z-0" />
+    <div class="container flex flex-col lg:flex-row items-center justify-center w-full h-full z-1">
         <div class="lg:w-1/2 lg:mr-36">
             <h1 class="text-white mb-6">{HEADINGS.title}</h1>
             <h4 class="text-white">{HEADINGS.description}</h4>

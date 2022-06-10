@@ -18,6 +18,7 @@ $metropolis-bold: "Metropolis Bold", $fallback-fonts;
 html,
 body,
 #svelte {
+    font-family: "Metropolis Medium";
     @apply h-full;
     @apply overflow-x-hidden;
 }

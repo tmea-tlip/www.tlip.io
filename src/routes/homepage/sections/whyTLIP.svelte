@@ -3,6 +3,6 @@
 </script>
 
 <section class="container py-72" {id}>
-    <div>WhoAreWe</div>
+    <div>WhyTLIP</div>
     <hr />
 </section>
