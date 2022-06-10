@@ -1,5 +1,4 @@
 const pxToRem = (px, base = 16) => `${px / base}rem`
-
 module.exports = {
     purge: {
         content: [
@@ -20,19 +19,28 @@ module.exports = {
         extend: {
             colors: {
                 blue: {
-                    1: '#006EA9',
-                    2: '#2D9CDB',
-                    3: '#56CCF2'
+                    1: '#C7F4F4',
+                    2: '#96D5F6',
+                    3: '#64A9D1',
+                    4: '#2D7AA0',
+                    5: '#E5E5E5',
+                    6: '#002645',
                 },
                 green: {
-                    1: '#002E00',
-                    2: '#219653',
-                    3: '#6FCF97'
+                    1: '#DBE4DA',
+                    2: '#C3D5C2',
+                    3: '#3CB878',
+                    4: '#00874C',
+                    5: '#005923',
+                    6: '#002E00',
                 },
                 grey: {
-                    1: '#333333',
-                    2: '#4F4F4F',
-                    3: '#BDBDBD'
+                    1: '#E0E0E0',
+                    2: '#9E9E9E',
+                    3: '#616161',
+                    4: '#424242',
+                    5: '#212121',
+                    6: '#000000',
                 },
             },
             fontSize: {
@@ -44,6 +52,7 @@ module.exports = {
                 20: pxToRem(20),
                 22: pxToRem(22),
                 24: pxToRem(24),
+                28: pxToRem(28),
                 32: pxToRem(32),
                 40: pxToRem(40),
                 48: pxToRem(48),
@@ -55,18 +64,22 @@ module.exports = {
                 100: '100%',
                 110: '110%',
                 120: '120%',
+                125: '125%',
                 130: '130%',
                 140: '140%',
+                150: '150%',
                 160: '160%',
             },
             letterSpacing: {
                 0.02: '0.02em',
+                0.04: '0.04em'
             },
         }
     },
     variants: {
         extend: {
-            backgroundColor: ["odd", "even"]
+            backgroundColor: ["odd", "even"],
+            margin: ["last"]
         }
     },
     plugins: []
