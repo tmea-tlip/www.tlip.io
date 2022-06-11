@@ -1,10 +1,11 @@
 <script lang="ts">
     import { Button } from "../../../components";
     import type { Button as ButtonType } from "$lib/types/components";
+    import type { Heading } from "$lib/types/sections";
 
     export let id:string
 
-    const HEADINGS = {
+    const HEADING: Heading = {
         title: "Trade and Logistics Information Pipeline",
         description:
             "Creating paperless trade throgh a trusted infrastructure that enables secure and efficient cross-border collaboration between multiple parties."
@@ -22,8 +23,8 @@
     <img src="/assets/background-hero.png" alt="background" class="absolute bottom-0 right-0 lg:w-4/5 lg:h-2/3 z-0" />
     <div class="container flex flex-col lg:flex-row items-center justify-center w-full h-full z-1">
         <div class="lg:w-1/2 lg:mr-36">
-            <h1 class="text-white mb-6">{HEADINGS.title}</h1>
-            <h4 class="text-white">{HEADINGS.description}</h4>
+            <h1 class="text-white mb-6">{HEADING.title}</h1>
+            <h4 class="text-white">{HEADING.description}</h4>
             <div class="flex jmt-12 lg:mt-10">
                 {#each BUTTONS as button}
                     <div class="mr-6 last:mr-0">

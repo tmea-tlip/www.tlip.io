@@ -6,7 +6,7 @@
 
     export let sections: Section[] = []
 
-    let container
+    let container: HTMLElement
 
     $: darkModeNavbar.set(sections.find((s) => s.id === $activeSectionId)?.darkModeNavbar ?? false)
 

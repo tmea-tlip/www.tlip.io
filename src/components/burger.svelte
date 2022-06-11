@@ -1,14 +1,13 @@
 <script lang="ts">
     import { darkModeNavbar } from '$lib/store'
 
-    export let open = false
-    export let onClick = () => {}
-    export let sideMenuOpen
+    export let open: boolean = false
+    export let onClick: (event:Event) => void = () => {}
+    export let sideMenuOpen:boolean
 
-    const stroke = "currentColor"
+    const stroke: string = "currentColor"
     $: stroke_current = $darkModeNavbar ? 'white' : 'black'
     $: color = (!$darkModeNavbar && !sideMenuOpen) ? 'white' : 'black'
-
 </script>
 
 <button

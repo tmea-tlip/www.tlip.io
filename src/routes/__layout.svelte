@@ -2,7 +2,7 @@
     import { Footer, Header } from "../components";
     import "../scss/index.scss";
 
-    function scrollIntoView({ target }) {
+    const scrollIntoView = ({ target }):(event: Event) => void => {
         const el = document.querySelector(target.getAttribute("href"));
         if (!el) return;
         el.scrollIntoView({

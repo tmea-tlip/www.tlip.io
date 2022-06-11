@@ -2,7 +2,7 @@
     import type { Section } from "$lib/types/components";
     import { Hero, WhatIsTLIP, WhyTLIP, HowDoesTLIPWork, Benefits, WhoAreWe } from "./sections";
 
-    export const prerender = true;
+    export const prerender: boolean = true;
 </script>
 
 <script lang="ts">
@@ -16,7 +16,8 @@ import { ObservedRoute } from "../../components";
         },
         {
             component: WhatIsTLIP,
-            id: "WhatIsTLIP"
+            id: "WhatIsTLIP",
+            darkModeNavbar: true
         },
         {
             component: WhyTLIP,
@@ -25,7 +26,8 @@ import { ObservedRoute } from "../../components";
         },
         {
             component: HowDoesTLIPWork,
-            id: "HowDoesTLIPWork"
+            id: "HowDoesTLIPWork",
+            darkModeNavbar: true
         },
         {
             component: WhoAreWe,
@@ -33,7 +35,8 @@ import { ObservedRoute } from "../../components";
         },
         {
             component: Benefits,
-            id: "Benefits"
+            id: "Benefits",
+            darkModeNavbar: true
         }
     ];
 </script>

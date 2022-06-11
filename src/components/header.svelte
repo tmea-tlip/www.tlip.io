@@ -9,7 +9,7 @@
 
     let classes: string = "";
 
-    let sideMenuOpen = false;
+    let sideMenuOpen: boolean = false;
 
     const BUTTON: ButtonType = {
         title: "CONTACT US",
@@ -18,7 +18,7 @@
         classes: 'text-14'
     };
 
-    const toggleMenu = () => {
+    const toggleMenu: () => void = () => {
         sideMenuOpen ? closeMenu() : openMenu();
     };
     const closeMenu = () => {
@@ -43,7 +43,7 @@
     <div class="flex flex-row">
         {#if items}
             <!-- Desktop -->
-            <ul class="flex-row flex-wrap items-center hidden w-full lg:flex">
+            <ul class="flex-row flex-wrap items-center hidden w-full lg:flex transition-opacity duration-200">
                 {#each items as { title, url, id, onClick }}
                     {#if title}
                     <li class="px-4 first:pl-0 last:pr-0">
@@ -61,7 +61,7 @@
                 <Burger bind:open={sideMenuOpen} onClick={toggleMenu} {sideMenuOpen} />
             </div>
             <aside class="bg-green-200 h-screen w-0 absolute left-0 top-0 lg:hidden {sideMenuOpen ? 'open' : ''}">
-                <ul class="h-screen pt-20 px-10 text-black border-t-2 w-full {!sideMenuOpen ? 'opacity-0' : 'opacity-100'}">
+                <ul class="h-screen pt-20 px-10 text-black border-t-2 w-full transition-opacity duration-200 {!sideMenuOpen ? 'opacity-0' : 'opacity-100'}">
                     {#each items as { title, url, id, onClick }}
                         {#if title}
                         <li class="py-4 nav-link border-b border-green-100 min-w-max">
@@ -89,9 +89,6 @@
 
 <style lang="scss">
     nav {
-        ul {
-            transition: opacity .2s ease-in;
-        }
         &.bg-blur {
             @apply bg-grey-100;
             @apply bg-opacity-20;

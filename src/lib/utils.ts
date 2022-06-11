@@ -1,16 +1,20 @@
 import { activeSectionId } from "./store";
 
-/**  */
+/**
+ * Starts an Observer that checks the section that you are navigating.
+ * @param container The HTML Element that is going to be observed.
+ * @returns A disconnect function that stops the service.
+ */
 export const startActiveSectionObserver = (container: HTMLElement): (() => void) => {
-    const visible = [];
-    const sectionElements = [].slice.call(container.querySelectorAll("section"));
-    const sections = sectionElements?.map(s => s.id) ?? [];
+    const visible: string[] = [];
+    const arr: [] = [];
+    const sectionElements: HTMLElement[] = arr.slice.call(container.querySelectorAll("section"));
+    const sections: string[] = sectionElements?.map(s => s.id) ?? [];
 
     const intersectionObserver = new IntersectionObserver(
         entries => {
-            for (const entry of entries) {
-                const id = entry.target.id;
-                if (entry.isIntersecting) {
+            for (const { target: { id }, isIntersecting } of entries) {
+                if (isIntersecting) {
                     if (sections.indexOf(id) < sections.indexOf(visible[0])) {
                         visible.unshift(id);
                     } else {
