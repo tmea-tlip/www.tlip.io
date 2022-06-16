@@ -1,6 +1,8 @@
 <script lang="ts">
     export let id: string;
-    const HEADINGS = {
+    import type { Heading } from "$lib/types/sections";
+
+    const HEADINGS: Heading = {
         title: "Why TLIP?",
         description:
             "Global trade today has a problem. Paper based trade documentation required for cross border exchange is slow, error prone and expensive."
@@ -8,11 +10,11 @@
     const REASONS = [
         {
             title: "$500 Bn",
-            description: "annual cost of paper based documentation"
+            description: "the annual cost of paper based documentation"
         },
         {
             title: "200+",
-            description: "number of information exchanges required for a shipment from Kenya to the Netherlands"
+            description: "the number of information exchanges required for a shipment from Kenya to the Netherlands"
         },
         {
             title: "Zero",
