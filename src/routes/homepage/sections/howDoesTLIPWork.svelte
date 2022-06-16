@@ -56,14 +56,16 @@
         cards: [
             {
                 video: "https://files.iota.org/media/TLIP_Demo_Video.mp4",
-                title: "Demo Video Title",
-                description: "Interoperable. No vendor-lock in. Working with legacy systems."
+                title: "TLIP Dashboard Video",
+                description: "Interoperable. No vendor-lock in. Working with legacy systems.",
+                poster: "/assets/posters/TLIP_Demo_Video_poster.png"
             },
             {
-                video: "https://files.iota.org/media/TLIP_Demo_Video.mp4",
+                video: "https://files.iota.org/media/TLIP_Documentary_2020.mp4",
                 title: "Flowers from Kenya to Holland",
                 description:
-                    "The benefits of TLIP are demonstrated by a shipment of flowers from Nairobi, Kenya, to Royal FloraHolland in the Netherlands."
+                    "The benefits of TLIP are demonstrated by a shipment of flowers from Nairobi, Kenya, to Royal FloraHolland in the Netherlands.",
+                poster: "/assets/posters/TLIP_Documentary_2020_poster.png"
             }
         ]
     };
@@ -88,9 +90,15 @@
         <div>
             <h3 class="tracking-0.02 mb-5 md:mb-16 text-center leading-125">{SEE_IN_ACTION.title}</h3>
             <div class="flex flex-col lg:flex-row">
-                {#each SEE_IN_ACTION.cards as { title, video, description }}
+                {#each SEE_IN_ACTION.cards as { title, video, description, poster }}
                     <div class="w-full lg:w-1/2 lg:mr-20 last:mr-0 mb-9 lg:mb-0 h-full">
-                        <video class="h-full w-full object-cover image-shadow" muted controls preload="metadata">
+                        <video
+                            class="h-full w-full object-cover image-shadow"
+                            muted
+                            controls
+                            preload="metadata"
+                            {poster}
+                        >
                             <source src={video} type="video/mp4" />
                             <track kind="captions" />
                         </video>

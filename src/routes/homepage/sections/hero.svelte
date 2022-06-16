@@ -37,8 +37,14 @@
             </div>
         </div>
         <div class="w-full lg:w-1/2">
-            <video class="h-full w-full object-cover image-shadow" muted controls preload="metadata">
-                <source src="https://files.iota.org/media/TLIP_Demo_Video.mp4" type="video/mp4" />
+            <video
+                class="h-full w-full object-cover image-shadow"
+                muted
+                controls
+                preload="metadata"
+                poster="/assets/posters/Akeyos_flowers_poster.png"
+            >
+                <source src="https://files.iota.org/media/Akeyos_flowers.mp4" type="video/mp4" />
                 <track kind="captions" />
             </video>
         </div>

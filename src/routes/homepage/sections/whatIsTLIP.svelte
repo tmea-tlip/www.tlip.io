@@ -10,7 +10,7 @@
     const cards = [
         {
             eyebrow: "For traders",
-            title: "Quick Seamless and Digitised Document Sharing with Border Agencies",
+            title: "Quick, Seamless and Digitised Document Sharing with Border Agencies",
             description:
                 "TLIP provides transparency to governments and trading partners with real-time updates on consignments.",
             image: "forTraders.png"
