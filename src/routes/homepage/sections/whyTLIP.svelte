@@ -17,7 +17,7 @@
             description: "the number of information exchanges required for a shipment from Kenya to the Netherlands"
         },
         {
-            title: "Zero",
+            title: "$Zero",
             description: "the value of a shipment delayed due to lost documents"
         }
     ];
