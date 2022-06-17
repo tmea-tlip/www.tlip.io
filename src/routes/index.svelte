@@ -1,3 +1,9 @@
-<div class="flex-1">
-    <p>This is the web site</p>
-</div>
+<script context="module" lang="ts">
+    export const prerender = true;
+</script>
+
+<script lang="ts">
+    import Homepage from "./homepage/index.svelte";
+</script>
+
+<Homepage />
