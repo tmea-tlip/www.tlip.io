@@ -19,7 +19,7 @@
         class:secondary
         class={classes}
     >
-        <span>{title}</span>
+        <span class="flex-shrink-0">{title}</span>
     </a>
 {/if}
 
