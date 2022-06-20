@@ -39,7 +39,7 @@
     ];
 </script>
 
-<section class="container py-16 md:pt-32 md:pb-36" {id}>
+<section class="container py-24 md:pt-32 md:pb-36" {id}>
     <h2 class="text-center text-36 mb-9">{HEADING.title}</h2>
     <p class="text-center leading-6 tracking-0.04 mb-6 md:mb-32 mx-auto max-w-4xl">{HEADING.description}</p>
     {#each cards as { image, title, eyebrow, description }, idx}
