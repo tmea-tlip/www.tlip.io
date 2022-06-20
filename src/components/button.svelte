@@ -37,7 +37,6 @@
 <style lang="scss">
     a,
     button {
-        font-family: "Inter", sans-serif;
         @apply flex;
         @apply items-center;
         @apply justify-center;
