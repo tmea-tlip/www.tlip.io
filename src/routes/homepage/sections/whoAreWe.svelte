@@ -31,7 +31,7 @@
     };
 </script>
 
-<section class="container py-14 md:py-24" {id}>
+<section class="container py-24" {id}>
     <h3 class="mb-5 md:mb-10 text-left text-36">{HEADING.title}</h3>
     <div class="flex flex-col lg:flex-row lg:gap-x-20">
         <div class="lg:w-1/2 mb-7 md:mb-4 lg:mb-0 flex justify-center items-center">

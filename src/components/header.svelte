@@ -32,6 +32,9 @@
     };
 
     const logoClick: (event: Event) => void = e => {
+        if (openMenu) {
+            closeMenu()
+        }
         if ($page.path === "/") {
             e.preventDefault();
             document.body.scrollIntoView({ behavior: "smooth" });

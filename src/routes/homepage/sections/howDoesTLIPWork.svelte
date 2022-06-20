@@ -71,7 +71,7 @@
     };
 </script>
 
-<section {id} class=" pt-16 lg:pt-40 pb-16 lg:pb-28">
+<section {id} class=" pt-24 lg:pt-40 pb-16 lg:pb-28">
     <div class="container">
         <h3 class="mb-5 lg:mb-16 text-center ">{HEADINGS.title}</h3>
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 md:gap-10 mb-16 md:mb-32">
