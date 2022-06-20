@@ -22,7 +22,7 @@
     <img
         src="/assets/background-hero.png"
         alt="background"
-        class="absolute bottom-0 right-0 lg:w-4/5 lg:h-2/3 z-0 background-image"
+        class="absolute bottom-54 lg:bottom-0 lg:w-4/5 lg:h-2/3 z-0 background-image"
     />
     <div class="container flex flex-col lg:flex-row items-center justify-center w-full h-full z-10">
         <div class="w-full text-center lg:text-left lg:w-1/2  lg:mr-8">
@@ -57,5 +57,14 @@
     }
     .background-image {
         z-index: -1;
+        width: 100%;
+        min-width: 1200px;
+        right: -55rem;
+
+        @screen lg {
+            min-width: auto;
+            width: auto;
+            @apply right-0;
+        }
     }
 </style>
