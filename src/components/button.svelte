@@ -19,7 +19,7 @@
         class:secondary
         class={classes}
     >
-        <span>{title}</span>
+        <span class="flex-shrink-0">{title}</span>
     </a>
 {/if}
 
@@ -47,6 +47,7 @@
         @apply px-9;
         @apply py-4;
         @apply font-bold;
+        @apply tracking-0.08;
         &:hover {
             opacity: 0.8;
             transition: opacity 0.2s ease;

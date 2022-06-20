@@ -2,7 +2,7 @@ const GOVERNMENT_PARTNERS = {
   /**
    *
    */
-  title: "Our Government Partners",
+  title: "Our Donors and Government Partners",
   /**
    *
    */
@@ -11,7 +11,9 @@ const GOVERNMENT_PARTNERS = {
     "/assets/partners/KRA-logo.png",
     "/assets/partners/KEPHIS-logo.png",
     "/assets/partners/KENTrade-logo.png",
-    "/assets/partners/Trademark-logo.png"
+    "/assets/partners/Trademark-logo.png",
+    "/assets/partners/USAID-logo.png",
+    "/assets/partners/ministry-foreign-affairs-netherlands-logo.png"
   ]
 };
 
@@ -37,14 +39,14 @@ const COMMERCIAL_PARTNERS = {
     "/assets/partners/TAPA-logo.png",
     "/assets/partners/DP-world-logo.png",
     "/assets/partners/university-surrey-logo.png",
+    "/assets/partners/DFDS-logo.png",
+    "/assets/partners/beyond-now-logo.png"
     // "/assets/partners/morning-foods-logo.png",
     // "/assets/partners/AWS-logo.png",
     // "/assets/partners/british-coffee-association-logo.png",
     // "/assets/partners/nomad-foods-logo.png",
     // "/assets/partners/BT-logo.png",
-    // "/assets/partners/DFDS-logo.png",
     // "/assets/partners/FPC-logo.png",
-    // "/assets/partners/beyond-now-logo.png",
     // "/assets/partners/RAS-logo.png",
     // "/assets/partners/forum-future-logo.png",
     // "/assets/partners/OLAM-logo.png",

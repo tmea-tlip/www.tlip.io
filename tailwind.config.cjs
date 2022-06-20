@@ -75,7 +75,8 @@ module.exports = {
             },
             letterSpacing: {
                 0.02: '0.02em',
-                0.04: '0.04em'
+                0.04: '0.04em',
+                0.08: '0.08em'
             },
         }
     },

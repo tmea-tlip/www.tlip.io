@@ -21,7 +21,7 @@
         {
             title: "Funded",
             description:
-                "through the generous support of the development agencies from the Netherlands, the United Kingdom and the United States of America.",
+                "through the generous support of the development agencies from the Netherlands and the United States of America.",
             icon: "finance"
         }
     ];
@@ -49,16 +49,24 @@
                 {/each}
             </div>
         </div>
-        <div class="lg:w-1/2">
+        <div class="image-container lg:w-1/2 overflow-hidden">
             <img src="./assets/who-are-we.png" alt="TLIP in everyday life" class="h-full rounded-md" />
         </div>
     </div>
 </section>
 
 <style lang="scss">
-    img {
+    .image-container {
+        height: 760px;
         @screen lg {
-            max-width: fit-content;
+            height: auto;
+        }
+        img {
+            width: 100%;
+            object-fit: cover;
+            @screen lg {
+                max-width: fit-content;
+            }
         }
     }
 </style>

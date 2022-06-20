@@ -4,19 +4,20 @@
     import Burger from "./burger.svelte";
     import { page } from "$app/stores";
     import { activeSectionId, lightModeNavbar } from "$lib/store";
+    import { onMount } from "svelte";
+
     export let items = [];
     export { classes as class };
 
     let classes: string = "";
-
+    let scroll: number;
     let sideMenuOpen: boolean = false;
 
     const BUTTON: ButtonType = {
         title: "CONTACT US",
         url: "mailto:tlip@iota.org",
         small: true,
-        classes: "text-14",
-        as: "link"
+        classes: "text-14"
     };
 
     const toggleMenu: () => void = () => {
@@ -41,11 +42,24 @@
             window.history.pushState(null, "", "/");
         }
     };
+
+    function onScroll() {
+        window.scrollY > 100;
+        scroll = window.scrollY;
+    }
+
+    onMount(() => {
+        window.addEventListener("scroll", onScroll);
+        return () => {
+            window.removeEventListener("scroll", onScroll);
+        };
+    });
 </script>
 
 <nav
     class="fixed py-1 z-50 w-full bg-blur text-grey-600 metropolis-500 {classes}"
     class:lightMode={$lightModeNavbar && !sideMenuOpen}
+    class:borderBottom={scroll}
 >
     <div class="container flex justify-between">
         <a href="/" class="py-4" on:click={logoClick}>
@@ -67,11 +81,14 @@
                                     <a
                                         href={url}
                                         on:click|preventDefault={onClick}
-                                        class="{id === '#' + $activeSectionId ? 'highlight' : ''} hover:text-green-400"
-                                        >{title}</a
+                                        class="{id === '#' + $activeSectionId
+                                            ? 'metropolis-700'
+                                            : ''} hover:text-green-400">{title}</a
                                     >
                                 {:else if url || (id && url != $page.path)}
-                                    <a href={url} class="{url === $page.path ? 'highlight' : ''} hover:text-green-400"
+                                    <a
+                                        href={url}
+                                        class="{url === $page.path ? 'metropolis-700' : ''} hover:text-green-400"
                                         >{title}</a
                                     >
                                 {/if}
@@ -86,8 +103,12 @@
 </nav>
 
 <!-- Mobile Menu   -->
-<aside class="bg-white h-screen w-0 fixed left-0 top-0 lg:hidden z-40 whitespace-nowrap justify- {sideMenuOpen ? 'open' : ''}">
-    <div class="h-full flex flex-col items-start justify-between pb-10">
+<aside
+    class="bg-white h-screen w-0 fixed left-0 top-0 lg:hidden z-40 whitespace-nowrap justify- {sideMenuOpen
+        ? 'open'
+        : ''}"
+>
+    <div class="h-full flex flex-col items-start justify-between">
         <ul
             class="container h-auto pt-20 text-black border-t-2 w-full transition-opacity duration-400 {!sideMenuOpen
                 ? 'opacity-0 hidden'
@@ -98,7 +119,7 @@
                     <li class="py-4 nav-link min-w-max">
                         {#if id && url.startsWith("/#")}
                             <a
-                                class={id === "#" + $activeSectionId ? "highlight" : ""}
+                                class={id === "#" + $activeSectionId ? "metropolis-700" : ""}
                                 href={url}
                                 on:click|preventDefault={e => {
                                     onClick(e);
@@ -106,7 +127,9 @@
                                 }}>{title}</a
                             >
                         {:else if url || (id && url != $page.path)}
-                            <a on:click={closeMenu} class={url === $page.path ? "highlight" : ""} href={url}>{title}</a>
+                            <a on:click={closeMenu} class={url === $page.path ? "metropolis-700" : ""} href={url}
+                                >{title}</a
+                            >
                         {/if}
                     </li>
                 {/if}
@@ -145,6 +168,10 @@
             #logo {
                 filter: invert(100%) sepia(100%) saturate(36%) hue-rotate(279deg) brightness(109%) contrast(112%);
             }
+        }
+        &.borderBottom {
+            @apply border-b;
+            @apply border-grey-100;
         }
     }
 </style>

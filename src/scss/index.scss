@@ -19,9 +19,11 @@ $inter: "Inter", $fallback-fonts;
 html,
 body,
 #svelte {
-    font-family: "Metropolis regular", sans-serif;
-
     @apply h-full;
+}
+
+* {
+    font-family: "Inter", sans-serif;
 }
 
 h1 {
@@ -87,6 +89,10 @@ p > ol {
     }
 }
 
+ul > li > a {
+    font-family: "Metropolis regular", sans-serif;
+}
+
 .metropolis-700 {
     font-family: "Metropolis bold";
 }
@@ -109,8 +115,4 @@ p > ol {
     @screen 2xl {
         max-width: 1200px;
     }
-}
-
-.highlight {
-    @apply font-bold;
 }
