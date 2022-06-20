@@ -26,5 +26,24 @@
 <style lang="scss">
     .background-image {
         z-index: -1;
+        width: 100%;
+        min-width: 1200px;
+        right: -55rem;
+        @apply -bottom-60;
+        @screen md {
+            right: -40rem;
+        }
+        @screen lg {
+            min-width: auto;
+            width: auto;
+            @apply -right-20;
+            @apply -bottom-32;
+        }
+        @screen xl {
+            min-width: auto;
+            width: auto;
+            @apply right-0;
+            @apply -bottom-60;
+        }
     }
 </style>
