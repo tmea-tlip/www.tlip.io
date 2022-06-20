@@ -37,6 +37,7 @@
 <style lang="scss">
     a,
     button {
+        font-family: "Inter", sans-serif;
         @apply flex;
         @apply items-center;
         @apply justify-center;
@@ -47,6 +48,7 @@
         @apply px-9;
         @apply py-4;
         @apply font-bold;
+        @apply tracking-0.08;
         &:hover {
             opacity: 0.8;
             transition: opacity 0.2s ease;
