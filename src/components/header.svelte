@@ -78,11 +78,14 @@
                                     <a
                                         href={url}
                                         on:click|preventDefault={onClick}
-                                        class="{id === '#' + $activeSectionId ? 'highlight' : ''} hover:text-green-400"
-                                        >{title}</a
+                                        class="{id === '#' + $activeSectionId
+                                            ? 'metropolis-700'
+                                            : ''} hover:text-green-400">{title}</a
                                     >
                                 {:else if url || (id && url != $page.path)}
-                                    <a href={url} class="{url === $page.path ? 'highlight' : ''} hover:text-green-400"
+                                    <a
+                                        href={url}
+                                        class="{url === $page.path ? 'metropolis-700' : ''} hover:text-green-400"
                                         >{title}</a
                                     >
                                 {/if}
@@ -113,7 +116,7 @@
                     <li class="py-4 nav-link min-w-max">
                         {#if id && url.startsWith("/#")}
                             <a
-                                class={id === "#" + $activeSectionId ? "highlight" : ""}
+                                class={id === "#" + $activeSectionId ? "metropolis-700" : ""}
                                 href={url}
                                 on:click|preventDefault={e => {
                                     onClick(e);
@@ -121,7 +124,9 @@
                                 }}>{title}</a
                             >
                         {:else if url || (id && url != $page.path)}
-                            <a on:click={closeMenu} class={url === $page.path ? "highlight" : ""} href={url}>{title}</a>
+                            <a on:click={closeMenu} class={url === $page.path ? "metropolis-700" : ""} href={url}
+                                >{title}</a
+                            >
                         {/if}
                     </li>
                 {/if}
