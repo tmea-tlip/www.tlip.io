@@ -11,7 +11,7 @@
     <img
         src="/assets/background-hero.png"
         alt="background"
-        class="absolute bottom-54 lg:bottom-0 lg:w-4/5 lg:h-2/3 z-0 background-image"
+        class="absolute bottom-54 lg:bottom-0 lg:w-4/5 lg:h-2/3 z-0 background-image opacity-50"
     />
     <div class="container">
         <div
