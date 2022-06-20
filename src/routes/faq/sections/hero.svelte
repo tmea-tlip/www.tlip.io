@@ -7,11 +7,11 @@
     };
 </script>
 
-<section class="bg-blue-300 w-full h-full relative pt-28 lg:pt-36 pb-20 lg:pb-28 z-20">
+<section class="bg-blue-300 w-full h-full relative pt-28 lg:pt-36 pb-20 lg:pb-28 z-20 overflow-hidden">
     <img
         src="/assets/background-hero.png"
         alt="background"
-        class="background-image absolute -bottom-12 md:-bottom-60 right-0"
+        class="absolute bottom-54 lg:bottom-0 lg:w-4/5 lg:h-2/3 z-0 background-image"
     />
     <div class="container">
         <div
@@ -28,22 +28,20 @@
         z-index: -1;
         width: 100%;
         min-width: 1200px;
-        right: -55rem;
-        @apply -bottom-60;
+        right: -50rem;
         @screen md {
-            right: -40rem;
+            width: calc((100vw - 600px) / 2 + 600px + 10px);
+            right: -30rem;
         }
         @screen lg {
-            min-width: auto;
-            width: auto;
-            @apply -right-20;
-            @apply -bottom-32;
+            width: calc((100vw - 900px) / 2 + 900px + 10px);
+            right: -12rem;
+            top: 113px;
+            height: auto;
         }
         @screen xl {
-            min-width: auto;
-            width: auto;
-            @apply right-0;
-            @apply -bottom-60;
+            width: calc((100vw - 1200px) / 2 + 1200px + 10px);
+            right: 0px;
         }
     }
 </style>

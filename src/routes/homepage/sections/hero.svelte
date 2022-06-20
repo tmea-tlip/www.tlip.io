@@ -59,12 +59,20 @@
         z-index: -1;
         width: 100%;
         min-width: 1200px;
-        right: -55rem;
-
+        right: -50rem;
+        @screen md {
+            width: calc((100vw - 600px) / 2 + 600px + 10px);
+            right: -30rem;
+        }
         @screen lg {
-            min-width: auto;
-            width: auto;
-            @apply right-0;
+            width: calc((100vw - 900px) / 2 + 900px + 10px);
+            right: -12rem;
+            top: 113px;
+            height: auto;
+        }
+        @screen xl {
+            width: calc((100vw - 1200px) / 2 + 1200px + 10px);
+            right: 0px;
         }
     }
 </style>
