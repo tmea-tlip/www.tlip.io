@@ -13,13 +13,6 @@
     let scroll: number;
     let sideMenuOpen: boolean = false;
 
-    onMount(() => {
-        window.addEventListener("scroll", () => {
-            window.scrollY > 100;
-            scroll = window.scrollY;
-        });
-    });
-
     const BUTTON: ButtonType = {
         title: "CONTACT US",
         url: "mailto:tlip@iota.org",
@@ -46,6 +39,18 @@
             window.history.pushState(null, "", "/");
         }
     };
+
+    function onScroll() {
+        window.scrollY > 100;
+        scroll = window.scrollY;
+    }
+
+    onMount(() => {
+        window.addEventListener("scroll", onScroll);
+        return () => {
+            window.removeEventListener("scroll", onScroll);
+        };
+    });
 </script>
 
 <nav
