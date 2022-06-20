@@ -4,19 +4,27 @@
     import Burger from "./burger.svelte";
     import { page } from "$app/stores";
     import { activeSectionId, lightModeNavbar } from "$lib/store";
+    import { onMount } from "svelte";
+
     export let items = [];
     export { classes as class };
 
     let classes: string = "";
-
+    let scroll: number;
     let sideMenuOpen: boolean = false;
+
+    onMount(() => {
+        window.addEventListener("scroll", () => {
+            window.scrollY > 100;
+            scroll = window.scrollY;
+        });
+    });
 
     const BUTTON: ButtonType = {
         title: "CONTACT US",
         url: "mailto:tlip@iota.org",
         small: true,
-        classes: "text-14",
-        as: "link"
+        classes: "text-14"
     };
 
     const toggleMenu: () => void = () => {
@@ -43,6 +51,7 @@
 <nav
     class="fixed py-1 z-50 w-full bg-blur text-grey-600 metropolis-500 {classes}"
     class:lightMode={$lightModeNavbar && !sideMenuOpen}
+    class:borderBottom={scroll}
 >
     <div class="container flex justify-between">
         <a href="/" class="py-4" on:click={logoClick}>
@@ -83,8 +92,12 @@
 </nav>
 
 <!-- Mobile Menu   -->
-<aside class="bg-white h-screen w-0 fixed left-0 top-0 lg:hidden z-40 whitespace-nowrap justify- {sideMenuOpen ? 'open' : ''}">
-    <div class="h-full flex flex-col items-start justify-between pb-10">
+<aside
+    class="bg-white h-screen w-0 fixed left-0 top-0 lg:hidden z-40 whitespace-nowrap justify- {sideMenuOpen
+        ? 'open'
+        : ''}"
+>
+    <div class="h-full flex flex-col items-start justify-between">
         <ul
             class="container h-auto pt-20 text-black border-t-2 w-full transition-opacity duration-400 {!sideMenuOpen
                 ? 'opacity-0 hidden'
@@ -142,6 +155,10 @@
             #logo {
                 filter: invert(100%) sepia(100%) saturate(36%) hue-rotate(279deg) brightness(109%) contrast(112%);
             }
+        }
+        &.borderBottom {
+            @apply border-b;
+            @apply border-grey-100;
         }
     }
 </style>
