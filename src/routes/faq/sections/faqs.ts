@@ -24,7 +24,7 @@ const howIsOrganized = `
 const howWillGrow = `
 - TLIP is currently being tested for selected tradelanes and commodities such as flowers, fish, tea and textiles As new tradelanes and commodities are added, TLIP will partner with the relevant government agencies, trade associations and traders to build out new features.
 - We plan to pilot TLIP across Kenya, Uganda, Rwanda and Tanzania to establish integrations with relevant border agencies for secure data exchange. Furthermore, different destination markets will be involved in accepting digital certificates for the commodities involved in TLIP.
-- Further, TLIP has been selected by the UK Border Innovation Team under Cabinet Office for pilots on export/import with the UK during 202-
+- Further, TLIP has been selected by the UK Border Innovation Team under Cabinet Office for pilots on export/import with the UK during 2022.
 - The aim is to establish TLIP as the public system, starting in the East African Community and the UK, for the exchange of trade data and certificates. Piloting across different trade lanes and commodities enables a robust system to be built that over time can cover all trade lanes and commodities.
 `;
 
