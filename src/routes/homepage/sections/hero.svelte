@@ -8,7 +8,7 @@
     const HEADING: Heading = {
         title: "Trade and Logistics Information Pipeline",
         description:
-            "Creating paperless trade throgh a trusted infrastructure that enables secure and efficient cross-border collaboration between multiple parties."
+            "Creating paperless trade through a trusted infrastructure that enables secure and efficient cross-border collaboration between multiple parties."
     };
     const BUTTONS: ButtonType[] = [
         {
