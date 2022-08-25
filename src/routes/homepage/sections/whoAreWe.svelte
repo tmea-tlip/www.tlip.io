@@ -20,8 +20,7 @@
         },
         {
             title: "Funded",
-            description:
-                "through the generous support of the development agencies from the Netherlands and the United States of America.",
+            description: "through the generous support of development agencies.",
             icon: "finance"
         }
     ];
