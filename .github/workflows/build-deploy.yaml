@@ -1,9 +1,16 @@
-name: Deploy production to Vercel
+name: www.tlip.io Components Build and Deploy
 
 on:
   push:
     branches:
       - main
+    paths:
+      - "src/**"
+      - "static/**"
+      - "package.json"
+
+concurrency:
+  group: ui
 
 jobs:
   build:
@@ -17,14 +24,18 @@ jobs:
 
     steps:
       - uses: actions/checkout@v2
-      - name: Use Node.js 16.x
+      - name: Use Node.js 14.x
         uses: actions/setup-node@v2
         with:
-          node-version: "16"
+          node-version: "14"
       - name: npm 7
         run: npm install -g npm@7
       - name: vercel 27
         run: npm install -g vercel@27.4.0
+      - name: Build
+        run: |
+          npm install
+          npm run deploy-build
       - name: Deploy
         run: |
           TS="$( date +%s )"
