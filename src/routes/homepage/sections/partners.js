@@ -33,7 +33,6 @@ const COMMERCIAL_PARTNERS = {
     "/assets/partners/MCP-logo.png",
     "/assets/partners/mansys-logo.png",
     "/assets/partners/SCT-logo.png",
-    "/assets/partners/katlas-logo.png",
     "/assets/partners/coriolis-logo.png",
     "/assets/partners/TAPA-logo.png",
     "/assets/partners/DP-world-logo.png",
