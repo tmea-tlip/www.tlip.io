@@ -1,16 +1,9 @@
-name: www.tlip.io Components Build and Deploy
+name: Deploy production to Vercel
 
 on:
   push:
     branches:
       - main
-    paths:
-      - "src/**"
-      - "static/**"
-      - "package.json"
-
-concurrency:
-  group: ui
 
 jobs:
   build:
@@ -24,18 +17,17 @@ jobs:
 
     steps:
       - uses: actions/checkout@v2
-      - name: Use Node.js 14.x
+      - name: Use Node.js 16.x
         uses: actions/setup-node@v2
         with:
-          node-version: "14"
+          node-version: "16"
       - name: npm 7
         run: npm install -g npm@7
-      - name: Build
-        run: |
-          npm install
-          npm run deploy-build
+      - name: vercel 27
+        run: npm install -g vercel@27.4.0
       - name: Deploy
         run: |
-          npx vercel --prod --token ${{ secrets.VERCEL_TOKEN }} --scope ${{ secrets.VERCEL_SCOPE }} --force -m githubCommitSha=${{ github.sha }}
-          VERCEL_DEPLOYMENT_URL=$(npx vercel ls --token ${{ secrets.VERCEL_TOKEN }} --scope ${{ secrets.VERCEL_SCOPE }} -m githubCommitSha=${{ github.sha }} | grep $VERCEL_PROJECT_NAME | awk {'print $2'})
+          TS="$( date +%s )"
+          npx vercel --prod --token ${{ secrets.VERCEL_TOKEN }} --scope ${{ secrets.VERCEL_SCOPE }} --force -m githubCommitSha=${{ github.sha }} -m timestamp=$TS
+          VERCEL_DEPLOYMENT_URL=$(npx vercel ls --token ${{ secrets.VERCEL_TOKEN }} --scope ${{ secrets.VERCEL_SCOPE }} -m githubCommitSha=${{ github.sha }} -m timestamp=$TS 2>&1 | grep $VERCEL_PROJECT_NAME | awk {'print $2'})
           npx vercel alias --token ${{ secrets.VERCEL_TOKEN }} --scope ${{ secrets.VERCEL_SCOPE }} $VERCEL_DEPLOYMENT_URL $VERCEL_DOMAIN
