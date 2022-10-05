@@ -18,6 +18,9 @@
             "$lib":["src/lib"],
             "$lib/*":["src/lib/*"],
             "$components":["src/components"],
+            "$components/*":["src/components/*"],
+            "$sections":["src/sections"],
+            "$sections/*":["src/sections/*"],
         }
     },
     "include": ["src/**/*.d.ts", "src/**/*.js", "src/**/*.ts", "src/**/*.svelte"],

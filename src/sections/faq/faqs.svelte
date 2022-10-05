@@ -1,5 +1,5 @@
 <script lang="ts">
-    import { FAQS as data } from "./faqs";
+    import { FAQS as data } from "$lib";
     import { Accordion } from "$components";
 </script>
 
@@ -7,7 +7,7 @@
     <div class="container">
         <div class="w-full">
             <div id="contents">
-                {#each data?.sections as section, index}
+                {#each data as section, index}
                     <div
                         class={`text-32 md:text-36 leading-125 md:leading-110 tracking-0.02 font-bold mb-5 md:mb-10 text-blue-600 metropolis-700 ${
                             index > 0 && "mt-10 md:mt-20"
@@ -17,7 +17,7 @@
                     </div>
                     <div id={section.id} class="border border-grey-100 rounded-2xl bg-white p-7 md:p-9">
                         {#each section.subsections as faq, index}
-                            <Accordion {...faq} />
+                            <Accordion item={faq} />
                             {#if index != section.subsections.length - 1}
                                 <hr class="my-6 md:my-9" />
                             {/if}

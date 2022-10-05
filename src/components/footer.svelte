@@ -1,5 +1,5 @@
 <script lang="ts">
-    import type { Link as LinkType } from "$lib/types/sections";
+    import type { Link as LinkType } from "$lib";
 
     let classes: string = "";
 

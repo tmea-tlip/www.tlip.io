@@ -1,5 +1,5 @@
 <script lang="ts">
-    import { lightModeNavbar } from "$lib/store";
+    import { lightModeNavbar } from "$lib";
 
     export let open: boolean = false;
     export let classes: string = ''
