@@ -1,6 +1,6 @@
 <script lang="ts">
     import type { Heading } from "$lib/types/sections";
-    export let id:string;
+    export let id: string;
     const HEADINGS: Heading = {
         title: "Why TLIP?",
         description:
