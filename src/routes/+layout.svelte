@@ -1,6 +1,6 @@
 <script lang="ts">
     import { scrollIntoView } from "$lib/utils";
-    import { Footer, Header } from "../components";
+    import { Footer, Header } from "$components";
     import "../scss/index.scss";
 
     const SITE_PAGES = [

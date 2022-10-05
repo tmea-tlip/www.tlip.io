@@ -49,29 +49,6 @@ export interface Button {
      */
     classes?: string;
 }
-/**
- *
- */
-
-/**
- *
- */
-export interface Faq {
-    /**
-     *
-     */
-    title?: string;
-
-    /**
-     *
-     */
-    description?: string;
-
-    /**
-     *
-     */
-    sections: FaqSection[];
-}
 
 /**
  *
@@ -88,9 +65,27 @@ export interface FaqSection {
     /**
      *
      */
-    description: string;
+    description?: string;
     /**
      *
      */
-    subsections?: FaqSection[];
+    subsections?: AccordionItem[];
+}
+
+/**
+ *
+ */
+export interface AccordionItem {
+    /**
+     *
+     */
+     id: string;
+     /**
+      *
+      */
+     title: string;
+     /**
+      *
+      */
+     description?: string;
 }

@@ -1,7 +1,6 @@
 <script lang="ts">
-    import { Card, Icon } from "../../../components";
+    import { Card, Icon } from "$components";
     import type { Heading } from "$lib/types/sections";
-
     export let id: string;
     const HEADINGS: Heading = {
         title: "How Does TLIP Work?"

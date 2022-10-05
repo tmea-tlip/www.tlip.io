@@ -1,17 +1,17 @@
 <script lang="ts">
+    import { ObservedRoute } from "$components";
     import type { Section } from "$lib/types/components";
     import {
-        Hero,
-        Partners,
-        HaveAnyQuestions,
-        WhatIsTLIP,
-        WhyTLIP,
-        HowDoesTLIPWork,
         Benefits,
+        Hero,
+        HowDoesTLIPWork,
+        Partners,
+        UkEcosystem,
+        WhatIsTLIP,
         WhoAreWe,
-        UkEcosystem
-    } from "./sections";
-    import { ObservedRoute } from "../../components";
+        WhyTLIP
+    } from "$sections/homepage";
+    import { HaveAnyQuestions } from "$sections/shared";
 
     const sections: Section[] = [
         {

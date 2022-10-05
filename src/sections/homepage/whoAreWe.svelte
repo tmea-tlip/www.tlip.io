@@ -1,8 +1,6 @@
 <script lang="ts">
     import type { Heading } from "$lib/types/sections";
-
-    import { Icon, Card } from "../../../components";
-
+    import { Icon, Card } from "$components";
     export let id: string;
 
     const CARDS = [

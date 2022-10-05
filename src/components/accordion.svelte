@@ -1,23 +1,24 @@
 <script lang="ts">
+    import type { AccordionItem } from "$lib";
     import { marked } from "marked";
     import { slide } from "svelte/transition";
 
-    export let id: string;
-    export let title: string;
-    export let description: string;
+    export let item: AccordionItem;
+
     let active: boolean = false;
+
     function handleClick(): void {
         active = !active;
     }
 </script>
 
-<div {id}>
+<div id={item?.id}>
     <div class="cursor-pointer" on:click={handleClick}>
         <div class={`flex justify-between items-center w-full`}>
             <span
                 class="text-20 lg:text-28 leading-120 md:leading-110 tracking-0.02 font-semibold md:font-bold {active
                     ? 'text-blue-400 metropolis-700'
-                    : 'text-grey-600 metropolis-600'}">{@html title}</span
+                    : 'text-grey-600 metropolis-600'}">{@html item?.title}</span
             >
             <div
                 class="flex items-center justify-center relative ml-8 p-2.5 border {active
@@ -43,7 +44,7 @@
 {#if active}
     <div class="mt-6 md:mt-9 overflow-hidden text-grey-500" transition:slide={{ duration: 300 }}>
         <p>
-            {@html marked(description)}
+            {@html marked(item?.description)}
         </p>
     </div>
 {/if}

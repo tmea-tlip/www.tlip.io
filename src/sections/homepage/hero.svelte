@@ -1,8 +1,7 @@
 <script lang="ts">
-    import { Button } from "../../../components";
+    import { Button } from "$components";
     import type { Button as ButtonType } from "$lib/types/components";
     import type { Heading } from "$lib/types/sections";
-
     export let id: string;
 
     const HEADING: Heading = {

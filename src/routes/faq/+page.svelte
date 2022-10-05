@@ -1,8 +1,8 @@
 <script lang="ts">
-    import type { Section } from "$lib/types/components";
-    import { Hero, Faqs } from "./sections";
-    import HaveAnyQuestions from "../../sections/haveAnyQuestions.svelte";
-    import { ObservedRoute } from "../../components";
+    import { ObservedRoute } from "$components";
+    import type { Section } from "$lib";
+    import { Faqs, Hero } from "$sections/faq";
+    import { HaveAnyQuestions } from "$sections/shared";
 
     const sections: Section[] = [
         {
