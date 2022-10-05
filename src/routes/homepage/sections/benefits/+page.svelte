@@ -1,5 +1,5 @@
 <script lang="ts">
-    import { Card, Icon } from "../../../components/index";
+    import { Card, Icon } from "../../../../components/index";
 
     export let id: string;
     const HEADINGS = {

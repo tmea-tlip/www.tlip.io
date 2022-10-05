@@ -10,9 +10,9 @@
         Benefits,
         WhoAreWe,
         UkEcosystem
-    } from "./sections";
+    } from "./sections/+server";
     import { ObservedRoute } from "../../components";
-
+    
     const sections: Section[] = [
         {
             component: Hero,

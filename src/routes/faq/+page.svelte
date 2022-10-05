@@ -1,6 +1,6 @@
 <script lang="ts">
     import type { Section } from "$lib/types/components";
-    import { Hero, Faqs } from "./sections";
+    import { Hero, Faqs } from "./sections/+server";
     import HaveAnyQuestions from "../../sections/haveAnyQuestions.svelte";
     import { ObservedRoute } from "../../components";
 

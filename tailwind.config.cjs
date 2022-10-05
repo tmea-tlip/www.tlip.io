@@ -1,10 +1,9 @@
 const pxToRem = (px, base = 16) => `${px / base}rem`
 module.exports = {
-    purge: {
         content: [
             "./src/**/*.{html,js,svelte,ts,scss}"
         ]
-    },
+    ,
     darkMode: "class",
     theme: {
         container: {

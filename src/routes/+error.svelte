@@ -1,16 +1,6 @@
-<script context="module" lang="ts">
-    export function load({ error, status }) {
-        return {
-            props: {
-                status,
-                error: error?.message,
-            },
-        }
-    }
-</script>
-
 <script lang="ts">
     import { Button } from '../components'
+    import { page } from '$app/stores';
     export let status
     export let error
 
@@ -22,7 +12,7 @@
 </script>
 
 <svelte:head>
-    <title>TMEA / TLIP - {status}</title>
+    <title>TMEA / TLIP - {$page.status}</title>
 </svelte:head>
 
 <section class="w-full h-screen flex items-center justify-center p-20 overflow-hidden">
@@ -31,7 +21,7 @@
             <h2 class="uppercase flex text-64 leading-none">
                 {status}
             </h2>
-            <h4 class="my-2">{error}</h4>
+            <h4 class="my-2">{$page.error}</h4>
         </div>
         <div class="flex home-button">
             <Button {...BUTTON} small/>

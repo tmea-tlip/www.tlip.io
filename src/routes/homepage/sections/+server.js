@@ -1,0 +1,9 @@
+export { default as Hero } from "./hero/+page.svelte";
+export { default as Partners } from "./partners/+page.svelte";
+export { default as HaveAnyQuestions } from "../../../sections/haveAnyQuestions.svelte";
+export { default as WhatIsTLIP } from "./whatIsTLIP/+page.svelte";
+export { default as WhyTLIP } from "./whyTLIP/+page.svelte";
+export { default as Benefits } from "./benefits/+page.svelte";
+export { default as HowDoesTLIPWork } from "./howDoesTLIPWork/+page.svelte";
+export { default as WhoAreWe } from "./whoAreWe/+page.svelte";
+export { default as UkEcosystem } from "./ukEcosystem/+page.svelte";

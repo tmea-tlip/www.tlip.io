@@ -36,7 +36,7 @@
         if (openMenu) {
             closeMenu()
         }
-        if ($page.path === "/") {
+        if ($page.url.pathname === "/") {
             e.preventDefault();
             document.body.scrollIntoView({ behavior: "smooth" });
             window.history.pushState(null, "", "/");
@@ -85,10 +85,10 @@
                                             ? 'metropolis-700'
                                             : ''} hover:text-green-400">{title}</a
                                     >
-                                {:else if url || (id && url != $page.path)}
+                                {:else if url || (id && url != $page.url.pathname)}
                                     <a
                                         href={url}
-                                        class="{url === $page.path ? 'metropolis-700' : ''} hover:text-green-400"
+                                        class="{url === $page.url.pathname ? 'metropolis-700' : ''} hover:text-green-400"
                                         >{title}</a
                                     >
                                 {/if}
@@ -126,8 +126,8 @@
                                     closeMenu();
                                 }}>{title}</a
                             >
-                        {:else if url || (id && url != $page.path)}
-                            <a on:click={closeMenu} class={url === $page.path ? "metropolis-700" : ""} href={url}
+                        {:else if url || (id && url != $page.url.pathname)}
+                            <a on:click={closeMenu} class={url === $page.url.pathname ? "metropolis-700" : ""} href={url}
                                 >{title}</a
                             >
                         {/if}
