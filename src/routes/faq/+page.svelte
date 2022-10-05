@@ -1,8 +1,8 @@
 <script lang="ts">
     import type { Section } from "$lib/types/components";
-    import { Hero, Faqs } from "./sections/+server";
+    import { Hero, Faqs } from "./sections";
     import HaveAnyQuestions from "../../sections/haveAnyQuestions.svelte";
-    import { ObservedRoute } from "../../components";
+    import { ObservedRoute } from "$components";
 
     const sections: Section[] = [
         {

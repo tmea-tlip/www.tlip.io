@@ -1,5 +1,5 @@
 <script lang="ts">
-    import { Button } from '../components'
+    import { Button } from '$components'
     import { page } from '$app/stores';
     export let status
     export let error

@@ -1,6 +1,6 @@
 <script lang="ts">
     import { FAQS as data } from "./faqs";
-    import { Accordion } from "../../../../components";
+    import { Accordion } from "$components";
 </script>
 
 <section class="pt-12 pb-32 relative z-20">

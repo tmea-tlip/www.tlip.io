@@ -1,6 +1,6 @@
 <script lang="ts">
     import type { Button as ButtonType } from "$lib/types/components";
-    import { Button } from "../components";
+    import { Button } from "$components";
     import type { Heading } from "$lib/types/sections";
     import { page } from "$app/stores";
 

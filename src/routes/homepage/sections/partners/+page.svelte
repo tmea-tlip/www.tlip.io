@@ -1,5 +1,5 @@
 <script lang="ts">
-    import { Carousel } from "../../../../components";
+    import { Carousel } from "$components";
     import { PARTNERS } from "./partners";
 </script>
 
