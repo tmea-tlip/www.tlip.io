@@ -1,6 +1,6 @@
 <script lang="ts">
-    import { FAQS as data } from "$lib";
     import { Accordion } from "$components";
+    import { FAQS as data } from "$lib";
 </script>
 
 <section class="pt-12 pb-32 relative z-20">
