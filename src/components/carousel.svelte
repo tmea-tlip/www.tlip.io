@@ -18,7 +18,7 @@
 
     $: swiperOptions = {
         slidesPerView: "auto",
-        class:"mySwiper",
+        class: "mySwiper",
         spaceBetween: 40,
         centeredSlides: !staticCarousel,
         centerInsufficientSlides: true,
@@ -39,7 +39,7 @@
             enabled: !staticCarousel,
             delay: 0,
             disableOnInteraction: false
-        },
+        }
     };
 </script>
 

@@ -63,90 +63,94 @@ const INVEST_NEW_TECHNOLOGY = `
 
 export const FAQS: FaqSection[] = [
     {
-        "id": "Purpose",
-        "title": "Purpose",
-        "subsections": [
+        id: "Purpose",
+        title: "Purpose",
+        subsections: [
             {
-                "id": "what-is",
-                "title": "What is TLIP?",
-                "description": "TLIP is a digital system that enables the secure storing and sharing of trade-related information. TLIP is both i) a set of secure connections to border agencies’ databases; and ii) a user-friendly dashboard, which can be accessed via a secure login from PCs and mobile devices. The backend connections are automated to allow border agencies to share information without introducing new work processes. The front end allows all actors (agencies, traders, transporters, etc.) to upload typical trade documentation such as the Certificate of Origin, the Phytosanitary Certificate, Packing List or Commercial Invoice. Once uploaded, documents are protected against loss and forgery, and can be easily shared with relevant parties. "
-            }, {
-                "id": "what-is-impact",
-                "title": "What is the impact of TLIP?",
-                "description": WHAT_IS_IMPACT
+                id: "what-is",
+                title: "What is TLIP?",
+                description:
+                    "TLIP is a digital system that enables the secure storing and sharing of trade-related information. TLIP is both i) a set of secure connections to border agencies’ databases; and ii) a user-friendly dashboard, which can be accessed via a secure login from PCs and mobile devices. The backend connections are automated to allow border agencies to share information without introducing new work processes. The front end allows all actors (agencies, traders, transporters, etc.) to upload typical trade documentation such as the Certificate of Origin, the Phytosanitary Certificate, Packing List or Commercial Invoice. Once uploaded, documents are protected against loss and forgery, and can be easily shared with relevant parties. "
+            },
+            {
+                id: "what-is-impact",
+                title: "What is the impact of TLIP?",
+                description: WHAT_IS_IMPACT
             }
         ]
     },
     {
-        "id": "Roadmap",
-        "title": "Roadmap",
-        "subsections": [
+        id: "Roadmap",
+        title: "Roadmap",
+        subsections: [
             {
-                "id": "why-was-initiated",
-                "title": "Why was TLIP initiated?",
-                "description": WHY_WAS_INITIATED
+                id: "why-was-initiated",
+                title: "Why was TLIP initiated?",
+                description: WHY_WAS_INITIATED
             },
             {
-                "id": "how-is-organized",
-                "title": "How is the TLIP project organized?",
-                "description": HOW_IS_ORGANIZED
+                id: "how-is-organized",
+                title: "How is the TLIP project organized?",
+                description: HOW_IS_ORGANIZED
             },
             {
-                "id": "how-will-grow",
-                "title": "How will TLIP grow in the next 18 months?",
-                "description": HOW_WILL_GROW
+                id: "how-will-grow",
+                title: "How will TLIP grow in the next 18 months?",
+                description: HOW_WILL_GROW
             }
         ]
     },
     {
-        "id": "Governance",
-        "title": "Governance",
-        "subsections": [
+        id: "Governance",
+        title: "Governance",
+        subsections: [
             {
-                "id": "who-owns",
-                "title": "Who owns TLIP?",
-                "description": WHO_OWNS
+                id: "who-owns",
+                title: "Who owns TLIP?",
+                description: WHO_OWNS
             },
             {
-                "id": "who-uses",
-                "title": "Who uses TLIP?",
-                "description": WHO_USES
+                id: "who-uses",
+                title: "Who uses TLIP?",
+                description: WHO_USES
             }
         ]
     },
     {
-        "id": "Technology",
-        "title": "Technology",
-        "subsections": [
+        id: "Technology",
+        title: "Technology",
+        subsections: [
             {
-                "id": "why-uses-IOTA",
-                "title": "Why does TLIP use a DLT called IOTA?",
-                "description": WHY_USES_IOTA
+                id: "why-uses-IOTA",
+                title: "Why does TLIP use a DLT called IOTA?",
+                description: WHY_USES_IOTA
             },
             {
-                "id": "why-is-DLT-important",
-                "title": "Why is Distributed Ledger Technology (DLT) important for TLIP?",
-                "description": WHY_IS_DLT_IMPORTANT
+                id: "why-is-DLT-important",
+                title: "Why is Distributed Ledger Technology (DLT) important for TLIP?",
+                description: WHY_IS_DLT_IMPORTANT
             }
         ]
     },
     {
-        "id": "Finance",
-        "title": "Finance",
-        "subsections": [
+        id: "Finance",
+        title: "Finance",
+        subsections: [
             {
-                "id": "what-cost-to-use",
-                "title": "What does it cost to use TLIP?",
-                "description": WHAT_COST_TO_USE
+                id: "what-cost-to-use",
+                title: "What does it cost to use TLIP?",
+                description: WHAT_COST_TO_USE
             },
             {
-                "id": "how-TLIP-funded",
-                "title": "How is the TLIP project funded?",
-                "description": "Development of the project is made possible by the generous support of the development agencies of the following governments: the Netherlands, the United Kingdom and the United States of America."
-            }, {
-                "id": "invest-new-technology",
-                "title": "Will TLIP require users to invest in new technology?",
-                "description": INVEST_NEW_TECHNOLOGY
+                id: "how-TLIP-funded",
+                title: "How is the TLIP project funded?",
+                description:
+                    "Development of the project is made possible by the generous support of the development agencies of the following governments: the Netherlands, the United Kingdom and the United States of America."
+            },
+            {
+                id: "invest-new-technology",
+                title: "Will TLIP require users to invest in new technology?",
+                description: INVEST_NEW_TECHNOLOGY
             }
         ]
     }
