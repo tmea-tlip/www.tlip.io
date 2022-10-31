@@ -34,7 +34,7 @@
 
     const logoClick: (event: Event) => void = e => {
         if (openMenu) {
-            closeMenu()
+            closeMenu();
         }
         if ($page.url.pathname === "/") {
             e.preventDefault();
@@ -88,8 +88,9 @@
                                 {:else if url || (id && url != $page.url.pathname)}
                                     <a
                                         href={url}
-                                        class="{url === $page.url.pathname ? 'metropolis-700' : ''} hover:text-green-400"
-                                        >{title}</a
+                                        class="{url === $page.url.pathname
+                                            ? 'metropolis-700'
+                                            : ''} hover:text-green-400">{title}</a
                                     >
                                 {/if}
                             </li>{/if}
@@ -127,8 +128,10 @@
                                 }}>{title}</a
                             >
                         {:else if url || (id && url != $page.url.pathname)}
-                            <a on:click={closeMenu} class={url === $page.url.pathname ? "metropolis-700" : ""} href={url}
-                                >{title}</a
+                            <a
+                                on:click={closeMenu}
+                                class={url === $page.url.pathname ? "metropolis-700" : ""}
+                                href={url}>{title}</a
                             >
                         {/if}
                     </li>

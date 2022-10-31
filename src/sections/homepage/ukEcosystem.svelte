@@ -1,5 +1,4 @@
 <script lang="ts">
-
     import type { Heading } from "$lib/types/sections";
     export let id: string;
     const HEADING: Heading = {

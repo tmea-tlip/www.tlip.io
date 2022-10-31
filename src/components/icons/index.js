@@ -13,4 +13,3 @@ export { default as Government } from "./government.svelte";
 export { default as Trust } from "./trust.svelte";
 export { default as Visibility } from "./visibility.svelte";
 export { default as Accuracy } from "./accuracy.svelte";
-

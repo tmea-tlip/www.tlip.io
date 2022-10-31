@@ -2,7 +2,7 @@
     import { lightModeNavbar } from "$lib";
 
     export let open: boolean = false;
-    export let classes: string = ''
+    export let classes: string = "";
     export let onClick: (event: Event) => void = () => {};
     export let sideMenuOpen: boolean;
 
