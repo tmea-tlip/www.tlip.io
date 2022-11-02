@@ -41,7 +41,8 @@ const COMMERCIAL_PARTNERS = {
         "/assets/partners/DFDS-logo.png",
         "/assets/partners/beyond-now-logo.png",
         "/assets/partners/kenya-airways-logo.png",
-        "/assets/partners/british-coffee-association-logo.png"
+        "/assets/partners/british-coffee-association-logo.png",
+        "/assets/partners/ras-logo.png"
         // "/assets/partners/morning-foods-logo.png",
         // "/assets/partners/AWS-logo.png",
         // "/assets/partners/british-coffee-association-logo.png",
