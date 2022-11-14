@@ -7,3 +7,6 @@ export { default as Icon } from "./icons/index.svelte";
 export { default as ObservedRoute } from "./observed-route.svelte";
 export { default as Accordion } from "./accordion.svelte";
 export { default as News } from "./news.svelte";
+export { default as ListLoader } from "./list-loader.svelte";
+export { default as Paginator } from "./paginator.svelte";
+export { default as PaginatorPage } from "./paginator-page.svelte";

@@ -1,16 +1,10 @@
-/* eslint-disable @typescript-eslint/no-unsafe-argument */
-/* eslint-disable no-multi-assign */
-/* eslint-disable prefer-promise-reject-errors */
-/* eslint-disable nonblock-statement-body-position */
-/* eslint-disable @typescript-eslint/no-floating-promises */
-/* eslint-disable no-console */
-/* eslint-disable @typescript-eslint/no-unsafe-return */
-/* eslint-disable jsdoc/require-jsdoc */
-/* eslint-disable @typescript-eslint/no-unused-vars */
-import { fetchUrlMetadata } from "$lib";
+import { formatDateToDDMMYYYY, parseDate, type New } from "$lib";
 import { json as json$1 } from "@sveltejs/kit";
 import { google } from "googleapis";
 
+/**
+ *
+ */
 export async function GET({ url }) {
     const spreadsheetId: string = "1KRXVz3fbwCdJbs0Z7FOyykyQXK3WZhm3Bbi-QCm9rjg";
 
@@ -25,6 +19,7 @@ export async function GET({ url }) {
     };
     async function getRangeFromSheet() {
         return new Promise((resolve, reject) => {
+            // eslint-disable-next-line @typescript-eslint/no-floating-promises
             sheets.spreadsheets.values.get(
                 {
                     spreadsheetId,
@@ -33,15 +28,17 @@ export async function GET({ url }) {
                 },
                 async (err, res) => {
                     if (err) {
+                        // eslint-disable-next-line prefer-promise-reject-errors
                         reject({
                             message: `The API returned an error: ${err}`
                         });
                     }
-                    const rows: Promise<any[]> = res?.data?.values;
+                    const rows: Promise<New[]> = res?.data?.values;
                     resolve(rows);
                     if (await rows) {
                         resolve(rows);
                     } else {
+                        // eslint-disable-next-line prefer-promise-reject-errors
                         reject({
                             message: "no data found"
                         });
@@ -60,18 +57,21 @@ export async function GET({ url }) {
                 title: row[1],
                 linkUrl: row[2],
                 imageUrl: "",
-                date: row[3],
+                date: parseDate(row[3]),
                 isVisible: row[5]
             }))
             .filter(row => row.isVisible?.toLowerCase() === "ok")
             .sort((a, b) => {
+                // eslint-disable-next-line @typescript-eslint/no-unsafe-argument
                 const dateA = new Date(a.date);
+                // eslint-disable-next-line @typescript-eslint/no-unsafe-argument
                 const dateB = new Date(b.date);
-                return dateA.getTime() - dateB.getTime();
+                return dateB.getTime() - dateA.getTime();
             });
     }
 
     if (rowData) {
+        // eslint-disable-next-line @typescript-eslint/no-unsafe-return
         return json$1(rowData);
     }
 }

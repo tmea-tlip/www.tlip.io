@@ -89,3 +89,37 @@ export interface AccordionItem {
      */
     description?: string;
 }
+
+/**
+ *
+ */
+export interface New {
+    /**
+     *
+     */
+    date: Date;
+    /**
+     *
+     */
+    title: string;
+    /**
+     *
+     */
+    isVisible?: string;
+    /**
+     *
+     */
+    imageFetched?: boolean;
+    /**
+     *
+     */
+    imageUrl?: string;
+    /**
+     *
+     */
+    publishBy?: string;
+    /**
+     *
+     */
+    linkUrl?: string;
+}

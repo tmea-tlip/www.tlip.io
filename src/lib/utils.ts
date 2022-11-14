@@ -76,3 +76,38 @@ export const scrollIntoView = ({ target }): ((event: Event) => void) => {
         window.history.replaceState(null, "", targetID);
     }
 };
+
+// eslint-disable-next-line jsdoc/require-jsdoc
+export const fetchUrlMetadata = async (url: string): Promise<any> => {
+    // eslint-disable-next-line curly
+    if (!url) return null;
+    const urlMetadataJson = await fetch(`/api/get-url-metadata?url=${url}`);
+    const urlMetadata = await urlMetadataJson.json();
+    // eslint-disable-next-line @typescript-eslint/no-unsafe-return
+    return urlMetadata.urlMetadata;
+};
+
+// eslint-disable-next-line jsdoc/require-description, jsdoc/require-returns
+/**
+ *
+ * @param date
+ */
+export function parseDate(date) {
+    const [d, m, y] = date.split(".").map(Number);
+    // eslint-disable-next-line @typescript-eslint/no-unsafe-argument
+    return new Date(y, m - 1, d);
+}
+
+// eslint-disable-next-line jsdoc/require-description, jsdoc/require-returns
+/**
+ *
+ * @param date
+ */
+export function formatDateToDDMMYYYY(date?: Date | null) {
+    // eslint-disable-next-line curly
+    if (!date) return "-";
+    // eslint-disable-next-line max-len
+    return new Intl.DateTimeFormat("es-ES", { day: "2-digit", month: "2-digit", year: "numeric" }).format(
+        new Date(date)
+    );
+}
