@@ -35,8 +35,8 @@
         "prepare": "husky install"
     },
     "devDependencies": {
-        "@sveltejs/adapter-vercel": "^1.0.0-next.77",
         "@sveltejs/adapter-static": "^1.0.0-next.44",
+        "@sveltejs/adapter-vercel": "^1.0.0-next.77",
         "@sveltejs/kit": "^1.0.0-next.509",
         "@tailwindcss/forms": "^0.5.3",
         "@typescript-eslint/eslint-plugin": "^5.39.0",
@@ -76,6 +76,7 @@
     },
     "type": "module",
     "dependencies": {
+        "googleapis": "^109.0.1",
         "marked": "^4.1.1",
         "swiper": "^8.4.2"
     },
