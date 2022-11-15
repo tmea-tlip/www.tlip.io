@@ -1,6 +1,7 @@
-import { formatDateToDDMMYYYY, parseDate, type New } from "$lib";
 import { json as json$1 } from "@sveltejs/kit";
 import { google } from "googleapis";
+// eslint-disable-next-line import/no-unresolved
+import { parseDate, type New } from "$lib";
 
 /**
  *
@@ -50,28 +51,37 @@ export async function GET({ url }) {
 
     const data = await getRangeFromSheet();
     let rowData;
-    if (data) {
-        rowData = data
-            .map(row => ({
-                publishBy: row[0],
-                title: row[1],
-                linkUrl: row[2],
-                imageUrl: "",
-                date: parseDate(row[3]),
-                isVisible: row[5]
-            }))
-            .filter(row => row.isVisible?.toLowerCase() === "ok")
-            .sort((a, b) => {
-                // eslint-disable-next-line @typescript-eslint/no-unsafe-argument
-                const dateA = new Date(a.date);
-                // eslint-disable-next-line @typescript-eslint/no-unsafe-argument
-                const dateB = new Date(b.date);
-                return dateB.getTime() - dateA.getTime();
-            });
-    }
+    try {
+        if (data) {
+            rowData = data
+                .map(row => ({
+                    publishBy: row[0],
+                    title: row[1],
+                    linkUrl: row[2],
+                    imageUrl: "",
+                    date: parseDate(row[3]),
+                    isVisible: row[5]
+                }))
+                .filter(row => row.isVisible?.toLowerCase() === "ok")
+                .sort((a, b) => {
+                    // eslint-disable-next-line @typescript-eslint/no-unsafe-argument
+                    const dateA = new Date(a.date);
+                    // eslint-disable-next-line @typescript-eslint/no-unsafe-argument
+                    const dateB = new Date(b.date);
+                    return dateB.getTime() - dateA.getTime();
+                });
+        }
 
-    if (rowData) {
+        if (rowData) {
+            // eslint-disable-next-line @typescript-eslint/no-unsafe-return
+            return json$1(rowData);
+        }
+    } catch (e) {
+        // eslint-disable-next-line no-console
+        console.error(e);
         // eslint-disable-next-line @typescript-eslint/no-unsafe-return
-        return json$1(rowData);
+        return json$1({
+            rowData: null
+        });
     }
 }
