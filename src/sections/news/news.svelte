@@ -15,7 +15,7 @@
     let itemsPerPage: number = 8;
     let paginatorActivePage: number = 1;
 
-    async function fetchNews() {
+    async function fetchNews(): Promise<New[]> {
         let newsData: any = await fetch(`/api/get-news`);
         newsData = await newsData.json();
         return newsData;
@@ -34,7 +34,7 @@
         }
     }
 
-    const fetchImageFromMetaData = (items, itemsPerPage: number, paginatorActivePage: number) => {
+    const fetchImageFromMetaData = (items, itemsPerPage: number, paginatorActivePage: number): void => {
         const firstIndex = (paginatorActivePage - 1) * itemsPerPage;
         const lastIndex = paginatorActivePage * itemsPerPage - 1;
         for (let i = firstIndex; i <= lastIndex; i++) {
