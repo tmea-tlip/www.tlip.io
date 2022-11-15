@@ -58,7 +58,7 @@ export async function GET({ url }) {
                     publishBy: row[0],
                     title: row[1],
                     linkUrl: row[2],
-                    imageUrl: "",
+                    imageUrl: "pending",
                     date: parseDate(row[3]),
                     isVisible: row[5]
                 }))

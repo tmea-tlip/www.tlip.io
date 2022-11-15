@@ -14,16 +14,20 @@
 <a
     href={linkUrl}
     target="_blank"
-    class="flex justify-start items-center w-full border border-grey-100 rounded-2xl bg-white p-4 md:p-7 "
+    class="card relative overflow-hidden flex justify-start items-center w-full border border-grey-100 rounded-2xl bg-white p-4 md:p-7 "
 >
-    {#if imageUrl}
+    {#if imageUrl === "pending"}
         <div
-            class="w-16 h-16 md:w-20 md:h-20 flex items-center justify-center bg-grey-100 rounded-2xl overflow-hidden shrink-0"
+            class="w-16 h-16 md:w-20 md:h-20 flex items-center justify-center border border-[#dbe9f4] rounded-2xl overflow-hidden shrink-0"
         >
-            <img src={imageUrl} alt={title} class="w-full h-full object-cover" />
+            <img src="/assets/logo-TLIP.svg" alt={title} class="w-full h-full object-contain" />
         </div>
     {:else}
-        <div class="w-16 h-16 md:w-20 md:h-20 rounded-2xl bg-grey-100 shrink-0" />
+        <div
+            class="w-16 h-16 md:w-20 md:h-20 flex items-center justify-center border border-[#dbe9f4] rounded-2xl overflow-hidden shrink-0"
+        >
+            <img src={imageUrl} alt={title} class="w-full h-full object-contain" />
+        </div>
     {/if}
     <div class="space-y-2 ml-4">
         <p class="lg:text-20 lg:leading-110 tracking-0.02 font-semibold text-grey-600">{title}</p>
@@ -35,7 +39,36 @@
 </a>
 
 <style lang="scss">
-    a:hover {
-        box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.1), 0 2px 4px 0 rgba(0, 0, 0, 0.1);
+    .card {
+        &:hover {
+            transition: all 0.2s ease-in;
+            box-shadow: 0px 3px 6px rgba(38, 38, 38, 0.2);
+            top: -1px;
+            border: 1px solid #f2f8f9;
+            background-color: rgba(100, 169, 209, 0.1);
+        }
+        &:hover:before {
+            transform: scale(1.5);
+        }
+    }
+
+    .load-wraper {
+        background-color: rgb(219, 233, 244);
+        z-index: 44;
+    }
+    .load-image {
+        position: absolute;
+        left: -45%;
+        background: linear-gradient(239.01deg, rgba(232, 240, 255, 0.5) 9.43%, rgba(72, 87, 118, 0) 121.19%);
+        animation: load 1.5s infinite;
+        z-index: 45;
+    }
+    @keyframes load {
+        0% {
+            left: -50%;
+        }
+        100% {
+            left: 100%;
+        }
     }
 </style>
