@@ -28,8 +28,7 @@
     <div class="space-y-2 ml-4">
         <p class="lg:text-20 lg:leading-110 tracking-0.02 font-semibold text-grey-600">{title}</p>
         <div class="text-14">
-            <p>Published by: {publishBy}</p>
-
+            <p class="font-semibold">{publishBy}</p>
             <p>{formattedDate}</p>
         </div>
     </div>
