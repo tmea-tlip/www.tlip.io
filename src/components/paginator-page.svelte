@@ -18,7 +18,7 @@
         <button
             disabled={currentPage == 1 ? true : false}
             class="{currentPage == 1 ? 'cursor-not-allowed opacity-60' : 'false'} py-3 px-6 mx-1 rounded-lg
-          font-bold flex justify-center items-center lg:mx-2"
+          font-bold flex justify-center items-center lg:mx-2 border-blue-300 border-2 text-blue-300"
             on:click={e => setCurentPage(e, currentPage - 1)}
             on:keypress={e => setCurentPage(e, currentPage - 1)}
         >
@@ -42,7 +42,7 @@
                 <button
                     class:active={1 === currentPage}
                     class="md:block py-3 px-6 mx-1 rounded-lg font-bold flex justify-center
-                  items-center lg:mx-2"
+                  items-center lg:mx-2 border-blue-300 border-2 text-blue-300"
                     on:click={e => setCurentPage(e, 1)}
                     on:keypress={e => setCurentPage(e, 1)}
                 >
@@ -72,7 +72,7 @@
                         <button
                             class:active={pageIndex + 1 === currentPage}
                             class="py-3 px-6 mx-1 rounded-lg font-bold flex justify-center items-center
-                          lg:mx-2"
+                          lg:mx-2 border-blue-300 border-2 text-blue-300"
                             on:click={e => setCurentPage(e, pageIndex + 1)}
                             on:keypress={e => setCurentPage(e, pageIndex + 1)}
                         >
@@ -83,7 +83,7 @@
                     <button
                         class:active={pageIndex + 1 === currentPage}
                         class="py-3 px-6 mx-1 rounded-lg font-bold flex justify-center items-center
-                      lg:mx-2"
+                      lg:mx-2 border-blue-300 border-2 text-blue-300"
                         on:click={e => setCurentPage(e, pageIndex + 1)}
                         on:keypress={e => setCurentPage(e, pageIndex + 1)}
                     >
@@ -111,7 +111,7 @@
                     <button
                         class:active={numPages - 1 === currentPage}
                         class="py-3 px-6 mx-1 rounded-lg font-bold flex justify-center items-center
-                      lg:mx-2"
+                      lg:mx-2 border-blue-300 border-2 text-blue-300"
                         on:click={e => setCurentPage(e, numPages - 1)}
                         on:keypress={e => setCurentPage(e, numPages - 1)}
                     >
@@ -124,7 +124,7 @@
             {#if numPages > 7}
                 <button
                     class:active={numPages === currentPage}
-                    class="py-3 px-6 mx-1 rounded-lg font-bold flex justify-center items-center lg:mx-2"
+                    class="py-3 px-6 mx-1 rounded-lg font-bold flex justify-center items-center lg:mx-2 border-blue-300 border-2 text-blue-300"
                     on:click={e => setCurentPage(e, numPages)}
                     on:keypress={e => setCurentPage(e, numPages)}
                 >
@@ -153,7 +153,7 @@
         <button
             disabled={currentPage == numPages ? true : false}
             class="{currentPage == numPages ? 'cursor-not-allowed' : ''} py-3 px-6 mx-1 rounded-lg
-          font-bold flex justify-center items-center lg:mx-2"
+          font-bold flex justify-center items-center lg:mx-2 border-blue-300 border-2 text-blue-300"
             on:click={e => setCurentPage(e, currentPage + 1)}
             on:keypress={e => setCurentPage(e, currentPage + 1)}
         >
@@ -174,8 +174,8 @@
 
 <style lang="scss">
     .active {
-        @apply border-blue-300;
+        @apply bg-blue-300;
         @apply border-2;
-        @apply text-blue-300;
+        @apply text-white;
     }
 </style>
