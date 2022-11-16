@@ -16,19 +16,15 @@
     target="_blank"
     class="card relative overflow-hidden flex justify-start items-center w-full border border-grey-100 rounded-2xl bg-white p-4 md:p-7 "
 >
-    {#if imageUrl === "pending"}
-        <div
-            class="w-16 h-16 md:w-20 md:h-20 flex items-center justify-center border border-[#dbe9f4] rounded-2xl overflow-hidden shrink-0"
-        >
-            <img src="/assets/pending-news.svg" alt={title} class="w-full h-full object-contain" />
-        </div>
-    {:else}
-        <div
-            class="w-16 h-16 md:w-20 md:h-20 flex items-center justify-center border border-[#dbe9f4] rounded-2xl overflow-hidden shrink-0"
-        >
-            <img src={imageUrl} alt={title} class="w-full h-full object-cover" />
-        </div>
-    {/if}
+    <div
+        class="w-16 h-16 md:w-20 md:h-20 flex items-center justify-center border border-[#dbe9f4] rounded-2xl overflow-hidden shrink-0"
+    >
+        <img
+            src={imageUrl === "unreachable" ? "/assets/default-news-thumbnail.svg" : imageUrl}
+            alt={title}
+            class="w-full h-full {imageUrl === 'unreachable' ? 'object-contain' : 'object-cover'}"
+        />
+    </div>
     <div class="space-y-2 ml-4">
         <p class="lg:text-20 lg:leading-110 tracking-0.02 font-semibold text-grey-600">{title}</p>
         <div class="text-14">
