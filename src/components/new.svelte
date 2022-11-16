@@ -9,6 +9,8 @@
 
     let formattedDate: string;
     $: formattedDate = formatDateToDDMMYYYY(date);
+
+    $: showFallbackImage = imageUrl === "unreachable";
 </script>
 
 <a
@@ -19,11 +21,13 @@
     <div
         class="w-16 h-16 md:w-20 md:h-20 flex items-center justify-center border border-[#dbe9f4] rounded-2xl overflow-hidden shrink-0"
     >
-        <img
-            src={imageUrl === "unreachable" ? "/assets/default-news-thumbnail.svg" : imageUrl}
-            alt={title}
-            class="w-full h-full {imageUrl === 'unreachable' ? 'object-contain' : 'object-cover'}"
-        />
+        {#if imageUrl}
+            <img
+                src={showFallbackImage ? "/assets/default-news-thumbnail.svg" : imageUrl}
+                alt={title}
+                class="w-full h-full {showFallbackImage ? 'object-contain' : 'object-cover'}"
+            />
+        {/if}
     </div>
     <div class="space-y-2 ml-4">
         <p class="lg:text-20 lg:leading-110 tracking-0.02 font-semibold text-grey-600">{title}</p>
