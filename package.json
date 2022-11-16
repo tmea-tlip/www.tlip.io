@@ -21,22 +21,15 @@
     "scripts": {
         "dev": "vite dev",
         "build": "vite build",
-        "build-clean": "rimraf .vite",
-        "build-format": "prettier --config .prettierrc --write .",
-        "build-lint": "eslint src",
-        "build-check": "svelte-check --tsconfig ./tsconfig.json",
-        "build-compile": "vite build",
-        "build-p": "run-p build-lint build-style-lint build-check",
-        "build-style-lint": "stylelint ./src/**/*.{scss,svelte}",
-        "test-p": "",
-        "dist": "run-s build-clean build-format build-p build-compile",
         "preview": "vite preview",
-        "deploy-build": "vercel",
+        "check": "svelte-check --tsconfig ./tsconfig.json",
+        "check:watch": "svelte-check --tsconfig ./tsconfig.json --watch",
+        "lint": "prettier --check --plugin-search-dir=. . && eslint --ignore-path .gitignore .",
+        "format": "prettier --write --plugin-search-dir=. .",
         "prepare": "husky install"
     },
     "devDependencies": {
         "@sveltejs/adapter-vercel": "^1.0.0-next.77",
-        "@sveltejs/adapter-static": "^1.0.0-next.44",
         "@sveltejs/kit": "^1.0.0-next.509",
         "@tailwindcss/forms": "^0.5.3",
         "@typescript-eslint/eslint-plugin": "^5.39.0",
@@ -76,8 +69,10 @@
     },
     "type": "module",
     "dependencies": {
+        "googleapis": "^109.0.1",
         "marked": "^4.1.1",
-        "swiper": "^8.4.2"
+        "swiper": "^8.4.2",
+        "url-metadata": "^2.5.0"
     },
     "lint-staged": {
         "**/*.{js,ts,svelte,scss}": [

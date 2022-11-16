@@ -1,5 +1,5 @@
+import adapter from "@sveltejs/adapter-vercel";
 import preprocess from "svelte-preprocess";
-import adapter from "@sveltejs/adapter-static";
 /** @type {import('@sveltejs/kit').Config} */
 const config = {
     preprocess: [
@@ -9,11 +9,10 @@ const config = {
     ],
 
     kit: {
-        adapter: adapter({
-            pages: "dist",
-            assets: "dist",
-            fallback: "index.html"
-        })
+        adapter: adapter(),
+        files: {
+            assets: "static"
+        }
     }
 };
 
