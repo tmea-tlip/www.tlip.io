@@ -78,13 +78,13 @@ export const scrollIntoView = ({ target }): ((event: Event) => void) => {
 };
 
 // eslint-disable-next-line jsdoc/require-jsdoc
-export const fetchUrlMetadata = async (url: string): Promise<any> => {
+export const fetchUrlImageMetadata = async (url: string): Promise<string> => {
     // eslint-disable-next-line curly
     if (!url) return null;
-    const urlMetadataJson = await fetch(`/api/get-url-metadata?url=${url}`);
-    const urlMetadata = await urlMetadataJson.json();
+    const response = await fetch(`/api/get-url-metadata?url=${url}`);
+    const responseJson = await response.json();
     // eslint-disable-next-line @typescript-eslint/no-unsafe-return
-    return urlMetadata.urlMetadata;
+    return responseJson?.urlMetadata?.image ?? responseJson?.urlMetadata?.["og:image"] ?? null;
 };
 
 // eslint-disable-next-line jsdoc/require-description, jsdoc/require-returns

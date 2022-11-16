@@ -1,6 +1,6 @@
 <script lang="ts">
     import { afterUpdate } from "svelte";
-    import { News, PaginatorPage } from "$components";
+    import { New, PaginatorPage } from "$components";
 
     export let paginatorActivePage: number = 0;
     export let itemsPerPage: number = 0;
@@ -15,7 +15,7 @@
     let component;
     switch (elementsType) {
         case "news":
-            component = News;
+            component = New;
             break;
 
         default:

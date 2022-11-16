@@ -105,14 +105,6 @@ export interface New {
     /**
      *
      */
-    isVisible?: string;
-    /**
-     *
-     */
-    imageFetched?: boolean;
-    /**
-     *
-     */
     imageUrl?: string;
     /**
      *

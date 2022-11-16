@@ -1,6 +1,6 @@
 <script lang="ts">
     import { ListLoader, Paginator } from "$components";
-    import { fetchUrlMetadata, type New } from "$lib";
+    import { fetchUrlImageMetadata, type New } from "$lib";
     import { onMount } from "svelte";
 
     let news: New[] = [];
@@ -15,12 +15,6 @@
     let itemsPerPage: number = 8;
     let paginatorActivePage: number = 1;
 
-    async function fetchNews(): Promise<New[]> {
-        let newsData: any = await fetch(`/api/get-news`);
-        newsData = await newsData.json();
-        return newsData;
-    }
-
     $: paginatorData = {
         elements: newsWithImages,
         elementsType: "news",
@@ -34,28 +28,32 @@
         }
     }
 
-    const fetchImageFromMetaData = (items, itemsPerPage: number, paginatorActivePage: number): void => {
-        const firstIndex = (paginatorActivePage - 1) * itemsPerPage;
-        const lastIndex = paginatorActivePage * itemsPerPage - 1;
-        for (let i = firstIndex; i <= lastIndex; i++) {
-            if (items[i]) {
-                let imageUrl: string | null;
-                fetchUrlMetadata(items[i].linkUrl).then(metadata => {
-                    imageUrl = metadata.image || metadata["og:image"] || null;
-                    newsWithImages[i] = {
-                        ...items[i],
-                        imageUrl: imageUrl,
-                        imageFetched: true
-                    };
-                });
-            }
-        }
-    };
     onMount(async () => {
         news = await fetchNews();
         newsWithImages = news;
         fetchImageFromMetaData(news, itemsPerPage, paginatorActivePage);
     });
+
+    async function fetchNews(): Promise<New[]> {
+        let newsData: any = await fetch(`/api/get-news`);
+        newsData = await newsData.json();
+        return newsData;
+    }
+
+    function fetchImageFromMetaData(items, itemsPerPage: number, paginatorActivePage: number): void {
+        const firstIndex = (paginatorActivePage - 1) * itemsPerPage;
+        const lastIndex = paginatorActivePage * itemsPerPage - 1;
+        for (let i = firstIndex; i <= lastIndex; i++) {
+            if (items?.[i]) {
+                fetchUrlImageMetadata(items[i].linkUrl).then(imageUrl => {
+                    newsWithImages[i] = {
+                        ...items[i],
+                        imageUrl: imageUrl ?? "unreachable"
+                    };
+                });
+            }
+        }
+    }
 </script>
 
 <section class="pt-12 pb-32 relative z-20">

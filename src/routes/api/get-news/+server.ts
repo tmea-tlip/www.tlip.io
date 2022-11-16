@@ -1,4 +1,4 @@
-import { json as json$1 } from "@sveltejs/kit";
+import { json } from "@sveltejs/kit";
 import { google } from "googleapis";
 // eslint-disable-next-line import/no-unresolved
 import { parseDate, type New } from "$lib";
@@ -54,15 +54,13 @@ export async function GET({ url }) {
     try {
         if (data) {
             rowData = data
+                .filter(row => row[5]?.toLowerCase() === "ok")
                 .map(row => ({
                     publishBy: row[0],
                     title: row[1],
                     linkUrl: row[2],
-                    imageUrl: "pending",
-                    date: parseDate(row[3]),
-                    isVisible: row[5]
+                    date: parseDate(row[3])
                 }))
-                .filter(row => row.isVisible?.toLowerCase() === "ok")
                 .sort((a, b) => {
                     // eslint-disable-next-line @typescript-eslint/no-unsafe-argument
                     const dateA = new Date(a.date);
@@ -74,13 +72,13 @@ export async function GET({ url }) {
 
         if (rowData) {
             // eslint-disable-next-line @typescript-eslint/no-unsafe-return
-            return json$1(rowData);
+            return json(rowData);
         }
     } catch (e) {
         // eslint-disable-next-line no-console
         console.error(e);
         // eslint-disable-next-line @typescript-eslint/no-unsafe-return
-        return json$1({
+        return json({
             rowData: null
         });
     }
