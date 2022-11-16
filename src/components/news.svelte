@@ -20,13 +20,13 @@
         <div
             class="w-16 h-16 md:w-20 md:h-20 flex items-center justify-center border border-[#dbe9f4] rounded-2xl overflow-hidden shrink-0"
         >
-            <img src="/assets/logo-TLIP.svg" alt={title} class="w-full h-full object-contain" />
+            <img src="/assets/pending-news.svg" alt={title} class="w-full h-full object-contain" />
         </div>
     {:else}
         <div
             class="w-16 h-16 md:w-20 md:h-20 flex items-center justify-center border border-[#dbe9f4] rounded-2xl overflow-hidden shrink-0"
         >
-            <img src={imageUrl} alt={title} class="w-full h-full object-contain" />
+            <img src={imageUrl} alt={title} class="w-full h-full object-cover" />
         </div>
     {/if}
     <div class="space-y-2 ml-4">
@@ -41,14 +41,9 @@
 <style lang="scss">
     .card {
         &:hover {
-            transition: all 0.2s ease-in;
+            transition: all 0.2s ease-in-out;
             box-shadow: 0px 3px 6px rgba(38, 38, 38, 0.2);
-            top: -1px;
             border: 1px solid #f2f8f9;
-            background-color: rgba(100, 169, 209, 0.1);
-        }
-        &:hover:before {
-            transform: scale(1.5);
         }
     }
 
