@@ -16,7 +16,7 @@ const WHY_WAS_INITIATED = `
 `;
 
 const HOW_IS_ORGANIZED = `
-- TLIP was initiated by TradeMark East Africa and the initial stages of development and implementation are done by a team consisting of experts from TradeMark East Africa and the IOTA Foundation.
+- TLIP was initiated by TradeMark Africa and the initial stages of development and implementation are done by a team consisting of experts from TradeMark Africa and the IOTA Foundation.
 - As the TLIP moves from testing and learning into production, the aim is to anchor the project with relevant government bodies in the target countries such as Uganda, Kenya, Rwanda and Tanzania for the first phase.
 - A Technical Working Group, representing both public and private entities, has been established to oversee and provide feedback during the project.
 `;
@@ -29,7 +29,7 @@ const HOW_WILL_GROW = `
 `;
 
 const WHO_OWNS = `
-- Currently TLIP is anchored as an innovation project under TradeMark East Africa.
+- Currently TLIP is anchored as an innovation project under TradeMark Africa.
 - TLIP will become a public infrastructure for government agencies to exchange information with both foreign customs authorities and with traders, transporters and other private actors. As the system transitions into production mode, relevant government institutions will host the system to ensure it is compliant with national legislation and public service principles.
 `;
 
@@ -41,7 +41,7 @@ const WHO_USES = `
 
 const WHY_USES_IOTA = `
 - The TLIP project uses the IOTA DLT because it is highly scalable, energy-efficient and does not require the use of a cryptocurrency. IOTA is an open-source technology so that TLIP can be developed, maintained and serviced by any skillful technology consultancy.
-- TradeMark East Africa has partnered with the IOTA Foundation in order to establish TLIP. The IOTA Foundation is a not-for-profit organisation registered in Germany that is paid on a consultancy-based fee structure to support building TLIP.
+- TradeMark Africa has partnered with the IOTA Foundation in order to establish TLIP. The IOTA Foundation is a not-for-profit organisation registered in Germany that is paid on a consultancy-based fee structure to support building TLIP.
 `;
 
 const WHY_IS_DLT_IMPORTANT = `
@@ -57,7 +57,7 @@ const WHAT_COST_TO_USE = `
 
 const INVEST_NEW_TECHNOLOGY = `
 - Private actors such as traders, forwarders and transporters can access TLIP via a normal browser on both PCs and mobile devices, using their secure login credentials. As such, no new investments are required. 
-- Government agencies participating in the TLIP network can share information through either a set of standard APIs or by establishing a tailored “TLIP bridge” that communicates with their internal systems and databases. Furthermore, government agencies are expected to run DLT nodes to ensure the data integrity that provides trust to the system and the information shared across it. Some establishment costs are to be expected and financial support is leveraged through TradeMark East Africa and participating donor countries.
+- Government agencies participating in the TLIP network can share information through either a set of standard APIs or by establishing a tailored “TLIP bridge” that communicates with their internal systems and databases. Furthermore, government agencies are expected to run DLT nodes to ensure the data integrity that provides trust to the system and the information shared across it. Some establishment costs are to be expected and financial support is leveraged through TradeMark Africa and participating donor countries.
 - Large corporations can also opt to use open APIs for integrating with their internal systems and thus ensure more automated workflows. Our long-term vision is to establish standard setup processes to connect with relevant ERP systems.
 `;
 
