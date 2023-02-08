@@ -7,7 +7,7 @@
         {
             title: "Initiated",
             description:
-                "by TradeMark East Africa and IOTA Foundation together with strategic partners from the public and private sector in East Africa.",
+                "by TradeMark Africa and IOTA Foundation together with strategic partners from the public and private sector in East Africa.",
             icon: "friendship"
         },
         {
