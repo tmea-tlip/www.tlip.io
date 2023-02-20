@@ -1,5 +1,6 @@
 import { json } from "@sveltejs/kit";
 import { google } from "googleapis";
+import { GOOGLE_API_KEY } from "$env/static/private";
 // eslint-disable-next-line import/no-unresolved
 import { parseDate, type New } from "$lib";
 
@@ -11,7 +12,7 @@ export async function GET({ url }) {
 
     const sheets = google.sheets({
         version: "v4",
-        auth: import.meta.env.VITE_GOOGLE_API_KEY
+        auth: GOOGLE_API_KEY
     });
     const refererHeader: string = `https://${url.host}`;
     // google api request headers
