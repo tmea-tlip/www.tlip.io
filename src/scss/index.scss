@@ -23,13 +23,13 @@ body,
 }
 
 * {
-    font-family: "Inter", sans-serif;
+    font-family: $inter;
 }
 
 h1 {
     @apply text-32;
     @apply leading-130;
-    font-family: "Metropolis bold";
+    font-family: $metropolis-bold;
 
     @screen lg {
         @apply text-48;
@@ -39,7 +39,7 @@ h1 {
 h2 {
     @apply text-28;
     @apply leading-110;
-    font-family: "Metropolis bold";
+    font-family: $metropolis-bold;
 
     @screen lg {
         @apply text-40;
@@ -49,7 +49,7 @@ h2 {
 h3 {
     @apply text-24;
     @apply leading-125;
-    font-family: "Metropolis bold";
+    font-family: $metropolis-bold;
 
     @screen lg {
         @apply text-32;
@@ -60,7 +60,7 @@ h4 {
     @apply text-20;
     @apply leading-120;
     @apply tracking-0.02;
-    font-family: "Metropolis bold";
+    font-family: $metropolis-bold;
 }
 
 p {
@@ -90,22 +90,22 @@ p > ol {
 }
 
 ul > li > a {
-    font-family: "Metropolis regular", sans-serif;
+    font-family: $metropolis;
 }
 
 .metropolis-700 {
-    font-family: "Metropolis bold";
+    font-family: $metropolis-bold;
 }
 
 .metropolis-600 {
-    font-family: "Metropolis Semi Bold";
+    font-family: $metropolis-semi-bold;
 }
 
 .metropolis-400 {
-    font-family: "Metropolis Regular";
+    font-family: $metropolis;
 }
 .metropolis-500 {
-    font-family: "Metropolis Medium";
+    font-family: $metropolis-medium;
 }
 
 .container {
