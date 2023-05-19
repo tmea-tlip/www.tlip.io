@@ -1,5 +1,7 @@
 import { json } from "@sveltejs/kit";
 import { google } from "googleapis";
+import { logger } from "../logger";
+import type { RequestHandler } from "./$types";
 import { GOOGLE_API_KEY } from "$env/static/private";
 // eslint-disable-next-line import/no-unresolved
 import { parseDate, type New } from "$lib";
@@ -7,7 +9,7 @@ import { parseDate, type New } from "$lib";
 /**
  *
  */
-export async function GET({ url }) {
+export const GET: RequestHandler = async ({ url, setHeaders }) => {
     const spreadsheetId: string = "1KRXVz3fbwCdJbs0Z7FOyykyQXK3WZhm3Bbi-QCm9rjg";
 
     const sheets = google.sheets({
@@ -16,45 +18,45 @@ export async function GET({ url }) {
     });
     const refererHeader: string = `https://${url.host}`;
     // google api request headers
-    const headers = {
+    const headers: { [key: string]: string } = {
         referer: refererHeader
     };
+
     async function getRangeFromSheet() {
-        return new Promise((resolve, reject) => {
-            // eslint-disable-next-line @typescript-eslint/no-floating-promises
+        return new Promise((resolve, reject) =>
             sheets.spreadsheets.values.get(
                 {
                     spreadsheetId,
                     range: "!B2:Z1000",
                     headers
                 },
-                async (err, res) => {
+                (err, res) => {
                     if (err) {
-                        // eslint-disable-next-line prefer-promise-reject-errors
-                        reject({
-                            message: `The API returned an error: ${err}`
-                        });
+                        const errorMessage = `The API returned an error: ${err}`;
+                        logger.error(errorMessage);
+                        console.error(errorMessage);
+                        reject(new Error(errorMessage));
                     }
-                    const rows: Promise<New[]> = res?.data?.values;
-                    resolve(rows);
-                    if (await rows) {
+
+                    const rows = res?.data?.values;
+                    if (rows) {
                         resolve(rows);
                     } else {
-                        // eslint-disable-next-line prefer-promise-reject-errors
-                        reject({
-                            message: "no data found"
-                        });
+                        const errorMessage = "No data found";
+                        logger.error(errorMessage);
+                        console.error(errorMessage);
+                        reject(new Error(errorMessage));
                     }
                 }
-            );
-        });
+            )
+        );
     }
 
-    const data = await getRangeFromSheet();
-    let rowData;
     try {
+        const data = await getRangeFromSheet();
+
         if (data) {
-            rowData = data
+            const rowData: New[] = data
                 .filter(row => row[5]?.toLowerCase() === "ok")
                 .map(row => ({
                     publishBy: row[0],
@@ -62,25 +64,27 @@ export async function GET({ url }) {
                     linkUrl: row[2],
                     date: parseDate(row[3])
                 }))
-                .sort((a, b) => {
-                    // eslint-disable-next-line @typescript-eslint/no-unsafe-argument
+                .sort((a: New, b: New) => {
                     const dateA = new Date(a.date);
-                    // eslint-disable-next-line @typescript-eslint/no-unsafe-argument
                     const dateB = new Date(b.date);
                     return dateB.getTime() - dateA.getTime();
                 });
-        }
 
-        if (rowData) {
-            // eslint-disable-next-line @typescript-eslint/no-unsafe-return
-            return json(rowData);
+            if (rowData) {
+                setHeaders({
+                    "content-type": "application/json",
+                    "cache-control": "max-age=600, public"
+                });
+                return json(rowData);
+            }
         }
-    } catch (e) {
-        // eslint-disable-next-line no-console
-        console.error(e);
-        // eslint-disable-next-line @typescript-eslint/no-unsafe-return
-        return json({
-            rowData: null
-        });
+    } catch (err) {
+        const errorMessage = "Error when fetching data from the spreadsheet";
+        logger.error(`${errorMessage}\nError Details: ${err instanceof Error ? err.message : JSON.stringify(err)}`);
+        console.error(errorMessage);
     }
-}
+
+    return json({
+        rowData: null
+    });
+};
