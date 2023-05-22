@@ -9,6 +9,14 @@ const config = {
     ],
 
     kit: {
+        alias: {
+            lib: "src/lib",
+            "lib/*": "src/lib/*",
+            components: "src/components",
+            "components/*": "src/components/*",
+            sections: "src/sections",
+            "sections/*": "src/sections/*"
+        },
         adapter: adapter(),
         files: {
             assets: "static"
