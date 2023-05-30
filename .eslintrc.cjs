@@ -30,7 +30,12 @@ module.exports = {
     overrides: [{ files: ["*.svelte"], processor: "svelte3/svelte3" }],
     settings: {
         "svelte3/typescript": true,
-        "svelte3/ignore-styles": () => true
+        "svelte3/ignore-styles": () => true,
+        "import/resolver": {
+            "typescript": {
+                project: ["./.svelte-kit/tsconfig.json"],
+            }
+        }
     },
     env: {
         browser: true,
@@ -220,7 +225,7 @@ module.exports = {
         "import/no-duplicates": ["warn"],
         "import/no-named-as-default": ["warn"],
         "import/no-named-as-default-member": ["warn"],
-        "import/no-unresolved": ["error", { ignore: ["^\\$app/", "^@sveltejs/"] }],
+        "import/no-unresolved": ["error", { ignore: ["^\\$app/", "^\\$env/", "^@sveltejs/"] }],
         "import/order": [
             "error",
             {

@@ -1,10 +1,11 @@
 import { json } from "@sveltejs/kit";
+/* eslint-disable import/no-unresolved */
 import { google } from "googleapis";
 import { logger } from "../logger";
 import type { RequestHandler } from "./$types";
 import { GOOGLE_API_KEY } from "$env/static/private";
-// eslint-disable-next-line import/no-unresolved
 import { parseDate, type New } from "$lib";
+/* eslint-enable import/no-unresolved */
 
 /**
  *
