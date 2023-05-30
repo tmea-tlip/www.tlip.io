@@ -21,7 +21,7 @@ export async function GET({ url, setHeaders }) {
             }
         }
     } catch (err) {
-        const errorMessage = "Error when fetching URL metadata";
+        const errorMessage = "Error fetching URL metadata";
         logger.error(`${errorMessage}\nError Details: ${err instanceof Error ? err.message : JSON.stringify(err)}`);
     }
 }

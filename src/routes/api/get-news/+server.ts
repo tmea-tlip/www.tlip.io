@@ -79,7 +79,7 @@ export const GET: RequestHandler = async ({ url, setHeaders }) => {
             }
         }
     } catch (err) {
-        const errorMessage = "Error when fetching data from the spreadsheet";
+        const errorMessage = "Error fetching data from the spreadsheet";
         logger.error(`${errorMessage}\nError Details: ${err instanceof Error ? err.message : JSON.stringify(err)}`);
     }
 
