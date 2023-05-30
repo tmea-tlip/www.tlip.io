@@ -35,7 +35,6 @@ export const GET: RequestHandler = async ({ url, setHeaders }) => {
                     if (err) {
                         const errorMessage = `The API returned an error: ${err}`;
                         logger.error(errorMessage);
-                        console.error(errorMessage);
                         reject(new Error(errorMessage));
                     }
 
@@ -45,7 +44,6 @@ export const GET: RequestHandler = async ({ url, setHeaders }) => {
                     } else {
                         const errorMessage = "No data found";
                         logger.error(errorMessage);
-                        console.error(errorMessage);
                         reject(new Error(errorMessage));
                     }
                 }
