@@ -1,12 +1,9 @@
-/* eslint-disable @typescript-eslint/no-unsafe-return */
-/* eslint-disable @typescript-eslint/no-unsafe-argument */
-/* eslint-disable jsdoc/require-description */
-/* eslint-disable no-console */
 import { json } from "@sveltejs/kit";
 import getUrlMetadata from "url-metadata";
+import { logger } from "../logger";
 
-/** @type {import('./$types').PageServerLoad} */
-export async function GET({ url, setHeaders }): Promise<any> {
+/** @type {import('./$types').RequestHandler} */
+export async function GET({ url, setHeaders }) {
     const urlSearch = new URLSearchParams(url?.searchParams)?.get("url");
     try {
         if (urlSearch) {
@@ -23,10 +20,8 @@ export async function GET({ url, setHeaders }): Promise<any> {
                 });
             }
         }
-    } catch (e) {
-        console.error(e);
-        return json({
-            urlMetadata: null
-        });
+    } catch (err) {
+        const errorMessage = "Error fetching URL metadata";
+        logger.error(`${errorMessage}\nError Details: ${err instanceof Error ? err.message : JSON.stringify(err)}`);
     }
 }
