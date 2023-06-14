@@ -118,25 +118,49 @@ export function formatDateToDDMMYYYY(date?: Date | null) {
  * @returns An array of sections.
  */
 export function parseMarkdownToFaqs(html: string): FaqSection[] {
-    const sectionRegex = /<h2>(.*?)<\/h2>([\S\s]*?)(?=<h2>|$)/g;
-    const sectionMatches = Array.from(html.matchAll(sectionRegex));
+    const HEADING_REGEX = /<h(\d)>(.*?)<\/h\d>/g;
+    const headingMatches = Array.from(html.matchAll(HEADING_REGEX));
 
-    const sections = sectionMatches.map(([_, sectionTitle, sectionContent]) => {
-        const subsectionRegex = /<h3>(.*?)<\/h3>([\S\s]*?)(?=<h3>|$)/g;
-        const subsectionMatches = Array.from(sectionContent.matchAll(subsectionRegex));
+    const sections: FaqSection[] = [];
+    let currentSection: FaqSection = null;
+    let currentSubsection: FaqSubsection = null;
+    let firstHeadingLevel: number;
 
-        const subsections: FaqSubsection[] = subsectionMatches.map(([_, subsectionTitle, subsectionContent]) => ({
-            id: subsectionTitle.toLowerCase().replace(/[^\w-]/g, "-"),
-            title: subsectionTitle,
-            description: subsectionContent.trim()
-        }));
+    for (const matchHeading of headingMatches) {
+        const level = Number.parseInt(matchHeading[1], 10);
+        const title = matchHeading[2];
+        const id = title.toLowerCase().replace(/[^\w-]/g, "-");
 
-        return {
-            id: sectionTitle.toLowerCase().replace(/[^\w-]/g, "-"),
-            title: sectionTitle,
-            subsections
-        };
-    });
+        if (!firstHeadingLevel) {
+            firstHeadingLevel = level;
+        }
+
+        if (level === firstHeadingLevel) {
+            currentSection = {
+                id,
+                title,
+                subsections: []
+            };
+            sections.push(currentSection);
+        } else if (level > firstHeadingLevel && currentSection) {
+            currentSubsection = {
+                id,
+                title,
+                description: ""
+            };
+            currentSection.subsections.push(currentSubsection);
+        }
+
+        const startIndex = matchHeading.index + matchHeading[0].length;
+        const nextHeadingIndex = headingMatches[headingMatches.indexOf(matchHeading) + 1]?.index;
+
+        const endIndex = nextHeadingIndex ?? html.length;
+        const description = html.slice(startIndex, endIndex).trim();
+
+        if (currentSubsection) {
+            currentSubsection.description = description;
+        }
+    }
 
     return sections;
 }
