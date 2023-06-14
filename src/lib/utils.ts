@@ -118,10 +118,9 @@ export function formatDateToDDMMYYYY(date?: Date | null) {
  * @returns An array of sections.
  */
 export function parseMarkdownToFaqs(html: string): FaqSection[] {
-    const sections: FaqSection[] = [];
     const sectionRegex = /<h2>(.*?)<\/h2>([\S\s]*?)(?=<h2>|$)/g;
-
     const sectionMatches = Array.from(html.matchAll(sectionRegex));
+
     const sections = sectionMatches.map(([_, sectionTitle, sectionContent]) => {
         const subsectionRegex = /<h3>(.*?)<\/h3>([\S\s]*?)(?=<h3>|$)/g;
         const subsectionMatches = Array.from(sectionContent.matchAll(subsectionRegex));
