@@ -1,6 +1,9 @@
 <script lang="ts">
     import { Accordion } from "$components";
-    import { FAQS as data } from "$lib";
+    import { parseMarkdownToFaqs, type FaqSection } from "$lib";
+    import { FAQS } from "$lib/markdown";
+
+    const data: FaqSection[] = parseMarkdownToFaqs(FAQS);
 </script>
 
 <section class="pt-12 pb-32 relative z-20">
