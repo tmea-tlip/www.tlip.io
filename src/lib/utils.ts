@@ -119,32 +119,25 @@ export function formatDateToDDMMYYYY(date?: Date | null) {
  */
 export function parseMarkdownToFaqs(html: string): FaqSection[] {
     const sections: FaqSection[] = [];
-    const regex = /<h2>(.*?)<\/h2>([\S\s]*?)(?=<h2>|$)/g;
+    const sectionRegex = /<h2>(.*?)<\/h2>([\S\s]*?)(?=<h2>|$)/g;
 
-    let match;
-    while ((match = regex.exec(html))) {
-        const sectionTitle = match[1];
-        const sectionContent: string = match[2].trim();
-        const subsections = [];
-
+    const sectionMatches = Array.from(html.matchAll(sectionRegex));
+    const sections = sectionMatches.map(([_, sectionTitle, sectionContent]) => {
         const subsectionRegex = /<h3>(.*?)<\/h3>([\S\s]*?)(?=<h3>|$)/g;
-        let subsectionMatch;
-        while ((subsectionMatch = subsectionRegex.exec(sectionContent))) {
-            const subsectionTitle = subsectionMatch[1];
-            const subsectionContent = subsectionMatch[2].trim();
-            subsections.push({
-                id: subsectionTitle.toLowerCase().replace(/[^\w-]/g, "-"),
-                title: subsectionTitle,
-                description: subsectionContent
-            });
-        }
+        const subsectionMatches = Array.from(sectionContent.matchAll(subsectionRegex));
 
-        sections.push({
+        const subsections: FaqSubsection[] = subsectionMatches.map(([_, subsectionTitle, subsectionContent]) => ({
+            id: subsectionTitle.toLowerCase().replace(/[^\w-]/g, "-"),
+            title: subsectionTitle,
+            description: subsectionContent.trim()
+        }));
+
+        return {
             id: sectionTitle.toLowerCase().replace(/[^\w-]/g, "-"),
             title: sectionTitle,
             subsections
-        });
-    }
+        };
+    });
 
     return sections;
 }
