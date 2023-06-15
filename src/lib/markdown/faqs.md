@@ -66,7 +66,7 @@ TLIP is a digital system that enables the secure storing and sharing of trade-re
 
 ### How is the TLIP project funded?
 
--   Development of the project is made possible by the generous support of the development agencies of the following governments: the Netherlands, the United Kingdom and the United States of America.
+Development of the project is made possible by the generous support of the development agencies of the following governments: the Netherlands, the United Kingdom and the United States of America.
 
 ### Will TLIP require users to invest in new technology?
 

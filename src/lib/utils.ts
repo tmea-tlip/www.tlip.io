@@ -125,6 +125,7 @@ export function parseMarkdownToFaqs(html: string): FaqSection[] {
     let currentSection: FaqSection = null;
     let currentSubsection: FaqSubsection = null;
     let firstHeadingLevel: number;
+    let lastMatchIndex: number;
 
     for (const matchHeading of headingMatches) {
         const level = Number.parseInt(matchHeading[1], 10);
@@ -135,6 +136,17 @@ export function parseMarkdownToFaqs(html: string): FaqSection[] {
             firstHeadingLevel = level;
         }
 
+        if (lastMatchIndex !== undefined) {
+            const descriptionStartIndex = lastMatchIndex;
+            const descriptionEndIndex = matchHeading.index;
+            const description = html.slice(descriptionStartIndex, descriptionEndIndex).trim();
+            if (currentSubsection) {
+                currentSubsection.description = description;
+            } else if (currentSection) {
+                currentSection.description = description;
+            }
+        }
+
         if (level === firstHeadingLevel) {
             currentSection = {
                 id,
@@ -142,6 +154,7 @@ export function parseMarkdownToFaqs(html: string): FaqSection[] {
                 subsections: []
             };
             sections.push(currentSection);
+            currentSubsection = null;
         } else if (level > firstHeadingLevel && currentSection) {
             currentSubsection = {
                 id,
@@ -151,14 +164,17 @@ export function parseMarkdownToFaqs(html: string): FaqSection[] {
             currentSection.subsections.push(currentSubsection);
         }
 
-        const startIndex = matchHeading.index + matchHeading[0].length;
-        const nextHeadingIndex = headingMatches[headingMatches.indexOf(matchHeading) + 1]?.index;
+        lastMatchIndex = matchHeading.index + matchHeading[0].length;
+    }
 
-        const endIndex = nextHeadingIndex ?? html.length;
-        const description = html.slice(startIndex, endIndex).trim();
-
+    if (lastMatchIndex !== undefined) {
+        const descriptionStartIndex = lastMatchIndex;
+        const descriptionEndIndex = html.length;
+        const description = html.slice(descriptionStartIndex, descriptionEndIndex).trim();
         if (currentSubsection) {
             currentSubsection.description = description;
+        } else if (currentSection) {
+            currentSection.description = description;
         }
     }
 
