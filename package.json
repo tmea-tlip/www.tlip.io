@@ -73,7 +73,8 @@
         "marked": "^4.2.5",
         "pino": "^8.14.1",
         "swiper": "^8.4.5",
-        "url-metadata": "^2.5.0"
+        "url-metadata": "^2.5.0",
+        "vite-plugin-markdown": "^2.1.0"
     },
     "lint-staged": {
         "**/*.{js,ts,svelte,scss}": [

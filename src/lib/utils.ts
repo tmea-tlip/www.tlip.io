@@ -111,3 +111,72 @@ export function formatDateToDDMMYYYY(date?: Date | null) {
         new Date(date)
     );
 }
+
+/**
+ * Parses the HTML string and returns an array of sections.
+ * @param html - The HTML string to parse.
+ * @returns An array of sections.
+ */
+export function parseMarkdownToFaqs(html: string): FaqSection[] {
+    const HEADING_REGEX = /<h(\d)>(.*?)<\/h\d>/g;
+    const headingMatches = Array.from(html.matchAll(HEADING_REGEX));
+
+    const sections: FaqSection[] = [];
+    let currentSection: FaqSection = null;
+    let currentSubsection: FaqSubsection = null;
+    let firstHeadingLevel: number;
+    let lastMatchIndex: number;
+
+    for (const matchHeading of headingMatches) {
+        const level = Number.parseInt(matchHeading[1], 10);
+        const title = matchHeading[2];
+        const id = title.toLowerCase().replace(/[^\w-]/g, "-");
+
+        if (!firstHeadingLevel) {
+            firstHeadingLevel = level;
+        }
+
+        if (lastMatchIndex !== undefined) {
+            const descriptionStartIndex = lastMatchIndex;
+            const descriptionEndIndex = matchHeading.index;
+            const description = html.slice(descriptionStartIndex, descriptionEndIndex).trim();
+            if (currentSubsection) {
+                currentSubsection.description = description;
+            } else if (currentSection) {
+                currentSection.description = description;
+            }
+        }
+
+        if (level === firstHeadingLevel) {
+            currentSection = {
+                id,
+                title,
+                subsections: []
+            };
+            sections.push(currentSection);
+            currentSubsection = null;
+        } else if (level > firstHeadingLevel && currentSection) {
+            currentSubsection = {
+                id,
+                title,
+                description: ""
+            };
+            currentSection.subsections.push(currentSubsection);
+        }
+
+        lastMatchIndex = matchHeading.index + matchHeading[0].length;
+    }
+
+    if (lastMatchIndex !== undefined) {
+        const descriptionStartIndex = lastMatchIndex;
+        const descriptionEndIndex = html.length;
+        const description = html.slice(descriptionStartIndex, descriptionEndIndex).trim();
+        if (currentSubsection) {
+            currentSubsection.description = description;
+        } else if (currentSection) {
+            currentSection.description = description;
+        }
+    }
+
+    return sections;
+}
