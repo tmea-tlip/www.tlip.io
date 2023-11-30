@@ -16,7 +16,7 @@
         { title: "Benefits", url: "/#benefins", id: "#benefins", onClick: scrollIntoView },
         { title: "FAQ", url: "/faq" },
         { title: "News", url: "/news" },
-        { title: "Blog", url: "/blog" }
+        { title: "Blog", url: "/blog", external: true }
     ];
 </script>
 

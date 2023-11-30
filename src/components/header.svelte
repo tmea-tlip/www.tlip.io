@@ -74,7 +74,7 @@
                 <ul
                     class="flex-row items-center md:space-x-2 lg:space-x-6 xl:space-x-8 hidden w-full lg:flex transition-opacity duration-200"
                 >
-                    {#each items as { title, url, id, onClick }}
+                    {#each items as { title, url, id, onClick, external }}
                         {#if title}
                             <li class="shrink-0">
                                 {#if id && url.startsWith("/#")}
@@ -88,6 +88,8 @@
                                 {:else if url || (id && url != $page.url.pathname)}
                                     <a
                                         href={url}
+                                        target={external ? "_blank" : null}
+                                        rel={external ? "noopener noreferrer" : null}
                                         class="lg:text-14 xl:text-16 {url === $page.url.pathname
                                             ? 'metropolis-700'
                                             : ''} hover:text-green-400">{title}</a
