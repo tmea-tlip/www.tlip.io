@@ -72,7 +72,7 @@
             {#if items}
                 <!-- Desktop -->
                 <ul
-                    class="flex-row items-center md:space-x-2 lg:space-x-6 xl:space-x-12 hidden w-full lg:flex transition-opacity duration-200"
+                    class="flex-row items-center md:space-x-2 lg:space-x-6 xl:space-x-8 hidden w-full lg:flex transition-opacity duration-200"
                 >
                     {#each items as { title, url, id, onClick }}
                         {#if title}
@@ -81,14 +81,14 @@
                                     <a
                                         href={url}
                                         on:click|preventDefault={onClick}
-                                        class="{id === '#' + $activeSectionId
+                                        class="lg:text-14 xl:text-16 {id === '#' + $activeSectionId
                                             ? 'metropolis-700'
                                             : ''} hover:text-green-400">{title}</a
                                     >
                                 {:else if url || (id && url != $page.url.pathname)}
                                     <a
                                         href={url}
-                                        class="{url === $page.url.pathname
+                                        class="lg:text-14 xl:text-16 {url === $page.url.pathname
                                             ? 'metropolis-700'
                                             : ''} hover:text-green-400">{title}</a
                                     >
