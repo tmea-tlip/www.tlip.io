@@ -72,23 +72,25 @@
             {#if items}
                 <!-- Desktop -->
                 <ul
-                    class="flex-row items-center md:space-x-2 lg:space-x-6 xl:space-x-12 hidden w-full lg:flex transition-opacity duration-200"
+                    class="flex-row items-center md:space-x-2 lg:space-x-6 xl:space-x-8 hidden w-full lg:flex transition-opacity duration-200"
                 >
-                    {#each items as { title, url, id, onClick }}
+                    {#each items as { title, url, id, onClick, external }}
                         {#if title}
                             <li class="shrink-0">
                                 {#if id && url.startsWith("/#")}
                                     <a
                                         href={url}
                                         on:click|preventDefault={onClick}
-                                        class="{id === '#' + $activeSectionId
+                                        class="lg:text-14 xl:text-16 {id === '#' + $activeSectionId
                                             ? 'metropolis-700'
                                             : ''} hover:text-green-400">{title}</a
                                     >
                                 {:else if url || (id && url != $page.url.pathname)}
                                     <a
                                         href={url}
-                                        class="{url === $page.url.pathname
+                                        target={external ? "_blank" : null}
+                                        rel={external ? "noopener noreferrer" : null}
+                                        class="lg:text-14 xl:text-16 {url === $page.url.pathname
                                             ? 'metropolis-700'
                                             : ''} hover:text-green-400">{title}</a
                                     >
@@ -115,7 +117,7 @@
                 ? 'opacity-0 hidden'
                 : 'opacity-100 block'}"
         >
-            {#each items as { title, url, id, onClick }}
+            {#each items as { title, url, id, onClick, external }}
                 {#if title}
                     <li class="py-4 nav-link min-w-max">
                         {#if id && url.startsWith("/#")}
@@ -130,6 +132,8 @@
                         {:else if url || (id && url != $page.url.pathname)}
                             <a
                                 on:click={closeMenu}
+                                target={external ? "_blank" : null}
+                                rel={external ? "noopener noreferrer" : null}
                                 class={url === $page.url.pathname ? "metropolis-700" : ""}
                                 href={url}>{title}</a
                             >

@@ -15,7 +15,8 @@
         { title: "Who are we?", url: "/#who-we-are", id: "#who-we-are", onClick: scrollIntoView },
         { title: "Benefits", url: "/#benefins", id: "#benefins", onClick: scrollIntoView },
         { title: "FAQ", url: "/faq" },
-        { title: "News", url: "/news" }
+        { title: "News", url: "/news" },
+        { title: "Blog", url: "https://medium.com/@tlip.io", external: true }
     ];
 </script>
 
