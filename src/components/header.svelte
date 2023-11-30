@@ -117,7 +117,7 @@
                 ? 'opacity-0 hidden'
                 : 'opacity-100 block'}"
         >
-            {#each items as { title, url, id, onClick }}
+            {#each items as { title, url, id, onClick, external }}
                 {#if title}
                     <li class="py-4 nav-link min-w-max">
                         {#if id && url.startsWith("/#")}
@@ -132,6 +132,8 @@
                         {:else if url || (id && url != $page.url.pathname)}
                             <a
                                 on:click={closeMenu}
+                                target={external ? "_blank" : null}
+                                rel={external ? "noopener noreferrer" : null}
                                 class={url === $page.url.pathname ? "metropolis-700" : ""}
                                 href={url}>{title}</a
                             >
