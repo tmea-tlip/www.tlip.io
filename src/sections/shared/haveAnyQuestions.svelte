@@ -88,7 +88,7 @@
 <style lang="scss">
     .buttons {
         @screen lg {
-            max-width: 426px;
+            max-width: 468px;
         }
     }
 </style>
