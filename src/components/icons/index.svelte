@@ -14,7 +14,8 @@
         Government,
         Trust,
         Visibility,
-        Accuracy
+        Accuracy,
+        LinkedIn
     } from "./index";
 
     export let name: string;
@@ -34,7 +35,8 @@
         friendship: Friendship,
         dataQuality: DataQuality,
         finance: Finance,
-        accuracy: Accuracy
+        accuracy: Accuracy,
+        linkedin: LinkedIn
     };
 </script>
 
