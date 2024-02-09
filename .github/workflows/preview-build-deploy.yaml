@@ -1,9 +1,10 @@
-name: www.tlip.io Components Build and Deploy
+name: www.tlip.io Preview Build and Deploy
 
 on:
   push:
     branches:
-      - main
+      - "*"
+      - "!main"
     paths:
       - "src/**"
       - "static/**"
@@ -31,4 +32,4 @@ jobs:
           VERCEL_PROJECT_ID: ${{ secrets.VERCEL_PROJECT_ID }}
           VERCEL_SCOPE: ${{ secrets.VERCEL_SCOPE }}
           ALIAS_DOMAINS: ${{ secrets.DOMAIN }}
-          PRODUCTION: true
+          PRODUCTION: false

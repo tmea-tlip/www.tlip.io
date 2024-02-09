@@ -1,17 +1,38 @@
 {
-    "semi": true,
-    "trailingComma": "none",
-    "singleQuote": false,
-    "printWidth": 120,
-    "tabWidth": 4,
-    "useTabs": false,
-    "arrowParens": "avoid",
-    "overrides": [
-        {
-            "files": "*.yaml",
-            "options": {
-                "tabWidth": 2
-            }
-        }
-    ]
+	"plugins": ["prettier-plugin-svelte", "prettier-plugin-tailwindcss"],
+	"semi": true,
+	"trailingComma": "none",
+	"singleQuote": false,
+	"jsxSingleQuote": false,
+	"printWidth": 120,
+	"tabWidth": 4,
+	"useTabs": true,
+	"arrowParens": "avoid",
+	"overrides": [
+		{
+			"files": "*.yaml",
+			"options": {
+				"tabWidth": 2
+			}
+		},
+		{
+			"files": "*.svelte",
+			"options": {
+				"parser": "svelte"
+			}
+		},
+		{
+			"files": ["*.md"],
+			"options": {
+				"tabWidth": 2,
+				"useTabs": false
+			}
+		},
+		{
+			"files": ["*.scss"],
+			"options": {
+				"singleQuote": true
+			}
+		}
+	]
 }
