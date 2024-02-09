@@ -1,9 +1,9 @@
 name: www.tlip.io Preview Build and Deploy
 
-on: pull_request
+on: [pull_request, push]
 
 jobs:
-  deploy:
+  build-deploy:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
