@@ -1,22 +1,13 @@
 name: www.tlip.io Preview Build and Deploy
 
-on:
-  pull_request:
-    branches:
-      - "*"
-      - "!main"
-    paths:
-      - "src/**"
-      - "static/**"
-      - "package.json"
-      - ".github/workflows/*"
+on: pull_request
 
 jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
-        uses: actions/checkout@v2
+        uses: actions/checkout@v4
         with:
           fetch-depth: 0
 
