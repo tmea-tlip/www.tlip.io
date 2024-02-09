@@ -1,7 +1,7 @@
 name: www.tlip.io Preview Build and Deploy
 
 on:
-  push:
+  pull_request:
     branches:
       - "*"
       - "!main"
