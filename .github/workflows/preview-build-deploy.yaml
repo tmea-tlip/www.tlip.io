@@ -21,14 +21,14 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
+      - name: Run Build
+        run: npm run build
+
       - name: Run Linting
         run: npm run lint
 
       - name: Run Svelte-Check
         run: npm run check
-
-      - name: Run Build
-        run: npm run build
 
       - name: Deploy to Vercel
         uses: BetaHuhn/deploy-to-vercel-action@v1
