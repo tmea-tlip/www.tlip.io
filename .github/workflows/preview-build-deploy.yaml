@@ -21,6 +21,9 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
+      - name: Create Dummy Env
+        run: cp .env.example .env
+
       - name: Run Build
         run: npm run build
 
