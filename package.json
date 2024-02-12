@@ -29,6 +29,7 @@
 		"lint:style": "stylelint -c stylelint.config.cjs **/*.{css,scss}",
 		"lint:markdown": "markdownlint **/*.md --ignore **/node_modules/**",
 		"lint": "npm-run-all lint:format lint:code lint:style lint:markdown",
+		"dist": "npm-run-all format build check lint",
 		"format": "prettier --write ."
 	},
 	"devDependencies": {

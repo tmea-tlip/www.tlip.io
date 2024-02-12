@@ -24,14 +24,8 @@ jobs:
       - name: Create Dummy Env
         run: cp .env.example .env
 
-      - name: Run Build
-        run: npm run build
-
-      - name: Run Linting
-        run: npm run lint
-
-      - name: Run Svelte-Check
-        run: npm run check
+      - name: Run Dist
+        run: npm run dist
 
       - name: Deploy to Vercel
         uses: BetaHuhn/deploy-to-vercel-action@v1
