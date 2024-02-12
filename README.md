@@ -43,7 +43,7 @@ npm run check
 
 ## Contributing
 
-When creating a new PR make sure you run `npm run dist` before committing, this will run all the necessary code quality checks that are also run in the GitHub actions. If any of these check fail locally, they will also fail creating the PR.
+When creating a new PR make sure you run `npm run dist` before committing, this will run all the checks necessary to ensure code quality. If any of these checks fail locally, they will also fail creating the PR.
 
 ## Deployment
 
