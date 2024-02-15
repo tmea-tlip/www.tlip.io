@@ -1,4 +1,4 @@
-name: www.tlip.io Components Build and Deploy
+name: www.tlip.io Production Build and Deploy
 
 on:
   push:
@@ -11,7 +11,8 @@ on:
       - ".github/workflows/*"
 
 concurrency:
-  group: ui
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
 
 jobs:
   deploy:
@@ -19,7 +20,7 @@ jobs:
     if: "!contains(github.event.head_commit.message, '[skip ci]')"
     steps:
       - name: Checkout
-        uses: actions/checkout@v2
+        uses: actions/checkout@v4
         with:
           fetch-depth: 0
       - name: Deploy to Vercel

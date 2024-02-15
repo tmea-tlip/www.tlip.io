@@ -1,0 +1,12 @@
+{
+	"recommendations": [
+		"dbaeumer.vscode-eslint",
+		"rvest.vs-code-prettier-eslint",
+		"stylelint.vscode-stylelint",
+		"svelte.svelte-vscode",
+		"ardenivanov.svelte-intellisense",
+		"bradlc.vscode-tailwindcss",
+		"davidanson.vscode-markdownlint",
+		"streetsidesoftware.code-spell-checker"
+	]
+}

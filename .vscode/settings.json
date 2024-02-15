@@ -1,4 +1,7 @@
 {
-    "css.validate": false,
-    "scss.lint.unknownAtRules": "ignore"
+	"css.validate": false,
+	"scss.lint.unknownAtRules": "ignore",
+	"eslint.validate": ["svelte"],
+	"stylelint.validate": ["css", "scss"],
+	"cSpell.words": ["TLIP"]
 }

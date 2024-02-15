@@ -1,69 +1,77 @@
 <script lang="ts">
-    import { ListLoader, Paginator } from "$components";
-    import { fetchUrlImageMetadata, type New } from "$lib";
-    import { onMount } from "svelte";
+	import { onMount } from "svelte";
+	import { logger } from "../../routes/api/logger";
+	import { ListLoader, Paginator } from "$components";
+	import { fetchUrlImageMetadata, type NewsItem } from "$lib";
 
-    let news: New[] = [];
-    let newsWithImages: New[] = [];
+	let news: NewsItem[] = [];
+	let newsWithImages: NewsItem[] = [];
 
-    let paginatorData = {
-        elements: [],
-        elementsType: "news",
-        itemsPerPage: 8,
-        paginatorActivePage: 1
-    };
-    let itemsPerPage: number = 8;
-    let paginatorActivePage: number = 1;
+	let paginatorData: {
+		elements: NewsItem[];
+		elementsType: string;
+		itemsPerPage: number;
+		paginatorActivePage: number;
+	} = {
+		elements: [],
+		elementsType: "news",
+		itemsPerPage: 8,
+		paginatorActivePage: 1
+	};
+	const itemsPerPage: number = 8;
+	let paginatorActivePage: number = 1;
 
-    $: paginatorData = {
-        elements: newsWithImages,
-        elementsType: "news",
-        itemsPerPage,
-        paginatorActivePage
-    };
+	$: paginatorData = {
+		elements: newsWithImages,
+		elementsType: "news",
+		itemsPerPage,
+		paginatorActivePage
+	};
 
-    $: {
-        if (paginatorActivePage !== 1) {
-            fetchImageFromMetaData(news, itemsPerPage, paginatorActivePage);
-        }
-    }
+	$: {
+		if (paginatorActivePage !== 1) {
+			// eslint-disable-next-line unicorn/prefer-top-level-await
+			fetchImageFromMetaData(news, itemsPerPage, paginatorActivePage).catch(err => logger.error(err));
+		}
+	}
 
-    onMount(async () => {
-        news = await fetchNews();
-        newsWithImages = news;
-        fetchImageFromMetaData(news, itemsPerPage, paginatorActivePage);
-    });
+	onMount(async () => {
+		news = await fetchNews();
+		newsWithImages = news;
+		await fetchImageFromMetaData(news, itemsPerPage, paginatorActivePage);
+	});
 
-    async function fetchNews(): Promise<New[]> {
-        let newsData: any = await fetch(`/api/get-news`);
-        newsData = await newsData.json();
-        return newsData;
-    }
+	const fetchNews = async () => {
+		const response = await fetch("/api/get-news");
+		const json = await response.json();
+		return json as NewsItem[];
+	};
 
-    function fetchImageFromMetaData(items, itemsPerPage: number, paginatorActivePage: number): void {
-        const firstIndex = (paginatorActivePage - 1) * itemsPerPage;
-        const lastIndex = paginatorActivePage * itemsPerPage - 1;
-        for (let i = firstIndex; i <= lastIndex; i++) {
-            if (items?.[i]) {
-                fetchUrlImageMetadata(items[i].linkUrl).then(imageUrl => {
-                    newsWithImages[i] = {
-                        ...items[i],
-                        imageUrl: imageUrl ?? "unreachable"
-                    };
-                });
-            }
-        }
-    }
+	const fetchImageFromMetaData = async (items: NewsItem[], itemsPerPage: number, paginatorActivePage: number) => {
+		const firstIndex = (paginatorActivePage - 1) * itemsPerPage;
+		const lastIndex = paginatorActivePage * itemsPerPage;
+		for (let i = firstIndex; i < lastIndex; i++) {
+			const linkUrl = items?.[i]?.linkUrl;
+			if (linkUrl) {
+				const imageUrl = await fetchUrlImageMetadata(linkUrl);
+
+				newsWithImages[i] = {
+					...items[i],
+					imageUrl: imageUrl ?? "unreachable"
+				};
+			}
+		}
+	};
 </script>
 
-<section class="pt-12 pb-32 relative z-20">
-    <div class="container">
-        <div class="w-full flex flex-col space-y-6 mt-8">
-            {#if newsWithImages?.length > 0}
-                <Paginator {...paginatorData} bind:paginatorActivePage />
-            {:else}
-                <ListLoader />
-            {/if}
-        </div>
-    </div>
+<section class="relative z-20 pb-32 pt-12">
+	<div class="container">
+		<div class="mt-8 flex w-full flex-col space-y-6">
+			{#if newsWithImages?.length > 0}
+				<Paginator {...paginatorData} bind:paginatorActivePage />
+			{:else}
+				<ListLoader />
+			{/if}
+		</div>
+	</div>
 </section>

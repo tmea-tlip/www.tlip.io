@@ -1,16 +1,16 @@
-$font-path: "https://webassets.iota.org/fonts/" !default;
-@import "./../../static/fonts/inter.scss";
-@import "./../../static/fonts/metropolis.scss";
+$font-path: 'https://webassets.iota.org/fonts/' !default;
+@import './../../static/fonts/inter.scss';
+@import './../../static/fonts/metropolis.scss';
 
-$fallback-fonts: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif,
-    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-$metropolis: "Metropolis", $fallback-fonts;
-$metropolis-light: "Metropolis Light", $fallback-fonts;
-$metropolis-medium: "Metropolis Medium", $fallback-fonts;
-$metropolis-semi-bold: "Metropolis Semi Bold", $fallback-fonts;
-$metropolis-bold: "Metropolis Bold", $fallback-fonts;
+$fallback-fonts: -apple-system, blinkmacsystemfont, 'Segoe UI', roboto, helvetica, arial, sans-serif,
+	'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+$metropolis: 'Metropolis', $fallback-fonts;
+$metropolis-light: 'Metropolis Light', $fallback-fonts;
+$metropolis-medium: 'Metropolis Medium', $fallback-fonts;
+$metropolis-semi-bold: 'Metropolis Semi Bold', $fallback-fonts;
+$metropolis-bold: 'Metropolis Bold', $fallback-fonts;
 
-$inter: "Inter", $fallback-fonts;
+$inter: 'Inter', $fallback-fonts;
 
 @tailwind components;
 @tailwind base;
@@ -19,100 +19,107 @@ $inter: "Inter", $fallback-fonts;
 html,
 body,
 #svelte {
-    @apply h-full;
+	@apply h-full;
 }
 
 * {
-    font-family: $inter;
+	font-family: $inter;
 }
 
 h1 {
-    @apply text-32;
-    @apply leading-130;
-    font-family: $metropolis-bold;
+	@apply text-32;
+	@apply leading-130;
 
-    @screen lg {
-        @apply text-48;
-    }
+	font-family: $metropolis-bold;
+
+	@screen lg {
+		@apply text-48;
+	}
 }
 
 h2 {
-    @apply text-28;
-    @apply leading-110;
-    font-family: $metropolis-bold;
+	@apply text-28;
+	@apply leading-110;
 
-    @screen lg {
-        @apply text-40;
-    }
+	font-family: $metropolis-bold;
+
+	@screen lg {
+		@apply text-40;
+	}
 }
 
 h3 {
-    @apply text-24;
-    @apply leading-125;
-    font-family: $metropolis-bold;
+	@apply text-24;
+	@apply leading-125;
 
-    @screen lg {
-        @apply text-32;
-    }
+	font-family: $metropolis-bold;
+
+	@screen lg {
+		@apply text-32;
+	}
 }
 
 h4 {
-    @apply text-20;
-    @apply leading-120;
-    @apply tracking-0.02;
-    font-family: $metropolis-bold;
+	@apply text-20;
+	@apply leading-120;
+	@apply tracking-0.02;
+
+	font-family: $metropolis-bold;
 }
 
 p {
-    @apply leading-150;
-    @apply tracking-0.04;
+	@apply leading-150;
+	@apply tracking-0.04;
 }
 
 .image-shadow {
-    box-shadow: 10px 10px 0px 0px #333333;
-    @apply rounded;
+	box-shadow: 10px 10px 0 0 #333333;
+	@apply rounded;
 }
 
 p > ul {
-    list-style: disc;
-    margin-left: 20px;
-    li:not(:last-of-type) {
-        margin-bottom: 10px;
-    }
+	margin-left: 20px;
+	list-style: disc;
+
+	li:not(:last-of-type) {
+		margin-bottom: 10px;
+	}
 }
 
 p > ol {
-    list-style: decimal;
-    margin-left: 20px;
-    li:not(:last-of-type) {
-        margin-bottom: 10px;
-    }
+	margin-left: 20px;
+	list-style: decimal;
+
+	li:not(:last-of-type) {
+		margin-bottom: 10px;
+	}
 }
 
 ul > li > a {
-    font-family: $metropolis;
+	font-family: $metropolis;
 }
 
 .metropolis-700 {
-    font-family: $metropolis-bold;
+	font-family: $metropolis-bold;
 }
 
 .metropolis-600 {
-    font-family: $metropolis-semi-bold;
+	font-family: $metropolis-semi-bold;
 }
 
 .metropolis-400 {
-    font-family: $metropolis;
+	font-family: $metropolis;
 }
+
 .metropolis-500 {
-    font-family: $metropolis-medium;
+	font-family: $metropolis-medium;
 }
 
 .container {
-    @screen xl {
-        max-width: 1200px;
-    }
-    @screen 2xl {
-        max-width: 1200px;
-    }
+	@screen xl {
+		max-width: 1200px;
+	}
+	@screen 2xl {
+		max-width: 1200px;
+	}
 }

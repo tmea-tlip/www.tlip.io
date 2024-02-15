@@ -1,13 +1,15 @@
 <script lang="ts">
-    import { Carousel } from "$components";
-    import { PARTNERS } from "$lib";
+	import { Carousel } from "$components";
+	import { PARTNERS } from "$lib";
+
+	export let id: string;
 </script>
 
-<div class="flex flex-col justify-center items-center space-y-9 pt-20 overflow-hidden">
-    {#each PARTNERS as partnerCategory}
-        <div class="w-full flex flex-col justify-center items-center">
-            <h4 class="font-bold mb-4 text-center">{partnerCategory.title}</h4>
-            <Carousel images={partnerCategory.logos} />
-        </div>
-    {/each}
+<div class="flex flex-col items-center justify-center space-y-9 overflow-hidden pt-20" {id}>
+	{#each PARTNERS as partnerCategory, idx}
+		<div class="flex w-full flex-col items-center justify-center">
+			<h4 class="mb-4 text-center font-bold">{partnerCategory.title}</h4>
+			<Carousel images={partnerCategory.logos} id={`partners-${idx}`} />
+		</div>
+	{/each}
 </div>

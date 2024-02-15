@@ -1,29 +1,29 @@
 <div class="flex flex-col space-y-6">
-    <div
-        role="status"
-        class="flex justify-between p-4 rounded-2xl border border-gray-200 shadow animate-pulse md:p-6 dark:border-gray-700"
-    >
-        <div class="bg-gray-200 dark:bg-gray-700 shadow animate-pulse w-16 h-16 md:w-20 md:h-20 rounded-2xl shrink-0" />
-        <div class="w-full ml-4">
-            <div class="h-4 bg-gray-200 rounded-full dark:bg-gray-700 w-32 md:w-96 mb-4" />
-            <div class="h-4 bg-gray-200 rounded-full dark:bg-gray-700 mb-2.5 w-2/3" />
-            <div class="flex items-center mt-4 space-x-3">
-                <div class="h-2.5 bg-gray-200 rounded-full dark:bg-gray-700 w-32 mb-2" />
-            </div>
-        </div>
-    </div>
+	<div
+		role="status"
+		class="flex animate-pulse justify-between rounded-2xl border border-gray-200 p-4 shadow dark:border-gray-700 md:p-6"
+	>
+		<div class="h-16 w-16 shrink-0 animate-pulse rounded-2xl bg-gray-200 shadow dark:bg-gray-700 md:h-20 md:w-20" />
+		<div class="ml-4 w-full">
+			<div class="mb-4 h-4 w-32 rounded-full bg-gray-200 dark:bg-gray-700 md:w-96" />
+			<div class="mb-2.5 h-4 w-2/3 rounded-full bg-gray-200 dark:bg-gray-700" />
+			<div class="mt-4 flex items-center space-x-3">
+				<div class="mb-2 h-2.5 w-32 rounded-full bg-gray-200 dark:bg-gray-700" />
+			</div>
+		</div>
+	</div>
 
-    <div
-        role="status"
-        class="flex justify-between p-4 rounded-2xl border border-gray-200 shadow animate-pulse md:p-6 dark:border-gray-700"
-    >
-        <div class="bg-gray-200 dark:bg-gray-700 shadow animate-pulse w-16 h-16 md:w-20 md:h-20 rounded-2xl shrink-0" />
-        <div class="w-full ml-4">
-            <div class="h-4 bg-gray-200 rounded-full dark:bg-gray-700 w-32 md:w-96 mb-4" />
-            <div class="h-4 bg-gray-200 rounded-full dark:bg-gray-700 mb-2.5 w-2/3" />
-            <div class="flex items-center mt-4 space-x-3">
-                <div class="h-2.5 bg-gray-200 rounded-full dark:bg-gray-700 w-32 mb-2" />
-            </div>
-        </div>
-    </div>
+	<div
+		role="status"
+		class="flex animate-pulse justify-between rounded-2xl border border-gray-200 p-4 shadow dark:border-gray-700 md:p-6"
+	>
+		<div class="h-16 w-16 shrink-0 animate-pulse rounded-2xl bg-gray-200 shadow dark:bg-gray-700 md:h-20 md:w-20" />
+		<div class="ml-4 w-full">
+			<div class="mb-4 h-4 w-32 rounded-full bg-gray-200 dark:bg-gray-700 md:w-96" />
+			<div class="mb-2.5 h-4 w-2/3 rounded-full bg-gray-200 dark:bg-gray-700" />
+			<div class="mt-4 flex items-center space-x-3">
+				<div class="mb-2 h-2.5 w-32 rounded-full bg-gray-200 dark:bg-gray-700" />
+			</div>
+		</div>
+	</div>
 </div>

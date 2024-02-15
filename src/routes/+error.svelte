@@ -1,28 +1,22 @@
 <script lang="ts">
-    import { Button } from "$components";
-    import { page } from "$app/stores";
-
-    const BUTTON = {
-        title: "Home",
-        as: "link",
-        url: "/"
-    };
+	import { page } from "$app/stores";
+	import { Button } from "$components";
 </script>
 
 <svelte:head>
-    <title>TMEA / TLIP - {$page.status}</title>
+	<title>TMEA / TLIP - {$page.status}</title>
 </svelte:head>
 
-<section class="w-full h-screen flex items-center justify-center p-20 overflow-hidden">
-    <div class="container flex flex-col items-center">
-        <div class="flex flex-col items-center text-center justify-center z-10 mb-5 text-grey-500">
-            <h2 class="uppercase flex text-64 leading-none">
-                {$page.status}
-            </h2>
-            <h4 class="my-2">{$page.error.message}</h4>
-        </div>
-        <div class="flex home-button">
-            <Button {...BUTTON} small />
-        </div>
-    </div>
+<section class="flex h-screen w-full items-center justify-center overflow-hidden p-20">
+	<div class="container flex flex-col items-center">
+		<div class="z-10 mb-5 flex flex-col items-center justify-center text-center text-grey-500">
+			<h2 class="flex text-64 uppercase leading-none">
+				{$page.status}
+			</h2>
+			<h4 class="my-2">{$page.error?.message}</h4>
+		</div>
+		<div class="home-button flex">
+			<Button title="Home" as="link" url="/" small />
+		</div>
+	</div>
 </section>

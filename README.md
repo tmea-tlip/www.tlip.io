@@ -1,14 +1,54 @@
-# www.tlip.io
+# Content for the Main TLIP Web Site
 
-Web site for TMEA TLIP project [www.tlip.io](www.tlip.io).
+Web site for TMA TLIP project [www.tlip.io](www.tlip.io).
 
-## VSCode
+The site is built using Svelte.
 
-The following VSCode extensions are recommended while working with this package.
+## Developing Locally
 
-* ESLint - <https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint>
-* Prettier - <https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode>
-* StyleLint - <https://marketplace.visualstudio.com/items?itemName=stylelint.vscode-stylelint>
-* Svelte - <https://marketplace.visualstudio.com/items?itemName=svelte.svelte-vscode>
-* Tailwind - <https://marketplace.visualstudio.com/items?itemName=bradlc.vscode-tailwindcss>
-* Markdown Lint - <https://marketplace.visualstudio.com/items?itemName=DavidAnson.vscode-markdownlint>
+First install and build the project.
+
+```shell
+npm run install
+npm run build
+```
+
+To run the development build locally:
+
+```shell
+npm run dev
+```
+
+To run the build and run the production version locally:
+
+```shell
+npm run build
+npm run preview
+```
+
+## Code Quality
+
+Make sure the code is formatted correctly by running the following command:
+
+```shell
+npm run format
+```
+
+To validate the quality of your code and check it for errors you can run the following commands.
+
+```shell
+npm run lint
+npm run check
+```
+
+## Contributing
+
+When creating a new PR make sure you run `npm run dist` before committing, this will run all the checks necessary to ensure code quality. If any of these checks fail locally, they will also fail creating the PR.
+
+## Deployment
+
+The project contains GitHub actions to automatically deploy the project.
+
+When you create a PR for a new feature it will automatically trigger the preview GitHub action, which will first build and check the code, before deploying it to a preview location.
+
+Features branches that are merged into `main` will trigger the production action to make the site live.
