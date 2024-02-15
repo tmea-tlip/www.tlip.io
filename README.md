@@ -49,6 +49,6 @@ When creating a new PR make sure you run `npm run dist` before committing, this 
 
 The project contains GitHub actions to automatically deploy the project.
 
-When you create a PR for a new feature it will automatically trigger the preview GitHub action, which will first build and check the code, before deploying it to a staging location.
+When you create a PR for a new feature it will automatically trigger the preview GitHub action, which will first build and check the code, before deploying it to a preview location.
 
 Features branches that are merged into `main` will trigger the production action to make the site live.
