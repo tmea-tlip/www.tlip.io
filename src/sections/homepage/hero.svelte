@@ -104,8 +104,7 @@
 	}
 
 	swiper-slide {
-		img,
-		.video-container {
+		img {
 			height: 200px;
 			@apply object-contain;
 		}
@@ -113,9 +112,6 @@
 		@media only screen and (min-width: 1024px) {
 			img {
 				height: 500px;
-			}
-			.video-container {
-				height: 350px;
 			}
 		}
 	}
