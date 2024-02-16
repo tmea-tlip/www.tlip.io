@@ -17,9 +17,20 @@ export interface Link {
  */
 export interface Heading {
 	/**
+	 * Section title.
+	 */
+	section?: string;
+
+	/**
 	 * Heading Title.
 	 */
 	title: string;
+
+	/**
+	 * Heading Sub Title.
+	 */
+	subtitle?: string;
+
 	/**
 	 * Heading Description.
 	 */

@@ -1,21 +1,29 @@
 <script lang="ts">
 	import {
-		Decentralized,
-		Secure,
-		Upgrades,
-		Data,
-		Friendship,
-		DataQuality,
-		Finance,
-		DataAccess,
-		Innovative,
-		Time,
-		Exports,
-		Government,
-		Trust,
-		Visibility,
 		Accuracy,
-		LinkedIn
+		ChallengeNo,
+		ChallengeYes,
+		Data,
+		DataAccess,
+		DataQuality,
+		Decentralized,
+		Exports,
+		Finance,
+		Friendship,
+		Government,
+		Innovative,
+		Interoperability,
+		LinkedIn,
+		Neutrality,
+		OpenSource,
+		PaperAndDigital,
+		Scalability,
+		Secure,
+		Time,
+		Trust,
+		Upgrade,
+		Upgrades,
+		Visibility
 	} from "./index";
 
 	export let name: string;
@@ -36,7 +44,15 @@
 		dataQuality: DataQuality,
 		finance: Finance,
 		accuracy: Accuracy,
-		linkedin: LinkedIn
+		linkedin: LinkedIn,
+		interoperability: Interoperability,
+		neutrality: Neutrality,
+		openSource: OpenSource,
+		paperAndDigital: PaperAndDigital,
+		scalability: Scalability,
+		upgrade: Upgrade,
+		challengeNo: ChallengeNo,
+		challengeYes: ChallengeYes
 	};
 </script>
 

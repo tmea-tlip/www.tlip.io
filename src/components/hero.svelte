@@ -8,26 +8,40 @@
 	export let color: string | undefined = "text-white";
 	export let background: string = "bg-blue-300";
 	export let backgroundOpacity: string | undefined = undefined;
+	export let backgroundImage: string | undefined = undefined;
 	export let buttons: ButtonType[] = [];
+	export let style: string | undefined = undefined;
 
 	$: hasSlots = Object.keys($$slots).length > 0;
 </script>
 
-<section class="relative z-20 h-full w-full overflow-hidden {background} pb-14 pt-28 lg:pb-28 lg:pt-40" {id}>
-	<img
-		src="/assets/background-hero.png"
-		alt="background"
-		class="bottom-54 background-image absolute z-0 lg:bottom-0 lg:h-2/3 lg:w-4/5 {backgroundOpacity}"
-	/>
+<section class="relative z-20 h-full w-full overflow-hidden {background} pb-14 pt-28" {id} {style}>
+	{#if backgroundImage}
+		<img
+			src={backgroundImage}
+			alt="background"
+			class="bottom-54 background-image absolute z-0 lg:bottom-0 lg:h-2/3 lg:w-4/5 {backgroundOpacity}"
+		/>
+	{/if}
 	<div
-		class={`container z-10 flex h-full w-full flex-col items-center ${hasSlots ? "justify-center" : ""} lg:flex-row`}
+		class={`container z-10 flex h-full w-full flex-col items-center ${hasSlots ? "justify-center" : ""} lg:flex-row lg:gap-5`}
 	>
-		<div class={`w-full text-center ${hasSlots ? "lg:w-1/2" : "text-left"} lg:mr-8 lg:text-left`}>
+		<div class={`w-full flex-1 text-center ${hasSlots ? "w-full lg:w-2/5" : "text-left"} lg:text-left`}>
+			{#if heading?.section}
+				<h6 class="lgtext-20 mb-2 text-16 {color} metropolis-700">{heading.section}</h6>
+			{/if}
 			{#if heading?.title}
-				<h1 class="mb-6 {color}">{heading.title}</h1>
+				<h1 class="mb-6 text-28 lg:text-48 {color} metropolis-600">{heading.title}</h1>
+			{/if}
+			{#if heading?.subtitle}
+				<h6 class="mb-6 text-18 lg:text-24 {color} metropolis-700">{heading.subtitle}</h6>
 			{/if}
 			{#if heading?.description}
-				<h4 class="metropolis-400 {color} lg:max-w-md">{heading.description}</h4>
+				<h4
+					class={`${color} lg:max-w-md ${heading.description.length > 200 ? "text-16" : "text-16 lg:text-24"} metropolis-400 whitespace-pre-line`}
+				>
+					{heading.description}
+				</h4>
 			{/if}
 			{#if buttons.length > 0}
 				<div class="mb-9 mt-6 flex justify-center lg:mb-0 lg:mt-10 lg:justify-start">
@@ -40,7 +54,7 @@
 			{/if}
 		</div>
 		{#if hasSlots}
-			<div class="w-full max-w-xl lg:w-6/12 xl:w-10/12">
+			<div class="flex w-auto items-center justify-center lg:w-3/5 lg:justify-end">
 				<slot />
 			</div>
 		{/if}

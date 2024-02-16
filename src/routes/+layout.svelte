@@ -1,27 +1,71 @@
 <script lang="ts">
 	import { Footer, Header } from "$components";
-	import type { SitePage } from "$lib";
-	import { scrollIntoView } from "$lib/utils";
+	import type { NavigationMenu } from "$lib";
+	// import { scrollIntoView } from "$lib/utils";
 	import "../scss/index.scss";
 
-	const SITE_PAGES: SitePage[] = [
-		{ title: "What is TLIP?", url: "/#what-is-tlip", id: "#what-is-tlip", onClick: scrollIntoView },
-		{ title: "Why TLIP?", url: "/#why-tlip", id: "#why-tlip", onClick: scrollIntoView },
+	const navigationMenu: NavigationMenu[] = [
 		{
-			title: "How does TLIP work?",
-			url: "/#how-does-tlip-work",
-			id: "#how-does-tlip-work",
-			onClick: scrollIntoView
+			label: "About Us",
+			entries: [
+				{
+					label: "TLIP Institute",
+					url: "/institute"
+				},
+				{
+					label: "Our Ecosystem",
+					url: "/ecosystem"
+				}
+			]
 		},
-		{ title: "Who are we?", url: "/#who-we-are", id: "#who-we-are", onClick: scrollIntoView },
-		{ title: "Benefits", url: "/#benefins", id: "#benefins", onClick: scrollIntoView },
-		{ title: "FAQ", url: "/faq" },
-		{ title: "News", url: "/news" },
-		{ title: "Blog", url: "https://medium.com/@tlip.io", external: true }
+		{
+			label: "Understand TLIP",
+			entries: [
+				{
+					label: "What is TLIP?",
+					url: "/what-is"
+				},
+				{
+					label: "Why TLIP?",
+					url: "/why"
+				},
+				{
+					label: "How TLIP Works",
+					url: "/#how-does-it-work"
+				},
+				{
+					label: "TLIP In Action",
+					url: "/#in-action"
+				}
+			]
+		},
+		{
+			label: "Resources",
+			entries: [
+				{
+					label: "FAQ",
+					url: "/faq"
+				},
+				{
+					label: "Wiki",
+					url: "https://docs.tlip.io/",
+					external: true
+				},
+				{
+					label: "News",
+					url: "/news"
+				}
+			]
+		},
+		{
+			label: "Blog",
+			url: "https://medium.com/@tlip.io",
+			external: true
+		}
 	];
 </script>
 
-<Header items={SITE_PAGES} />
+<Header {navigationMenu} />
 <main>
 	<slot />
 </main>

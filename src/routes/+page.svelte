@@ -5,10 +5,10 @@
 		Benefits,
 		Hero,
 		HowDoesTLIPWork,
-		Partners,
-		UkEcosystem,
+		InAction,
+		Institute,
+		Ecosystem,
 		WhatIsTLIP,
-		WhoAreWe,
 		WhyTLIP
 	} from "$sections/homepage";
 	import { HaveAnyQuestions } from "$sections/shared";
@@ -19,8 +19,8 @@
 			id: "hero"
 		},
 		{
-			component: Partners,
-			id: "partners"
+			component: Institute,
+			id: "institute"
 		},
 		{
 			component: WhatIsTLIP,
@@ -28,25 +28,23 @@
 		},
 		{
 			component: WhyTLIP,
-			id: "why-tlip",
-			lightModeNavbar: true
+			id: "why-tlip"
 		},
 		{
 			component: HowDoesTLIPWork,
-			id: "how-does-tlip-work"
+			id: "how-does-it-work"
 		},
 		{
-			component: WhoAreWe,
-			id: "who-we-are"
-		},
-		{
-			component: UkEcosystem,
-			id: "uk-ecosystem",
-			lightModeNavbar: true
+			component: InAction,
+			id: "in-action"
 		},
 		{
 			component: Benefits,
-			id: "benefins"
+			id: "benefits"
+		},
+		{
+			component: Ecosystem,
+			id: "ecosystem"
 		},
 		{
 			component: HaveAnyQuestions,

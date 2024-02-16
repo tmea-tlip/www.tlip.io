@@ -1,88 +1,96 @@
 <script lang="ts">
-	import { Autoplay, FreeMode } from "swiper";
-	import { Swiper, SwiperSlide } from "swiper/svelte";
-	// Import Swiper styles
 	// eslint-disable-next-line import/no-unresolved
-	import "swiper/css";
+	import { register } from "swiper/element/bundle";
+	import { Button } from "$components";
+	import { type CarouselEntry, MAX_CONTENT_WIDTH } from "$lib";
 
-	export let images: string[] = [];
-	export let id: string;
+	export let items: CarouselEntry[] = [];
+	export let itemWidth: number = 180;
+	export let itemHeight: number | undefined = undefined;
+	export let showNavigation: boolean | undefined = undefined;
+	export let timing: number = 1000;
 
-	let innerWidth: number;
+	let swiperWidth: number = 0;
 
-	const SLIDE_WIDTH = 144; // px
-	const SLIDE_HEIGHT = 144; // px
-	const SLIDE_GUTTER = 40; // px
-	const MAX_CAROUSEL_WIDTH = 1600; // px
+	const SLIDE_GUTTER = 20;
 
-	let swiperOptions: { [key: string]: unknown } = {};
-	$: {
-		const imageLength = images ? SLIDE_WIDTH * images?.length : 0;
-		const gutterLength = images ? SLIDE_GUTTER * (images?.length - 1) : 0;
+	let staticCarousel = false;
+	let slidesPerView = 0;
+	let pagination: { el: string | null; bullets: string[] } | boolean = { el: null, bullets: [] };
 
-		const sliderWidth = imageLength + gutterLength;
-		const staticCarousel = sliderWidth <= Math.min(innerWidth ?? MAX_CAROUSEL_WIDTH, MAX_CAROUSEL_WIDTH);
-
-		swiperOptions = {
-			slidesPerView: "auto",
-			class: "mySwiper",
-			spaceBetween: 40,
-			centeredSlides: !staticCarousel,
-			centerInsufficientSlides: true,
-			modules: [Autoplay, FreeMode],
-			freeMode: {
-				enabled: !staticCarousel,
-				sticky: false,
-				momentumBounce: true,
-				momentumRatio: 0.4,
-				momentumVelocityRatio: 0.4,
-				minimumVelocity: 0
-			},
-			preventClicks: true,
-			loop: !staticCarousel,
-			slideToClickedSlide: true,
-			speed: staticCarousel ? 0 : 2000,
-			autoplay: {
-				enabled: !staticCarousel,
-				delay: 0,
-				disableOnInteraction: false
-			}
-		};
+	if (showNavigation) {
+		pagination = true;
 	}
+
+	$: {
+		const itemsWidth = items ? itemWidth * items.length : 0;
+		const gutterWidth = items ? SLIDE_GUTTER * (items.length - 1) : 0;
+
+		const totalItemsWidth = itemsWidth + gutterWidth;
+		staticCarousel = totalItemsWidth <= swiperWidth;
+
+		slidesPerView = staticCarousel ? items.length : Math.floor(swiperWidth / (itemWidth + SLIDE_GUTTER));
+	}
+
+	register();
 </script>
 
-<svelte:window bind:innerWidth />
-
-<div class="swiper-block" style="--max-width: {MAX_CAROUSEL_WIDTH}px;" {id}>
-	{#key swiperOptions}
-		<Swiper {...swiperOptions}>
-			{#each images as image}
-				<SwiperSlide>
+<section class="swiper-block" style={`--max-width: ${MAX_CONTENT_WIDTH}px}`}>
+	{#key staticCarousel || slidesPerView}
+		<swiper-container
+			bind:clientWidth={swiperWidth}
+			class="mySwiper"
+			loop={!staticCarousel}
+			autoplay-delay={staticCarousel ? 0 : timing}
+			autoplay-disable-on-interaction={!staticCarousel}
+			{slidesPerView}
+			spaceBetween={SLIDE_GUTTER}
+			centerInsufficientSlides={staticCarousel}
+			centerSlides={staticCarousel}
+			{pagination}
+		>
+			{#each items as item}
+				<swiper-slide class="flex flex-col items-center gap-2">
 					<div
-						class="rounded border border-grey-100 p-4"
-						style={`width: ${SLIDE_WIDTH}px; height: ${SLIDE_HEIGHT}px;`}
+						class={`content-container flex h-full flex-col ${item.src ? "" : "mb-20 border p-8"}`}
+						style:width={`${itemWidth}px`}
+						style:height={itemHeight ? `${itemHeight}px` : "auto"}
 					>
-						<img src={image} alt="" class="h-full w-full object-contain" />
+						{#if item.src}
+							<div
+								class="flex items-center border p-2"
+								style:width={`${itemWidth}px`}
+								style:height={`${itemWidth}px`}
+							>
+								<img src={item.src} alt={item.label ?? ""} class="w-full" />
+							</div>
+						{/if}
+						{#if item.label}
+							<p class={`w-full flex-1 ${item.src ? "text-center text-14" : "text-left text-16"}`}>
+								{item.label}
+							</p>
+						{/if}
+						{#if item.footnote}
+							<div class="w-full">
+								<h3 class="metropolis-700 mt-4 text-left text-16">{item.footnote}</h3>
+							</div>
+						{/if}
+						{#if item.buttons}
+							<div class="mt-4 flex w-full flex-row gap-5">
+								{#each item.buttons as button}
+									<Button {...button} small plain />
+								{/each}
+							</div>
+						{/if}
 					</div>
-				</SwiperSlide>
+				</swiper-slide>
 			{/each}
-		</Swiper>
+		</swiper-container>
 	{/key}
-</div>
+</section>
 
 <style lang="scss">
-	.swiper-block {
-		max-width: var(--max-width);
-	}
-	:global(.swiper-block .swiper) {
-		height: 100%;
-		width: 100%;
-	}
-	:global(.swiper-block .swiper .swiper-slide) {
-		@apply max-w-min;
-	}
-
-	:global(.swiper-free-mode > .swiper-wrapper) {
-		transition-timing-function: linear;
+	:root {
+		--swiper-pagination-color: #005923;
 	}
 </style>

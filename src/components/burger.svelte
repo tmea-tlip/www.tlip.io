@@ -1,21 +1,15 @@
 <script lang="ts">
-	import { lightModeNavbar } from "$lib";
-
 	export let open: boolean = false;
 	export let classes: string = "";
 	export let onClick: (event: Event) => void = () => {};
-	export let sideMenuOpen: boolean;
-
-	const stroke: string = "currentColor";
-	$: color = $lightModeNavbar && !sideMenuOpen ? "white" : "dark";
 </script>
 
 <button class="z-20 flex rounded-full {classes}" class:open on:click={onClick}>
 	<svg width="32" height="32">
-		<line class="top" x1="4" y1="7" x2="28" y2="7" {stroke} {color} />
-		<line class="middle" x1="4" y1="13" x2="28" y2="13" {stroke} {color} />
-		<line class="middle" x1="4" y1="19" x2="28" y2="19" {stroke} {color} />
-		<line class="bottom" x1="4" y1="25" x2="28" y2="25" {stroke} {color} />
+		<line class="top" x1="4" y1="7" x2="28" y2="7" stroke="currentColor" color="dark" />
+		<line class="middle" x1="4" y1="13" x2="28" y2="13" stroke="currentColor" color="dark" />
+		<line class="middle" x1="4" y1="19" x2="28" y2="19" stroke="currentColor" color="dark" />
+		<line class="bottom" x1="4" y1="25" x2="28" y2="25" stroke="currentColor" color="dark" />
 	</svg>
 </button>
 
