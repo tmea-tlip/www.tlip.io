@@ -18,37 +18,6 @@
 		<swiper-slide>
 			<Hero
 				heading={{
-					title: "Trade and Logistics Information Pipeline",
-					description:
-						"Creating paperless trade through a trusted infrastructure that enables secure and efficient cross-border collaboration between multiple parties."
-				}}
-				buttons={[
-					{
-						title: "Contact us",
-						url: "mailto:tlip@iota.org"
-					}
-				]}
-				background="bg-green-200"
-				color="text-grey-500"
-				backgroundImage="/assets/background-hero.png"
-			>
-				<div class="video-container">
-					<video
-						class="image-shadow h-full w-full object-cover"
-						muted
-						controls
-						preload="metadata"
-						poster="/assets/posters/Akeyos_flowers_poster.png"
-					>
-						<source src="https://files.iota.org/media/Akeyos_flowers.mp4" type="video/mp4" />
-						<track kind="captions" />
-					</video>
-				</div>
-			</Hero>
-		</swiper-slide>
-		<swiper-slide>
-			<Hero
-				heading={{
 					section: "TLIP",
 					title: "Revolutionizing Global Trade",
 					description:
