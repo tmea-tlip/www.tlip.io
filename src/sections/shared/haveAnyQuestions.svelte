@@ -39,6 +39,19 @@
 			width: 24
 		}
 	};
+
+	const X_SOCIAL: {
+		href: string;
+		icon: ComponentProps<Icon>;
+	} = {
+		href: "https://twitter.com/TLIP_io",
+		icon: {
+			name: "x",
+			fill: "#000",
+			height: 24,
+			width: 24
+		}
+	};
 </script>
 
 <section class="bg-blue-300 py-20" {id}>
@@ -70,6 +83,14 @@
 						class={"mx-auto mb-6 flex w-1/2 justify-center rounded-md bg-white p-4 transition-opacity last:mb-0 hover:opacity-80 md:mb-0 md:w-auto"}
 					>
 						<Icon {...LINKEDIN_SOCIAL.icon} />
+					</a>
+					<a
+						href={X_SOCIAL.href}
+						target="_blank"
+						rel="noopener noreferrer"
+						class={"mx-auto mb-6 flex w-1/2 justify-center rounded-md bg-white p-4 transition-opacity last:mb-0 hover:opacity-80 md:mb-0 md:w-auto"}
+					>
+						<Icon {...X_SOCIAL.icon} />
 					</a>
 				{:else}
 					<div class="mx-auto mb-6 w-1/2 uppercase last:mb-0 md:mb-0 lg:mx-0">

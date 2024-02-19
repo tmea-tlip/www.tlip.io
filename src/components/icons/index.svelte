@@ -23,7 +23,8 @@
 		Trust,
 		Upgrade,
 		Upgrades,
-		Visibility
+		Visibility,
+		X
 	} from "./index";
 
 	export let name: string;
@@ -52,7 +53,8 @@
 		scalability: Scalability,
 		upgrade: Upgrade,
 		challengeNo: ChallengeNo,
-		challengeYes: ChallengeYes
+		challengeYes: ChallengeYes,
+		x: X
 	};
 </script>
 

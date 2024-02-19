@@ -25,3 +25,4 @@ export { default as Trust } from "./trust.svelte";
 export { default as Upgrade } from "./upgrade.svelte";
 export { default as Upgrades } from "./upgrades.svelte";
 export { default as Visibility } from "./visibility.svelte";
+export { default as X } from "./x.svelte";
