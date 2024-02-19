@@ -1,15 +1,7 @@
-/* eslint-disable jsdoc/require-jsdoc */
-export const GOVERNMENT_PARTNERS = [
-	"/assets/partners/AFA-logo.png",
-	"/assets/partners/KRA-logo.png",
-	"/assets/partners/KEPHIS-logo.png",
-	"/assets/partners/KENTrade-logo.png",
-	"/assets/partners/Trademark-logo.png",
-	"/assets/partners/ministry-foreign-affairs-netherlands-logo.png",
-	"/assets/partners/hm-government-logo.png"
-];
+import type { CarouselEntry } from "$lib";
 
-export const ECOSYSTEM_PARTNERS = [
+/* eslint-disable jsdoc/require-jsdoc */
+export const COMMERCIAL_PARTNERS: CarouselEntry[] = [
 	{
 		src: "/assets/partners/institute-of-export-logo.png"
 	},
@@ -63,7 +55,7 @@ export const ECOSYSTEM_PARTNERS = [
 	}
 ];
 
-export const BOARD_MEMBERS = [
+export const BOARD_MEMBERS: CarouselEntry[] = [
 	{
 		label: "Global Alliance for Trade Facilitation",
 		src: "/assets/board/global-alliance-for-trade-facilitation.png"
@@ -90,7 +82,31 @@ export const BOARD_MEMBERS = [
 	}
 ];
 
-export const PARTNER_QUOTES = [
+export const GOVERNMENT_PARTNERS: CarouselEntry[] = [
+	{
+		src: "/assets/partners/AFA-logo.png"
+	},
+	{
+		src: "/assets/partners/KRA-logo.png"
+	},
+	{
+		src: "/assets/partners/KEPHIS-logo.png"
+	},
+	{
+		src: "/assets/partners/KENTrade-logo.png"
+	},
+	{
+		src: "/assets/partners/Trademark-logo.png"
+	},
+	{
+		src: "/assets/partners/ministry-foreign-affairs-netherlands-logo.png"
+	},
+	{
+		src: "/assets/partners/hm-government-logo.png"
+	}
+];
+
+export const PARTNER_QUOTES: CarouselEntry[] = [
 	{
 		label: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam tempor convallis lectus, mattis ullamcorper lorem congue eget",
 		footnote: "- Global Alliance for Trade Facilitation",

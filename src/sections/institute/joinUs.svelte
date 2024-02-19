@@ -15,12 +15,6 @@ Based on our experiences of implementing TLIP in Kenya and the UK, we welcome pu
 
 We envision an open ecosystem where industry, government, and businesses can come together to drive meaningful change.`
 	}}
-	buttons={[
-		{
-			title: "Contact Us",
-			url: "mailto:tlip@iota.org"
-		}
-	]}
 	background="light"
 	color="text-grey-500"
 	{id}

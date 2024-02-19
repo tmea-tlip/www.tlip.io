@@ -3,7 +3,7 @@
 	import type { Heading } from "$lib";
 
 	const heading: Heading = {
-		title: "Frequent Asked Questions",
+		title: "Frequently Asked Questions",
 		description: "Have questions? We are here to help."
 	};
 </script>
