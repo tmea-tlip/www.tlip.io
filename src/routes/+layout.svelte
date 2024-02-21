@@ -9,8 +9,8 @@
 			label: "About Us",
 			entries: [
 				{
-					label: "TLIP Institute",
-					url: "/institute"
+					label: "The Consortium",
+					url: "/consortium"
 				},
 				{
 					label: "Our Ecosystem",

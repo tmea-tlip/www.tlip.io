@@ -37,15 +37,15 @@
 		<swiper-slide>
 			<Hero
 				heading={{
-					section: "TLIP Institute",
+					section: "The Consortium",
 					title: "Impartial Governance",
 					description:
-						"The neutrality of TLIP is secured by the TLIP Institute, governed by a board of international organisations and guided by the goals of public good."
+						"The neutrality of TLIP is secured by a consortium, aiming to develop relevant governance structures involving impartial international organisations and guided by the goals of public good."
 				}}
 				buttons={[
 					{
 						title: "About Us",
-						url: "/institute"
+						url: "/consortium"
 					}
 				]}
 				style="background:#64A9D1"

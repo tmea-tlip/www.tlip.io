@@ -9,7 +9,7 @@
 		title: "Our Call for Collaboration",
 		description: `Our goal is to foster global partnerships that enable everyone to participate in international trade.
 
-The governing body of the TLIP Institute invites like-minded global trade actors to help shape the future of trade facilitation.
+The partners invite like-minded global trade actors to co-design the future of trade facilitation.
 
 Based on our experiences of implementing TLIP in Kenya and the UK, we welcome public and private entities to build on TLIP and develop it into a public utility infrastructure.
 

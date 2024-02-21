@@ -6,10 +6,10 @@
 <Hero
 	heading={{
 		section: "About Us",
-		title: "The TLIP Institute",
+		title: "The TLIP Teaming Agreement",
 		subtitle: "Seamless Trade for All",
 		description:
-			"The TLIP Institute is a non-profit organization that promotes transparency, inclusivity, and efficiency in global trade operations."
+			"The future governance structure of TLIP aims to promote transparency, inclusivity, and efficiency in global trade operations."
 	}}
 	buttons={[
 		{

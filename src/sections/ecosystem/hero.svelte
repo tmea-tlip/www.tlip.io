@@ -5,7 +5,7 @@
 
 <Hero
 	heading={{
-		section: "The TLIP Institute",
+		section: "About Us",
 		title: "Our Ecosystem"
 	}}
 	color="text-white"

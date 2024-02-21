@@ -40,7 +40,7 @@
 				<h4
 					class={`${color} lg:max-w-md ${heading.description.length > 200 ? "text-16" : "text-16 lg:text-24"} metropolis-400 whitespace-pre-line`}
 				>
-					{heading.description}
+					{@html heading.description}
 				</h4>
 			{/if}
 			{#if buttons.length > 0}

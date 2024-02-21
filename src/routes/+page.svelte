@@ -6,7 +6,7 @@
 		Hero,
 		HowDoesTLIPWork,
 		InAction,
-		Institute,
+		Consortium,
 		Ecosystem,
 		WhatIsTLIP,
 		WhyTLIP
@@ -19,8 +19,8 @@
 			id: "hero"
 		},
 		{
-			component: Institute,
-			id: "institute"
+			component: Consortium,
+			id: "consortium"
 		},
 		{
 			component: WhatIsTLIP,

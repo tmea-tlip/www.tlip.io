@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { ObservedRoute } from "$components";
 	import type { Section } from "$lib";
-	import { GoverningBody, Hero, Inquiries, JoinUs, Quotes } from "$sections/institute";
+	import { GoverningBody, Hero, Inquiries, JoinUs, Quotes } from "$sections/consortium";
 	import { HaveAnyQuestions } from "$sections/shared";
 
 	const sections: Section[] = [
