@@ -1,112 +1,113 @@
 import type { CarouselEntry } from "$lib";
 
 /* eslint-disable jsdoc/require-jsdoc */
+
+export const GOVERNMENT_PARTNERS: CarouselEntry[] = [
+	{
+		src: "/assets/government/kra.png"
+	},
+	{
+		src: "/assets/government/kephis.png"
+	},
+	{
+		src: "/assets/government/kentrade.png"
+	},
+	{
+		src: "/assets/government/usaid.png"
+	},
+	{
+		src: "/assets/government/mofa-netherlands.png"
+	},
+	{
+		src: "/assets/government/afa.png"
+	}
+];
+
 export const COMMERCIAL_PARTNERS: CarouselEntry[] = [
 	{
-		src: "/assets/partners/institute-of-export-logo.png"
+		src: "/assets/partners/mcp.png"
 	},
 	{
-		src: "/assets/partners/premier-nutrition-logo.png"
+		src: "/assets/partners/royal-flora-holland.png"
 	},
 	{
-		src: "/assets/partners/geodis-logo.png"
+		src: "/assets/partners/dfds.png"
 	},
 	{
-		src: "/assets/partners/royal-flora-holland-logo.png"
+		src: "/assets/partners/kenya-airways.png"
 	},
 	{
-		src: "/assets/partners/CNSI-logo.png"
+		src: "/assets/partners/mansys.png"
 	},
 	{
-		src: "/assets/partners/MCP-logo.png"
+		src: "/assets/partners/sct.png"
 	},
 	{
-		src: "/assets/partners/mansys-logo.png"
+		src: "/assets/partners/tapa.png"
 	},
 	{
-		src: "/assets/partners/SCT-logo.png"
+		src: "/assets/partners/coriolis.png"
 	},
 	{
-		src: "/assets/partners/coriolis-logo.png"
+		src: "/assets/partners/dpworld.png"
 	},
 	{
-		src: "/assets/partners/TAPA-logo.png"
+		src: "/assets/partners/beyond-now.png"
 	},
 	{
-		src: "/assets/partners/DP-world-logo.png"
+		src: "/assets/partners/katlas.png"
 	},
 	{
-		src: "/assets/partners/university-surrey-logo.png"
+		src: "/assets/partners/premier-nutrition.png"
 	},
 	{
-		src: "/assets/partners/DFDS-logo.png"
+		src: "/assets/partners/cns.png"
 	},
 	{
-		src: "/assets/partners/beyond-now-logo.png"
+		src: "/assets/partners/geodis.png"
 	},
 	{
-		src: "/assets/partners/kenya-airways-logo.png"
+		src: "/assets/partners/university-of-surrey.png"
 	},
 	{
-		src: "/assets/partners/british-coffee-association-logo.png"
+		src: "/assets/partners/british-coffee-association.png"
 	},
 	{
-		src: "/assets/partners/ras-logo.png"
+		src: "/assets/partners/ras.png"
+	},
+	{
+		src: "/assets/partners/airflo.png"
 	}
 ];
 
 export const BOARD_MEMBERS: CarouselEntry[] = [
 	{
 		label: "Global Alliance for Trade Facilitation",
-		src: "/assets/board/global-alliance-for-trade-facilitation.png"
+		src: "/assets/consortium/global-alliance-for-trade-facilitation.png"
 	},
 	{
 		label: "IOTA Foundation",
-		src: "/assets/board/iota-foundation.png"
+		src: "/assets/consortium/iota-foundation.png"
 	},
 	{
 		label: "Institute of Export and International Trade",
-		src: "/assets/board/institute-of-export.png"
+		src: "/assets/consortium/institute-of-export.png"
 	},
 	{
 		label: "Tony Blair Institute for Global Change",
-		src: "/assets/board/tony-blair-institute.png"
+		src: "/assets/consortium/tony-blair-institute.png"
 	},
 	{
 		label: "Trademark Africa",
-		src: "/assets/board/trademark-africa.png"
+		src: "/assets/consortium/trademark-africa.png"
 	},
 	{
 		label: "World Economic Forum",
-		src: "/assets/board/world-economic-forum.png"
+		src: "/assets/consortium/world-economic-forum.png"
 	}
 ];
 
-export const GOVERNMENT_PARTNERS: CarouselEntry[] = [
-	{
-		src: "/assets/partners/AFA-logo.png"
-	},
-	{
-		src: "/assets/partners/KRA-logo.png"
-	},
-	{
-		src: "/assets/partners/KEPHIS-logo.png"
-	},
-	{
-		src: "/assets/partners/KENTrade-logo.png"
-	},
-	{
-		src: "/assets/partners/Trademark-logo.png"
-	},
-	{
-		src: "/assets/partners/ministry-foreign-affairs-netherlands-logo.png"
-	},
-	{
-		src: "/assets/partners/hm-government-logo.png"
-	}
-];
-
-export const PARTNER_QUOTES: CarouselEntry[] = [
+export const CONSORTIUM_QUOTES: CarouselEntry[] = [
 	{
 		label: "The signing of the Teaming Agreement is this coalition’s promise to be a responsive institute focused on the needs of every stakeholder in the supply chain. We are ready to transform international e-commerce, but we need all public and private entities in the global trade space to help us craft the policies and frameworks of the future.",
 		author: "- Dominik Schiener, Co-Founder of IOTA and Chairman of the IOTA Foundation",
@@ -171,7 +172,7 @@ export const PARTNER_QUOTES: CarouselEntry[] = [
 		]
 	},
 	{
-		label: "We are proud to champion the creation of a neutral, inclusive AI-based digital infrastructure for trade. This partnership between key international trade organizations, pools together a perfect mix of specialism, knowledge and the right balance of tech and trade experts to streamline supply chains and customs procedures.  With the Trade Logistics Information Pipeline (TLIP) framework, we expect promising outcomes, including up to 80% cost reduction, processing times cut to one day, and a 35% increase in SME efficiency. Through collaboration, we are committed to shaping a future where trade facilitation benefits societies worldwide, through the creation of a more equitable and sustainable global trade ecosystem and infrastructure.",
+		label: "With the Trade Logistics Information Pipeline (TLIP) framework, we expect promising outcomes, including up to 80% cost reduction, processing times cut to one day, and a 35% increase in SME efficiency. Through collaboration, we are committed to shaping a future where trade facilitation benefits societies worldwide, through the creation of a more equitable and sustainable global trade ecosystem and infrastructure.",
 		author: "- Marco Forgione, Director General of The Institute of Export and International Trade",
 		links: [
 			{

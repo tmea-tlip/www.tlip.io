@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { ObservedRoute } from "$components";
 	import type { Section } from "$lib";
-	import { CommercialPartners, DonorsAndPartners, Hero } from "$sections/ecosystem";
+	import { CommercialPartners, Consortium, Government, Hero } from "$sections/ecosystem";
 	import { HaveAnyQuestions } from "$sections/shared";
 
 	const sections: Section[] = [
@@ -10,8 +10,12 @@
 			id: "hero"
 		},
 		{
-			component: DonorsAndPartners,
-			id: "donors-and-partners"
+			component: Consortium,
+			id: "consortium"
+		},
+		{
+			component: Government,
+			id: "government"
 		},
 		{
 			component: CommercialPartners,

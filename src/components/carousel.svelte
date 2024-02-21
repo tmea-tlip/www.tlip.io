@@ -52,13 +52,13 @@
 			{#each items as item}
 				<swiper-slide class="flex flex-col items-center gap-2">
 					<div
-						class={`content-container flex h-full flex-col ${item.src ? "" : "mb-20 border rounded p-8"}`}
+						class={`content-container flex h-full flex-col ${item.src ? "" : "mb-20 rounded border p-8"}`}
 						style:width={`${itemWidth}px`}
 						style:height={itemHeight ? `${itemHeight}px` : "auto"}
 					>
 						{#if item.src}
 							<div
-								class="flex items-center border rounded p-2"
+								class="flex items-center rounded border p-2"
 								style:width={`${itemWidth}px`}
 								style:height={`${itemWidth}px`}
 							>
