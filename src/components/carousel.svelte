@@ -1,7 +1,7 @@
 <script lang="ts">
 	// eslint-disable-next-line import/no-unresolved
 	import { register } from "swiper/element/bundle";
-	import { Button } from "$components";
+	import { Icon } from "$components";
 	import { type CarouselEntry, MAX_CONTENT_WIDTH } from "$lib";
 
 	export let items: CarouselEntry[] = [];
@@ -52,13 +52,13 @@
 			{#each items as item}
 				<swiper-slide class="flex flex-col items-center gap-2">
 					<div
-						class={`content-container flex h-full flex-col ${item.src ? "" : "mb-20 border p-8"}`}
+						class={`content-container flex h-full flex-col ${item.src ? "" : "mb-20 border rounded p-8"}`}
 						style:width={`${itemWidth}px`}
 						style:height={itemHeight ? `${itemHeight}px` : "auto"}
 					>
 						{#if item.src}
 							<div
-								class="flex items-center border p-2"
+								class="flex items-center border rounded p-2"
 								style:width={`${itemWidth}px`}
 								style:height={`${itemWidth}px`}
 							>
@@ -66,19 +66,26 @@
 							</div>
 						{/if}
 						{#if item.label}
-							<p class={`w-full flex-1 ${item.src ? "text-center text-14" : "text-left text-16"}`}>
+							<p class={`w-full flex-1 ${item.src ? "text-10 text-center" : "text-left text-12"}`}>
 								{item.label}
 							</p>
 						{/if}
-						{#if item.footnote}
+						{#if item.author}
 							<div class="w-full">
-								<h3 class="metropolis-700 mt-4 text-left text-16">{item.footnote}</h3>
+								<h3 class="metropolis-700 mt-4 whitespace-pre-line text-left text-14">{item.author}</h3>
 							</div>
 						{/if}
-						{#if item.buttons}
+						{#if item.links}
 							<div class="mt-4 flex w-full flex-row gap-5">
-								{#each item.buttons as button}
-									<Button {...button} small plain />
+								{#each item.links as link}
+									<a
+										href={link.href}
+										target="_blank"
+										rel="noopener noreferrer"
+										class={"rounded border border-green-500 p-3"}
+									>
+										<Icon name={link.icon} fill="#000" height={24} width={24} />
+									</a>
 								{/each}
 							</div>
 						{/if}

@@ -108,86 +108,128 @@ export const GOVERNMENT_PARTNERS: CarouselEntry[] = [
 
 export const PARTNER_QUOTES: CarouselEntry[] = [
 	{
-		label: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam tempor convallis lectus, mattis ullamcorper lorem congue eget",
-		footnote: "- Global Alliance for Trade Facilitation",
-		buttons: [
+		label: "The signing of the Teaming Agreement is this coalition’s promise to be a responsive institute focused on the needs of every stakeholder in the supply chain. We are ready to transform international e-commerce, but we need all public and private entities in the global trade space to help us craft the policies and frameworks of the future.",
+		author: "- Dominik Schiener, Co-Founder of IOTA and Chairman of the IOTA Foundation",
+		links: [
 			{
-				title: "Website",
-				url: "https://www.iota.org"
+				label: "Website",
+				href: "https://www.iota.org",
+				icon: "world"
 			},
 			{
-				title: "Social",
-				url: "https://www.iota.org"
+				label: "LinkedIn",
+				href: "https://www.linkedin.com/company/iotafoundation/",
+				icon: "linkedin"
+			},
+			{
+				label: "X",
+				href: "https://twitter.com/iota",
+				icon: "x"
 			}
 		]
 	},
 	{
-		label: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam tempor convallis lectus, mattis ullamcorper lorem congue eget",
-		footnote: "- IOTA Foundation",
-		buttons: [
+		label: "Our   collaboration   with   leading   organisations   underscores   our commitment   to   sustainable   and   inclusive   trade.   We   are   proud   of   the development of platforms such as  TLIP, through which we aim to dismantle barriers and foster innovation in global trade, empowering all stakeholders to actively participate in shaping the future of trade facilitation. We’re   achieving   remarkable   feats   with   emerging technologies, but taking this to the next level is about joining forces with these innovators and great collaborators.",
+		author: "- David Beer, CEO of TradeMark Africa",
+		links: [
 			{
-				title: "Website",
-				url: "https://www.iota.org"
+				label: "Website",
+				href: "https://www.trademarkafrica.com/",
+				icon: "world"
 			},
 			{
-				title: "Social",
-				url: "https://www.iota.org"
+				label: "LinkedIn",
+				href: "https://www.linkedin.com/company/trademark-africa/",
+				icon: "linkedin"
+			},
+			{
+				label: "X",
+				href: "https://twitter.com/TradeMarkAfrica",
+				icon: "x"
 			}
 		]
 	},
 	{
-		label: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam tempor convallis lectus, mattis ullamcorper lorem congue eget",
-		footnote: "- Institute of Export and International Trade",
-		buttons: [
+		label: "Exchanging information along the trade supply chain remains a real challenge. … Trust and structured collaboration will be key to scaling systems and approaches that work across many countries.",
+		author: "- Tim Stekkinger, Head, TradeTech Global Initiative at the World Economic Forum",
+		links: [
 			{
-				title: "Website",
-				url: "https://www.iota.org"
+				label: "Website",
+				href: "https://www.weforum.org/",
+				icon: "world"
 			},
 			{
-				title: "Social",
-				url: "https://www.iota.org"
+				label: "LinkedIn",
+				href: "https://www.linkedin.com/company/world-economic-forum/",
+				icon: "linkedin"
+			},
+			{
+				label: "X",
+				href: "https://twitter.com/wef",
+				icon: "x"
 			}
 		]
 	},
 	{
-		label: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam tempor convallis lectus, mattis ullamcorper lorem congue eget",
-		footnote: "- Tony Blair Institute for Global Change",
-		buttons: [
+		label: "We are proud to champion the creation of a neutral, inclusive AI-based digital infrastructure for trade. This partnership between key international trade organizations, pools together a perfect mix of specialism, knowledge and the right balance of tech and trade experts to streamline supply chains and customs procedures.  With the Trade Logistics Information Pipeline (TLIP) framework, we expect promising outcomes, including up to 80% cost reduction, processing times cut to one day, and a 35% increase in SME efficiency. Through collaboration, we are committed to shaping a future where trade facilitation benefits societies worldwide, through the creation of a more equitable and sustainable global trade ecosystem and infrastructure.",
+		author: "- Marco Forgione, Director General of The Institute of Export and International Trade",
+		links: [
 			{
-				title: "Website",
-				url: "https://www.iota.org"
+				label: "Website",
+				href: "https://www.export.org.uk/",
+				icon: "world"
 			},
 			{
-				title: "Social",
-				url: "https://www.iota.org"
+				label: "LinkedIn",
+				href: "https://www.linkedin.com/company/ioe-international-trade/",
+				icon: "linkedin"
+			},
+			{
+				label: "X",
+				href: "https://twitter.com/IOExport",
+				icon: "x"
 			}
 		]
 	},
 	{
-		label: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam tempor convallis lectus, mattis ullamcorper lorem congue eget",
-		footnote: "- Trademark Africa",
-		buttons: [
+		label: "As a community, we keep promoting the pivotal role of technology in overcoming frictions to trade. Yet the reality remains that international trade continues to rely heavily on paper-based transactions. The introduction of TLIP marks a paradigm shift, utilizing distributed ledger technology within a collaborative, non-commercial framework aimed solely at easing the process of conducting trade in a secure and efficient environment. I am delighted that the Global Alliance for Trade Facilitation is a leading player in this transformative venture.",
+		author: "- Philippe Isler, Director, Global Alliance for Trade Facilitation",
+		links: [
 			{
-				title: "Website",
-				url: "https://www.iota.org"
+				label: "Website",
+				href: "https://www.tradefacilitation.org/",
+				icon: "world"
 			},
 			{
-				title: "Social",
-				url: "https://www.iota.org"
+				label: "LinkedIn",
+				href: "https://www.linkedin.com/company/global-alliance-for-trade-facilitation/",
+				icon: "linkedin"
+			},
+			{
+				label: "X",
+				href: "https://twitter.com/GATFnews",
+				icon: "x"
 			}
 		]
 	},
 	{
-		label: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam tempor convallis lectus, mattis ullamcorper lorem congue eget",
-		footnote: "- World Economic Forum",
-		buttons: [
+		label: "Re-imaging trade in the information age is imperative in making global trade work for all. Innovating a public global digital infrastructure for trade that is inclusive and green, that this partnership aims to achieve, resonates with TBI’s core goal of reimagining how governments and states deliver services in the 21st Century.",
+		author: "- Frank Matsaert, Director of Trade & Infrastructure, Kenya Team, at the Tony Blair Institute for Global Change",
+		links: [
 			{
-				title: "Website",
-				url: "https://www.iota.org"
+				label: "Website",
+				href: "https://www.institute.global/",
+				icon: "world"
 			},
 			{
-				title: "Social",
-				url: "https://www.iota.org"
+				label: "LinkedIn",
+				href: "https://www.linkedin.com/company/tony-blair-institute-for-global-change/",
+				icon: "linkedin"
+			},
+			{
+				label: "X",
+				href: "https://twitter.com/InstituteGC",
+				icon: "x"
 			}
 		]
 	}

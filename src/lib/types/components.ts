@@ -144,12 +144,25 @@ export interface CarouselEntry {
 	label?: string;
 
 	/**
-	 * The footnote for the item.
+	 * The author for the item.
 	 */
-	footnote?: string;
+	author?: string;
 
 	/**
-	 * Buttons for the item.
+	 * Links for the item.
 	 */
-	buttons?: Button[];
+	links?: {
+		/**
+		 * The label for the button.
+		 */
+		label: string;
+		/**
+		 * The source to open.
+		 */
+		href: string;
+		/**
+		 * The icon do display.
+		 */
+		icon: string;
+	}[];
 }

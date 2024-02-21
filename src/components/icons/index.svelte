@@ -24,6 +24,7 @@
 		Upgrade,
 		Upgrades,
 		Visibility,
+		World,
 		X
 	} from "./index";
 
@@ -54,7 +55,8 @@
 		upgrade: Upgrade,
 		challengeNo: ChallengeNo,
 		challengeYes: ChallengeYes,
-		x: X
+		x: X,
+		world: World
 	};
 </script>
 
