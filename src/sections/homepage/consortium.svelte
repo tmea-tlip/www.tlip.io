@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { Button, Carousel } from "$components";
-	import { BOARD_MEMBERS } from "$lib";
+	import { CONSORTIUM_MEMBERS } from "$lib";
 
 	export let id: string;
 </script>
@@ -16,7 +16,7 @@
 		interoperable digital ecosystem.
 	</p>
 	<h4 class="mb-9 text-center text-18">The TLIP Partners</h4>
-	<Carousel items={BOARD_MEMBERS}></Carousel>
+	<Carousel items={CONSORTIUM_MEMBERS}></Carousel>
 	<div class="mt-20 flex justify-center">
 		<Button url="/consortium" title="Read More" />
 	</div>

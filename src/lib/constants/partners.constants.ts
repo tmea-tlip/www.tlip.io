@@ -80,14 +80,18 @@ export const COMMERCIAL_PARTNERS: CarouselEntry[] = [
 	}
 ];
 
-export const BOARD_MEMBERS: CarouselEntry[] = [
-	{
-		label: "Global Alliance for Trade Facilitation",
-		src: "/assets/consortium/global-alliance-for-trade-facilitation.png"
-	},
+export const CONSORTIUM_MEMBERS: CarouselEntry[] = [
 	{
 		label: "IOTA Foundation",
 		src: "/assets/consortium/iota-foundation.png"
+	},
+	{
+		label: "Trademark Africa",
+		src: "/assets/consortium/trademark-africa.png"
+	},
+	{
+		label: "Global Alliance for Trade Facilitation",
+		src: "/assets/consortium/global-alliance-for-trade-facilitation.png"
 	},
 	{
 		label: "Institute of Export and International Trade",
@@ -96,10 +100,6 @@ export const BOARD_MEMBERS: CarouselEntry[] = [
 	{
 		label: "Tony Blair Institute for Global Change",
 		src: "/assets/consortium/tony-blair-institute.png"
-	},
-	{
-		label: "Trademark Africa",
-		src: "/assets/consortium/trademark-africa.png"
 	},
 	{
 		label: "World Economic Forum",
