@@ -172,7 +172,9 @@ export const CONSORTIUM_QUOTES: CarouselEntry[] = [
 		]
 	},
 	{
-		label: "With the Trade Logistics Information Pipeline (TLIP) framework, we expect promising outcomes, including up to 80% cost reduction, processing times cut to one day, and a 35% increase in SME efficiency. Through collaboration, we are committed to shaping a future where trade facilitation benefits societies worldwide, through the creation of a more equitable and sustainable global trade ecosystem and infrastructure.",
+		label: `We are proud to champion the creation of a neutral, inclusive digital infrastructure for trade. This partnership between key international trade organizations pools together a perfect mix of specialism, knowledge and the right balance of tech and trade experts to streamline supply chains and customs procedures.
+
+		With the Trade Logistics Information Pipeline (TLIP) framework, we expect promising outcomes, including up to 80% cost reduction, processing times cut to one day, and a 35% increase in SME efficiency.`,
 		author: "- Marco Forgione, Director General of The Institute of Export and International Trade",
 		links: [
 			{
