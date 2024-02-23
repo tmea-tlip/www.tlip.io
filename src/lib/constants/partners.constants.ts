@@ -82,12 +82,12 @@ export const COMMERCIAL_PARTNERS: CarouselEntry[] = [
 
 export const CONSORTIUM_MEMBERS: CarouselEntry[] = [
 	{
-		label: "IOTA Foundation",
-		src: "/assets/consortium/iota-foundation.png"
-	},
-	{
 		label: "Trademark Africa",
 		src: "/assets/consortium/trademark-africa.png"
+	},
+	{
+		label: "IOTA Foundation",
+		src: "/assets/consortium/iota-foundation.png"
 	},
 	{
 		label: "Global Alliance for Trade Facilitation",
