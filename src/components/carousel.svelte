@@ -66,7 +66,9 @@
 							</div>
 						{/if}
 						{#if item.label}
-							<p class={`w-full flex-1 whitespace-pre-line ${item.src ? "text-10 text-center" : "text-left text-12"}`}>
+							<p
+								class={`w-full flex-1 whitespace-pre-line ${item.src ? "text-10 text-center" : "text-left text-12"}`}
+							>
 								{item.label}
 							</p>
 						{/if}
