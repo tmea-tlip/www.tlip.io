@@ -27,9 +27,8 @@
 			<div class="mb-9 flex flex-col items-center lg:items-start">
 				<h3 class="mb-6">Why TLIP?</h3>
 				<p class="text-center lg:text-left">
-					Trade Logistics Information Pipeline (TLIP) is a collaborative infrastructure, where all actors can
-					share data and documents. Used by both border agencies and commercial actors, each party has full
-					control of its own data, and all data is available directly from the source.
+					Global trade today has a problem. Paper based trade documentation required for cross border exchange
+					is slow, error prone and expensive.
 				</p>
 			</div>
 			{#each reasonItems as reason}

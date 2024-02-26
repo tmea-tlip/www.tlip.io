@@ -6,7 +6,7 @@
 			title: "Decentralised",
 			description: "Data is not stored or controlled centrally.",
 			icon: {
-				name: "decentralized"
+				name: "decentralised"
 			}
 		},
 		{

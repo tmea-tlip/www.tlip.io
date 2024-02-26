@@ -6,7 +6,7 @@
 		Data,
 		DataAccess,
 		DataQuality,
-		Decentralized,
+		Decentralised,
 		Exports,
 		Finance,
 		Friendship,
@@ -31,7 +31,7 @@
 	export let name: string;
 
 	const icons: { [id: string]: ConstructorOfATypedSvelteComponent } = {
-		decentralized: Decentralized,
+		decentralised: Decentralised,
 		secure: Secure,
 		upgrades: Upgrades,
 		data: Data,

@@ -18,7 +18,7 @@
 			<Hero
 				heading={{
 					section: "TLIP",
-					title: "Revolutionizing Global Trade",
+					title: "Revolutionising Global Trade",
 					description:
 						"Trade Logistics Information Pipeline (TLIP) is a digital, collaborative infrastructure that enables data sharing between different partners in the global trade supply chain."
 				}}
@@ -60,7 +60,7 @@
 					section: "Unlocking Potential",
 					title: "Open-Source Collaboration",
 					description:
-						"Governments and businesses around the globe can adapt and build on TLIP’s open-source functionality according to their specific needs and cross-border processes."
+						"Governments and businesses around the globe can adapt and build on TLIP's open-source functionality according to their specific needs and cross-border processes."
 				}}
 				buttons={[
 					{
@@ -80,7 +80,7 @@
 					section: "Empowering All",
 					title: "Low Fees and Inclusivity",
 					description:
-						"TLIP is powered by IOTA’s distributed ledger technology, ensuring low-fee transactions, and built according to the TLIP Institute’s commitment to public good, making it accessible to all."
+						"TLIP is powered by IOTA's distributed ledger technology and built with commitment to the public good, ensuring low-fee transactions and making it accessible to all."
 				}}
 				buttons={[
 					{

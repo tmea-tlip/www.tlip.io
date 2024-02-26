@@ -2,13 +2,13 @@
 
 ### What is TLIP?
 
-TLIP is a digital system that enables the secure storing and sharing of trade-related information. TLIP is both i) a set of secure connections to border agencies’ databases; and ii) a user-friendly dashboard, which can be accessed via a secure login from PCs and mobile devices. The backend connections are automated to allow border agencies to share information without introducing new work processes. The front end allows all actors (agencies, traders, transporters, etc.) to upload typical trade documentation such as the Certificate of Origin, the Phytosanitary Certificate, Packing List or Commercial Invoice. Once uploaded, documents are protected against loss and forgery, and can be easily shared with relevant parties.
+TLIP is a digital system that enables the secure storing and sharing of trade-related information. TLIP is both i) a set of secure connections to border agencies' databases; and ii) a user-friendly dashboard, which can be accessed via a secure login from PCs and mobile devices. The backend connections are automated to allow border agencies to share information without introducing new work processes. The front end allows all actors (agencies, traders, transporters, etc.) to upload typical trade documentation such as the Certificate of Origin, the Phytosanitary Certificate, Packing List or Commercial Invoice. Once uploaded, documents are protected against loss and forgery, and can be easily shared with relevant parties.
 
 ### What is the impact of TLIP?
 
 - TLIP enables a transparent, efficient and cost-effective way of managing trade information across borders. It allows for trade processes to become paperless and fully digital.
 - TLIP will create trust and visibility along the trade supply chains as actors can securely exchange information in a digital format.
-- TLIP supports WTO’s Trade Facilitation Agreement and the ambition to make cross-border trade processes more efficient-both in terms of saved time and cost.
+- TLIP supports WTO's Trade Facilitation Agreement and the ambition to make cross-border trade processes more efficient-both in terms of saved time and cost.
 - The impact of TLIP is to make East African exports more competitive through building efficiencies around information generation, transmission and storage. TLIP will link the East African trading community to the global trade supply chain in a way that gives the region and its trading partners access to the critical information required to make informed decisions well in advance of the arrival of physical goods.
 
 ## Roadmap
@@ -16,9 +16,9 @@ TLIP is a digital system that enables the secure storing and sharing of trade-re
 ### Why was TLIP initiated?
 
 - International trade is an information-intensive process, involving hundreds of data points and multiple information exchanges between traders, transporters and border authorities. Most information exchanged throughout the journey of a single product is paper-based, making it unsustainable, expensive, slow, error-prone and inefficient. The TLIP project was initiated to tackle problems associated with paper-based information sharing and to increase the transparency, efficiency and sustainability of international trade.
-- TLIP’s vision is to enhance the international competitiveness of all East African traders by digitizing and covering the end-to-end trade-data journey to save time, cost, errors and lost documents.
+- TLIP's vision is to enhance the international competitiveness of all East African traders by digitizing and covering the end-to-end trade-data journey to save time, cost, errors and lost documents.
 
-### How is the TLIP project organized?
+### How is the TLIP project organised?
 
 - TLIP was initiated by TradeMark Africa and the initial stages of development and implementation are done by a team consisting of experts from TradeMark Africa and the IOTA Foundation.
 - As the TLIP moves from testing and learning into production, the aim is to anchor the project with relevant government bodies in the target countries such as Uganda, Kenya, Rwanda and Tanzania for the first phase.
@@ -60,7 +60,7 @@ TLIP is a digital system that enables the secure storing and sharing of trade-re
 
 ### What does it cost to use TLIP?
 
-- Currently TLIP is in an innovation project and any costs associated with testing and using the system are covered by participating donor organizations.
+- Currently TLIP is in an innovation project and any costs associated with testing and using the system are covered by participating donor organisations.
 - Potential future fees for using TLIP will be decided on by the relevant government agencies in each participating country.
 - The total cost of trade is expected to decline as TLIP becomes the standard for cross-border trade processes.
 

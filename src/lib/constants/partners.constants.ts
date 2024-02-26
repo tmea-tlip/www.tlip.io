@@ -109,7 +109,7 @@ export const CONSORTIUM_MEMBERS: CarouselEntry[] = [
 
 export const CONSORTIUM_QUOTES: CarouselEntry[] = [
 	{
-		label: "The signing of the Teaming Agreement is this coalition’s promise to be a responsive institute focused on the needs of every stakeholder in the supply chain. We are ready to transform international e-commerce, but we need all public and private entities in the global trade space to help us craft the policies and frameworks of the future.",
+		label: "The signing of the Teaming Agreement is this coalition's promise to be a responsive institute focused on the needs of every stakeholder in the supply chain. We are ready to transform international e-commerce, but we need all public and private entities in the global trade space to help us craft the policies and frameworks of the future.",
 		author: "- Dominik Schiener, Co-Founder of IOTA and Chairman of the IOTA Foundation",
 		links: [
 			{
@@ -130,7 +130,7 @@ export const CONSORTIUM_QUOTES: CarouselEntry[] = [
 		]
 	},
 	{
-		label: "Our   collaboration   with   leading   organisations   underscores   our commitment   to   sustainable   and   inclusive   trade.   We   are   proud   of   the development of platforms such as  TLIP, through which we aim to dismantle barriers and foster innovation in global trade, empowering all stakeholders to actively participate in shaping the future of trade facilitation. We’re   achieving   remarkable   feats   with   emerging technologies, but taking this to the next level is about joining forces with these innovators and great collaborators.",
+		label: "Our collaboration with leading organisations underscores our commitment to sustainable and inclusive trade. We are proud of the development of platforms such as TLIP, through which we aim to dismantle barriers and foster innovation in global trade, empowering all stakeholders to actively participate in shaping the future of trade facilitation. We're achieving remarkable feats with emerging technologies, but taking this to the next level is about joining forces with these innovators and great collaborators.",
 		author: "- David Beer, CEO of TradeMark Africa",
 		links: [
 			{
@@ -172,7 +172,7 @@ export const CONSORTIUM_QUOTES: CarouselEntry[] = [
 		]
 	},
 	{
-		label: `We are proud to champion the creation of a neutral, inclusive digital infrastructure for trade. This partnership between key international trade organizations pools together a perfect mix of specialism, knowledge and the right balance of tech and trade experts to streamline supply chains and customs procedures.
+		label: `We are proud to champion the creation of a neutral, inclusive digital infrastructure for trade. This partnership between key international trade organisations pools together a perfect mix of specialism, knowledge and the right balance of tech and trade experts to streamline supply chains and customs procedures.
 
 		With the Trade Logistics Information Pipeline (TLIP) framework, we expect promising outcomes, including up to 80% cost reduction, processing times cut to one day, and a 35% increase in SME efficiency.`,
 		author: "- Marco Forgione, Director General of The Institute of Export and International Trade",
@@ -216,7 +216,7 @@ export const CONSORTIUM_QUOTES: CarouselEntry[] = [
 		]
 	},
 	{
-		label: "Re-imaging trade in the information age is imperative in making global trade work for all. Innovating a public global digital infrastructure for trade that is inclusive and green, that this partnership aims to achieve, resonates with TBI’s core goal of reimagining how governments and states deliver services in the 21st Century.",
+		label: "Re-imaging trade in the information age is imperative in making global trade work for all. Innovating a public global digital infrastructure for trade that is inclusive and green, that this partnership aims to achieve, resonates with TBI's core goal of reimagining how governments and states deliver services in the 21st Century.",
 		author: "- Frank Matsaert, Director of Trade & Infrastructure, Kenya Team, at the Tony Blair Institute for Global Change",
 		links: [
 			{

@@ -6,7 +6,7 @@ export { default as ChevronUp } from "./chevronUp.svelte";
 export { default as Data } from "./data.svelte";
 export { default as DataAccess } from "./dataAccess.svelte";
 export { default as DataQuality } from "./dataQuality.svelte";
-export { default as Decentralized } from "./decentralized.svelte";
+export { default as Decentralised } from "./decentralised.svelte";
 export { default as Exports } from "./exports.svelte";
 export { default as Finance } from "./finance.svelte";
 export { default as Friendship } from "./friendship.svelte";
