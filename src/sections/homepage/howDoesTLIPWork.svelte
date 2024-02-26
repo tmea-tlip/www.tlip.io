@@ -51,7 +51,10 @@
 <section {id} class="pb-16 pt-24 lg:pb-16 lg:pt-40">
 	<div class="container">
 		<h3 class="mb-5 text-center lg:mb-16">How Does TLIP Work?</h3>
-		<img src="/assets/how.svg" alt="How Does TLIP Work?" class="mb-20 lg:p-10" />
+		<h2 class="mb-10 text-center text-24 italic text-green-300 lg:text-32">Infrastructure</h2>
+		<img src="/assets/how-infrastructure.png" alt="How Does TLIP Work - Infrastructure" class="mb-20" />
+		<h2 class="mb-10 text-center text-24 italic text-green-300 lg:text-32">Data Sharing</h2>
+		<img src="/assets/how-data-sharing.png" alt="How Does TLIP Work - Data Sharing" class="mb-20" />
 		<div class="mb-16 grid grid-cols-1 gap-5 md:mb-32 md:grid-cols-2 md:gap-10 lg:grid-cols-3">
 			{#each CARDS as { title, description, icon }}
 				<Card classes="work bg-white" withBorder>
