@@ -3,15 +3,15 @@
 	import { onMount } from "svelte";
 	import Burger from "./burger.svelte";
 	import Button from "./button.svelte";
-	import { activeSectionId, lightModeNavbar } from "$lib/store";
-	import type { Button as ButtonType, SitePage } from "$lib/types/components";
+	import NavigationBar from "./navigation-bar.svelte";
+	import { sideMenuOpen } from "$lib/store";
+	import type { Button as ButtonType, NavigationMenu } from "$lib/types/components";
 
-	export let items: SitePage[] = [];
+	export let navigationMenu: NavigationMenu[] = [];
 	export { classes as class };
 
 	let classes: string = "";
-	let scroll: number;
-	let sideMenuOpen: boolean = false;
+	let scroll: boolean;
 
 	const mailLink: ButtonType = {
 		title: "CONTACT US",
@@ -21,23 +21,23 @@
 	};
 
 	const toggleMenu: () => void = () => {
-		if (sideMenuOpen) {
+		if ($sideMenuOpen) {
 			closeMenu();
 		} else {
 			openMenu();
 		}
 	};
 	const closeMenu = () => {
-		sideMenuOpen = false;
-		document.querySelector("body")?.classList.remove("overflow-y-hidden");
+		sideMenuOpen.set(false);
+		document.body.classList.remove("overflow-y-hidden");
 	};
 	const openMenu = () => {
-		sideMenuOpen = true;
-		document.querySelector("body")?.classList.add("overflow-y-hidden");
+		sideMenuOpen.set(true);
+		document.body.classList.add("overflow-y-hidden");
 	};
 
 	const logoClick: (event: Event) => void = e => {
-		if (sideMenuOpen) {
+		if ($sideMenuOpen) {
 			closeMenu();
 		}
 		if ($page.url.pathname === "/") {
@@ -49,9 +49,7 @@
 
 	onMount(() => {
 		const onScroll = () => {
-			if (window.scrollY > 100) {
-				scroll = window.scrollY;
-			}
+			scroll = window.scrollY > 100;
 		};
 
 		window.addEventListener("scroll", onScroll);
@@ -61,11 +59,7 @@
 	});
 </script>
 
-<nav
-	class="bg-blur metropolis-500 fixed z-50 w-full py-1 text-grey-600 {classes}"
-	class:lightMode={$lightModeNavbar && !sideMenuOpen}
-	class:borderBottom={scroll}
->
+<nav class="bg-blur metropolis-500 fixed z-50 w-full py-1 text-grey-600 {classes}" class:borderBottom={scroll}>
 	<div class="container flex justify-between">
 		<a href="/" class="py-4" on:click={logoClick}>
 			<img src="/assets/logo-TLIP.svg" alt="TLIP logo" id="logo" />
@@ -73,39 +67,11 @@
 		<div class="order-3 my-auto hidden lg:inline-block">
 			<Button {...mailLink} as="link" />
 		</div>
-		<div class="flex flex-row">
-			{#if items}
-				<!-- Desktop -->
-				<ul
-					class={"hidden w-full flex-row items-center transition-opacity duration-200 md:space-x-2 lg:flex lg:space-x-6 xl:space-x-8"}
-				>
-					{#each items as { title, url, id, onClick, external }}
-						{#if title}
-							<li class="shrink-0">
-								{#if id && url.startsWith("/#")}
-									<a
-										href={url}
-										on:click|preventDefault={e => onClick && onClick(e.currentTarget)}
-										class={`lg:text-14 xl:text-16 ${
-											id === `#${$activeSectionId}` ? "metropolis-700" : ""
-										} hover:text-green-400`}>{title}</a
-									>
-								{:else if url || (id && url !== $page.url.pathname)}
-									<a
-										href={url}
-										target={external ? "_blank" : null}
-										rel={external ? "noopener noreferrer" : null}
-										class={`lg:text-14 xl:text-16 ${
-											url === $page.url.pathname ? "metropolis-700" : ""
-										} hover:text-green-400`}>{title}</a
-									>
-								{/if}
-							</li>{/if}
-					{/each}
-				</ul>
-				<!-- Burger Icon -- Mobile  -->
-				<Burger bind:open={sideMenuOpen} onClick={toggleMenu} {sideMenuOpen} classes="flex my-auto lg:hidden" />
-			{/if}
+		<div class="flex flex-1 flex-row justify-end">
+			<!-- Desktop -->
+			<NavigationBar items={navigationMenu} class="hidden px-8 lg:flex" />
+			<!-- Burger Icon -- Mobile  -->
+			<Burger bind:open={$sideMenuOpen} onClick={toggleMenu} classes="flex my-auto lg:hidden" />
 		</div>
 	</div>
 </nav>
@@ -113,43 +79,18 @@
 <!-- Mobile Menu   -->
 <aside
 	class={`justify- fixed left-0 top-0 z-40 h-screen w-0 whitespace-nowrap bg-white lg:hidden ${
-		sideMenuOpen ? "open" : ""
+		$sideMenuOpen ? "open" : ""
 	}`}
 >
 	<div class="flex h-full flex-col items-start justify-between">
 		<ul
-			class={`duration-400 container h-auto w-full border-t-2 pt-20 text-black transition-opacity ${
-				sideMenuOpen ? "block opacity-100" : "hidden opacity-0"
+			class={`duration-400 container w-full border-t-2 pt-32 text-black transition-opacity ${
+				$sideMenuOpen ? "flex flex-1 overflow-auto opacity-100" : "hidden opacity-0"
 			}`}
 		>
-			{#each items as { title, url, id, onClick, external }}
-				{#if title}
-					<li class="nav-link min-w-max py-4">
-						{#if id && url.startsWith("/#")}
-							<a
-								class={id === `#${$activeSectionId}` ? "metropolis-700" : ""}
-								href={url}
-								on:click|preventDefault={e => {
-									if (onClick) {
-										onClick(e.currentTarget);
-									}
-									closeMenu();
-								}}>{title}</a
-							>
-						{:else if url || (id && url !== $page.url.pathname)}
-							<a
-								on:click={closeMenu}
-								target={external ? "_blank" : null}
-								rel={external ? "noopener noreferrer" : null}
-								class={url === $page.url.pathname ? "metropolis-700" : ""}
-								href={url}>{title}</a
-							>
-						{/if}
-					</li>
-				{/if}
-			{/each}
+			<NavigationBar items={navigationMenu} class="flex-1" />
 		</ul>
-		<div class={`mx-auto mb-10 ${sideMenuOpen ? "flex" : "hidden"}`}><Button {...mailLink} as="link" /></div>
+		<div class={`mx-auto mb-10 ${$sideMenuOpen ? "flex" : "hidden"}`}><Button {...mailLink} as="link" /></div>
 	</div>
 </aside>
 

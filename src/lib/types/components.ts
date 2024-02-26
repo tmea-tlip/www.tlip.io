@@ -1,30 +1,4 @@
 /**
- * The type for a site page.
- */
-export interface SitePage {
-	/**
-	 * The title of the page.
-	 */
-	title: string;
-	/**
-	 * The url of the page.
-	 */
-	url: string;
-	/**
-	 * The id of the page.
-	 */
-	id?: string;
-	/**
-	 * Method to call when the page is clicked.
-	 */
-	onClick?: (element: HTMLAnchorElement) => void;
-	/**
-	 * Is the site external.
-	 */
-	external?: boolean;
-}
-
-/**
  * The type for a site section.
  */
 export interface Section {
@@ -128,4 +102,67 @@ export interface NewsItem {
 	 * The linkUrl of the news item.
 	 */
 	linkUrl?: string;
+}
+
+/**
+ * Definition for a menu.
+ */
+export interface NavigationMenu {
+	/**
+	 * The label to display in the menu.
+	 */
+	label: string;
+
+	/**
+	 * The URL to navigate to when the menu entry is clicked.
+	 */
+	url?: string;
+
+	/**
+	 * Does this link to an external site ?
+	 */
+	external?: boolean;
+
+	/**
+	 * The entries in the menu.
+	 */
+	entries?: NavigationMenu[];
+}
+
+/**
+ * Display an entry on the carousel.
+ */
+export interface CarouselEntry {
+	/**
+	 * The source for the image.
+	 */
+	src?: string;
+
+	/**
+	 * The label for the item.
+	 */
+	label?: string;
+
+	/**
+	 * The author for the item.
+	 */
+	author?: string;
+
+	/**
+	 * Links for the item.
+	 */
+	links?: {
+		/**
+		 * The label for the button.
+		 */
+		label: string;
+		/**
+		 * The source to open.
+		 */
+		href: string;
+		/**
+		 * The icon do display.
+		 */
+		icon: string;
+	}[];
 }

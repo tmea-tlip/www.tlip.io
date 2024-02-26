@@ -3,5 +3,5 @@
 	"scss.lint.unknownAtRules": "ignore",
 	"eslint.validate": ["svelte"],
 	"stylelint.validate": ["css", "scss"],
-	"cSpell.words": ["TLIP"]
+	"cSpell.words": ["Dhabi", "inclusivity", "organisation", "organisations", "TLIP"]
 }

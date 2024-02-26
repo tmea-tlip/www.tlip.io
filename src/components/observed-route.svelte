@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { onMount } from "svelte";
-	import { activeSectionId, lightModeNavbar } from "$lib/store";
+	import { sideMenuOpen } from "$lib/store";
 	import type { Section } from "$lib/types/components";
 	import { startActiveSectionObserver } from "$lib/utils";
 
@@ -8,12 +8,11 @@
 
 	let container: HTMLElement;
 
-	$: lightModeNavbar.set(sections.find(s => s.id === $activeSectionId)?.lightModeNavbar ?? false);
-
 	onMount(() => {
 		const disconnect = startActiveSectionObserver(container);
 		return () => {
-			lightModeNavbar.set(false);
+			sideMenuOpen.set(false);
+			document.body.classList.remove("overflow-y-hidden");
 			disconnect();
 		};
 	});

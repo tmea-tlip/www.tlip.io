@@ -1,12 +1,8 @@
 <script lang="ts">
-	import type { Heading } from "$lib/types/sections";
+	import { Button } from "$components";
+
 	export let id: string;
-	const HEADINGS: Heading = {
-		title: "Why TLIP?",
-		description:
-			"Global trade today has a problem. Paper based trade documentation required for cross border exchange is slow, error prone and expensive."
-	};
-	const REASONS = [
+	const reasonItems = [
 		{
 			title: "$500 Bn",
 			description: "the annual cost of paper based documentation"
@@ -25,17 +21,23 @@
 <section class="relative h-full w-full bg-green-500" {id}>
 	<div class="image bottom-0 left-0 top-0 h-full w-full lg:absolute lg:w-1/2" />
 	<div class="container h-full w-full justify-end lg:flex">
-		<div class="w-full bg-green-500 py-16 pl-6 text-white lg:w-1/2 lg:py-28 lg:pl-24 xl:max-w-xl">
-			<div class="mb-9">
-				<h3 class="mb-6">{HEADINGS.title}</h3>
-				<p class="">{HEADINGS.description}</p>
+		<div
+			class="flex w-full flex-col items-center bg-green-500 py-16 pl-6 text-white lg:w-1/2 lg:items-start lg:py-28 lg:pl-24 xl:max-w-xl"
+		>
+			<div class="mb-9 flex flex-col items-center lg:items-start">
+				<h3 class="mb-6">Why TLIP?</h3>
+				<p class="text-center lg:text-left">
+					Global trade today has a problem. Paper based trade documentation required for cross border exchange
+					is slow, error prone and expensive.
+				</p>
 			</div>
-			{#each REASONS as reason}
-				<div class="mb-6 last:mb-0 lg:w-8/12">
+			{#each reasonItems as reason}
+				<div class="mb-6 flex flex-col items-center last:mb-0 lg:w-8/12 lg:items-start">
 					<h3 class="mb-1.5">{reason.title}</h3>
-					<p>{reason.description}</p>
+					<p class="text-center lg:text-left">{reason.description}</p>
 				</div>
 			{/each}
+			<Button title="Learn More" url="/why" tertiary />
 		</div>
 	</div>
 	<hr />

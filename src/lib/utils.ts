@@ -1,6 +1,6 @@
 import { browser } from "$app/environment";
 import { goto } from "$app/navigation";
-import { activeSectionId } from "./store";
+import { sideMenuOpen } from "./store";
 import type { FaqSection } from "./types";
 
 /**
@@ -33,7 +33,6 @@ export const startActiveSectionObserver = (container: HTMLElement): (() => void)
 					}
 				}
 			}
-			activeSectionId.set(visible[0]);
 		},
 		{ threshold: [0], rootMargin: "-1px" }
 	);
@@ -43,7 +42,6 @@ export const startActiveSectionObserver = (container: HTMLElement): (() => void)
 	}
 
 	return () => {
-		activeSectionId.set(null);
 		intersectionObserver.disconnect();
 	};
 };
@@ -58,24 +56,32 @@ export function scrollIntoView(target: HTMLAnchorElement) {
 	if (browser) {
 		const href = target.getAttribute("href");
 		if (href) {
-			const targetID = href.replace("/", "");
-			const el = document.querySelector(targetID);
-			if (!el) {
+			sideMenuOpen.set(false);
+			document.body.classList.remove("overflow-y-hidden");
+
+			const parts = href.split("#");
+			if (parts.length === 2) {
+				const targetId = `#${parts[1]}`;
 				goto(target.href, { noScroll: true })
 					.then(() => {
 						scrollTimeout = window.setTimeout(() => {
-							document.querySelector(targetID)?.scrollIntoView({
-								behavior: "smooth"
-							});
+							const el = document.querySelector(targetId);
+
+							if (el) {
+								el.scrollIntoView({
+									behavior: "smooth"
+								});
+							}
 						}, 300);
 					})
-					.catch(() => []);
-				return;
+					.catch(() => {});
+			} else {
+				goto(target.href)
+					.then(() => {
+						window.scrollTo(0, 0);
+					})
+					.catch(() => {});
 			}
-			el.scrollIntoView({
-				behavior: "smooth"
-			});
-			window.history.replaceState(null, "", targetID);
 		}
 	}
 }
