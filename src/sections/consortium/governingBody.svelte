@@ -22,6 +22,7 @@
 		>
 		in Abu Dhabi, United Arab Emirates.
 		<br />
+		<img src="/assets/signing.jpg" alt="Governing Body" class="mx-auto my-16 border border-green-500" />
 		<br />
 		By pooling together the trade expertise and non-profit resources of its member organisations, we will build out the
 		relevant governance framework and supporting organisation to make TLIP impactful on a global level. The structure
