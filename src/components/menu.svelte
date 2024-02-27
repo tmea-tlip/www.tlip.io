@@ -1,6 +1,7 @@
 <script lang="ts">
 	import { createEventDispatcher } from "svelte";
 	import { slide } from "svelte/transition";
+	import { clickOutside } from "../directives/clickOutside";
 	import { scrollIntoView, type NavigationMenu } from "$lib";
 	let classes: string = "";
 
@@ -10,14 +11,21 @@
 
 	const dispatch = createEventDispatcher();
 
-	const dispatchClick = (e: MouseEvent) => {
+	const dispatchClick = (e?: MouseEvent) => {
 		dispatch("click", e);
 	};
+
+	const visibleTime = Date.now();
 </script>
 
 <ul
 	transition:slide={{ duration: 200 }}
 	class={`${classes} flex flex-col items-stretch justify-stretch lg:border lg:border-gray-300 lg:shadow-lg`}
+	use:clickOutside={() => {
+		if (Date.now() - visibleTime > 300) {
+			dispatchClick();
+		}
+	}}
 >
 	{#each items as item}
 		<li class="metropolis-400 w-full overflow-hidden whitespace-nowrap rounded pl-4 text-sm lg:pl-0 lg:text-base">
