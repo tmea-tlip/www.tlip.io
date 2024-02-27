@@ -8,12 +8,12 @@
 <section class="container py-24 md:pb-36 md:pt-32" {id}>
 	<h2 class="mb-9 text-center text-36">Our Governing Body</h2>
 	<p class="mx-auto mb-16 max-w-2xl text-center leading-6 tracking-0.04">
-		A Teaming Agreement has been signed by the IOTA Foundation, the World Economic Forum, the Tony Blair Institute
-		for Global Change, Trademark Africa, the Institute of Export and International Trade, and the Global Alliance
-		for Trade Facilitation.
+		The IOTA Foundation, TradeMark Africa, the World Economic Forum, the Tony Blair Institute for Global Change, the
+		Institute of Export and International Trade, and the Global Alliance for Trade Facilitation are planning to sign
+		a Collaboration Agreement.
 		<br />
 		<br />
-		The Teaming Agreement was signed on 27 February 2024 at the
+		A Collaboration Agreement draft was signed on 27 February 2024 at the
 		<a
 			class="text-green-500 underline"
 			href="https://www.wto.org/english/thewto_e/minist_e/mc13_e/mc13_e.htm"

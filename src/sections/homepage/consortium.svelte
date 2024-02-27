@@ -10,10 +10,8 @@
 	<p class="mx-auto mb-16 max-w-4xl text-center leading-6 tracking-0.04">
 		The TLIP platform was developed by TradeMark Africa in partnership with the IOTA Foundation, drawing from
 		experiences implementing TLIP in Kenya and the United Kingdom. Realising a global consortium is needed to ensure
-		widespread adoption, a Teaming Agreement has been signed with global leading organisations to collaborate and
-		build out the TLIP infrastructure and governance framework. All partners have come together in the belief that
-		to facilitate sustainable trade it is important to create a neutral, open, collaborative, trusted and
-		interoperable digital ecosystem.
+		widespread adoption, global leading organisations are planning to sign a Collaboration Agreement to collaborate
+		and build out the TLIP infrastructure and governance framework.
 	</p>
 	<h4 class="mb-9 text-center text-18">The TLIP Partners</h4>
 	<Carousel items={CONSORTIUM_MEMBERS}></Carousel>
