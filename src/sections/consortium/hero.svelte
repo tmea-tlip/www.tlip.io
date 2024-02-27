@@ -6,7 +6,7 @@
 <Hero
 	heading={{
 		section: "About Us",
-		title: "The TLIP Teaming Agreement",
+		title: "The TLIP Collaboration Agreement",
 		subtitle: "Seamless Trade for All",
 		description:
 			"The future governance structure of TLIP aims to promote transparency, inclusivity, and efficiency in global trade operations."
