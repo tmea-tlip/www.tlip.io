@@ -13,7 +13,7 @@
 		a Collaboration Agreement.
 		<br />
 		<br />
-		A Collaboration Agreement draft was signed on 27 February 2024 at the
+		A Collaboration Agreement was signed on 27 February 2024 at the
 		<a
 			class="text-green-500 underline"
 			href="https://www.wto.org/english/thewto_e/minist_e/mc13_e/mc13_e.htm"
