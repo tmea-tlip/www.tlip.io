@@ -1,4 +1,5 @@
 <script lang="ts">
+	import { createEventDispatcher } from "svelte";
 	import { slide } from "svelte/transition";
 	import { scrollIntoView, type NavigationMenu } from "$lib";
 	let classes: string = "";
@@ -6,6 +7,12 @@
 	export { classes as class };
 
 	export let items: NavigationMenu[] = [];
+
+	const dispatch = createEventDispatcher();
+
+	const dispatchClick = (e: MouseEvent) => {
+		dispatch("click", e);
+	};
 </script>
 
 <ul
@@ -20,6 +27,7 @@
 					target="_blank"
 					rel="noopener noreferrer"
 					class="block w-full rounded p-3 hover:bg-gray-100 hover:text-green-400"
+					on:click={dispatchClick}
 				>
 					{item.label}
 				</a>
@@ -27,7 +35,10 @@
 				<a
 					href={item.url}
 					class="block w-full rounded p-3 hover:bg-gray-100 hover:text-green-400"
-					on:click|preventDefault={e => scrollIntoView(e.currentTarget)}
+					on:click|preventDefault={e => {
+						dispatchClick(e);
+						scrollIntoView(e.currentTarget);
+					}}
 				>
 					{item.label}
 				</a>

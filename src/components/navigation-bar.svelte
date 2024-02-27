@@ -14,6 +14,9 @@
 	const handleDropdownClick = (idx: number) => {
 		openMenu = openMenu === idx ? -1 : idx;
 	};
+	const handleMenuClick = () => {
+		openMenu = -1;
+	};
 
 	const handleDropdownFocusLoss = (event: FocusEvent) => {
 		if (
@@ -46,7 +49,7 @@
 						{/if}
 					</button>
 					{#if openMenu === idx}
-						<Menu items={item.entries} class="absolute mt-4" />
+						<Menu items={item.entries} class="absolute mt-4" on:click={handleMenuClick} />
 					{/if}
 				</div>
 			{:else}
