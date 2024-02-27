@@ -48,7 +48,7 @@
 				},
 				{
 					label: "Wiki",
-					url: "https://docs.tlip.io/",
+					url: "https://wiki.tlip.io/",
 					external: true
 				},
 				{
