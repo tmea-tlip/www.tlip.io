@@ -11,7 +11,7 @@
 		pagination="true"
 		paginationClickable="true"
 		loop="true"
-		autoplay-delay="3500"
+		autoplay-delay="10000"
 		autoplay-disable-on-interaction="false"
 	>
 		<swiper-slide>
