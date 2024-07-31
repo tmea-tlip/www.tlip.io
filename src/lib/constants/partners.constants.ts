@@ -94,8 +94,8 @@ export const CONSORTIUM_MEMBERS: CarouselEntry[] = [
 		src: "/assets/consortium/global-alliance-for-trade-facilitation.png"
 	},
 	{
-		label: "Institute of Export and International Trade",
-		src: "/assets/consortium/institute-of-export.png"
+		label: "Chartered Institute of Export and International Trade",
+		src: "/assets/consortium/chartered-institute-of-export.png"
 	},
 	{
 		label: "Tony Blair Institute for Global Change",
@@ -175,7 +175,7 @@ export const CONSORTIUM_QUOTES: CarouselEntry[] = [
 		label: `We are proud to champion the creation of a neutral, inclusive digital infrastructure for trade. This partnership between key international trade organisations pools together a perfect mix of specialism, knowledge and the right balance of tech and trade experts to streamline supply chains and customs procedures.
 
 		With the Trade Logistics Information Pipeline (TLIP) framework, we expect promising outcomes, including up to 80% cost reduction, processing times cut to one day, and a 35% increase in SME efficiency.`,
-		author: "- Marco Forgione, Director General of The Institute of Export and International Trade",
+		author: "- Marco Forgione, Director General of The Chartered Institute of Export and International Trade",
 		links: [
 			{
 				label: "Website",
@@ -184,7 +184,7 @@ export const CONSORTIUM_QUOTES: CarouselEntry[] = [
 			},
 			{
 				label: "LinkedIn",
-				href: "https://www.linkedin.com/company/ioe-international-trade/",
+				href: "https://www.linkedin.com/company/chartered-institute/",
 				icon: "linkedin"
 			},
 			{
