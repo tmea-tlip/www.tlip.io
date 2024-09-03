@@ -31,7 +31,7 @@
 				},
 				{
 					label: "Built for developers",
-					url: "/#built-for-developers",
+					url: "/#built-for-developers"
 				},
 				{
 					label: "Standard compliance",
