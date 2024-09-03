@@ -2,11 +2,7 @@ name: www.tlip.io Preview Build and Deploy
 
 on:
   pull_request:
-    branches:
-      - "!main"
-  push:
-    branches:
-      - "!main"
+      types: [opened, synchronize, reopened]
 
 concurrency:
   group: ${{ github.workflow }}-${{ github.ref }}
