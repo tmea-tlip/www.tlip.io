@@ -2,7 +2,7 @@
 	export let id: string;
 </script>
 
-<section class="h-full w-full bg-green-500 py-20 text-white md:pb-36 md:pt-32" {id}>
+<section class="h-full w-full bg-[#56ccf233] py-20 md:pb-36 md:pt-32" {id}>
 	<div class="container">
 		<h2 class="mb-9 text-center text-36">Built for developers</h2>
 		<div class="mx-auto mb-8 flex max-w-2xl flex-col gap-5 text-center leading-6 tracking-0.04">
@@ -13,7 +13,7 @@
 			<p>
 				Explore the
 				<a
-					class="text-green-200 underline"
+					class="text-blue-500"
 					href="https://docs.tlip.io"
 					target="_blank"
 					rel="noopener noreferrer">TLIP Documentation</a
