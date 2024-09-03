@@ -7,35 +7,37 @@
 	const navigationMenu: NavigationMenu[] = [
 		{
 			label: "About Us",
-			entries: [
-				{
-					label: "The Consortium",
-					url: "/consortium"
-				},
-				{
-					label: "Our Ecosystem",
-					url: "/ecosystem"
-				}
-			]
+			url: "/about-us"
 		},
 		{
 			label: "Understand TLIP",
 			entries: [
 				{
-					label: "What is TLIP?",
-					url: "/what-is"
-				},
-				{
 					label: "Why TLIP?",
 					url: "/why"
 				},
 				{
-					label: "How TLIP Works",
-					url: "/#how-does-it-work"
+					label: "Benefits",
+					// TODO: update this in https://github.com/tmea-tlip/www.tlip.io/issues/37
+					url: "/#benefits"
+				}
+			]
+		},
+		{
+			label: "How TLIP works",
+			entries: [
+				{
+					label: "Launch with ease",
+					url: "/#launch-with-ease"
 				},
 				{
-					label: "TLIP In Action",
-					url: "/#in-action"
+					label: "Built for developers",
+					url: "/#built-for-developers",
+					external: true
+				},
+				{
+					label: "Standard compliance",
+					url: "/standard-compliance"
 				}
 			]
 		},
@@ -43,25 +45,25 @@
 			label: "Resources",
 			entries: [
 				{
-					label: "FAQ",
-					url: "/faq"
+					label: "News",
+					url: "/news"
 				},
 				{
-					label: "Wiki",
-					url: "https://wiki.tlip.io/",
+					label: "Blog",
+					url: "https://medium.com/@tlip.io",
 					external: true
 				},
 				{
-					label: "News",
-					url: "/news"
-				}
+					label: "Videos",
+					url: "/about-us#videos",
+				},
+				{
+					label: "TLIP Wiki",
+					url: "https://docs.tlip.io/",
+					external: true
+				},
 			]
 		},
-		{
-			label: "Blog",
-			url: "https://medium.com/@tlip.io",
-			external: true
-		}
 	];
 </script>
 
