@@ -18,7 +18,6 @@
 				},
 				{
 					label: "Benefits",
-					// TODO: update this in https://github.com/tmea-tlip/www.tlip.io/issues/37
 					url: "/#benefits"
 				}
 			]
@@ -33,7 +32,6 @@
 				{
 					label: "Built for developers",
 					url: "/#built-for-developers",
-					external: true
 				},
 				{
 					label: "Standard compliance",

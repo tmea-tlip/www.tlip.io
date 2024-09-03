@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { Carousel } from "$components";
-	import { CONSORTIUM_MEMBERS } from "$lib";
+	import { INTEGRATED_WITH } from "$lib";
 
 	export let id: string;
 </script>
@@ -26,5 +26,5 @@
 		will purposely be designed to foster collaboration among both government and industry stakeholders to drive policy
 		change and establish an impartial ecosystem for global trade.
 	</p>
-	<Carousel items={CONSORTIUM_MEMBERS}></Carousel>
+	<Carousel items={INTEGRATED_WITH}></Carousel>
 </section>
