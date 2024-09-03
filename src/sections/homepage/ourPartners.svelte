@@ -40,7 +40,9 @@
 			<h3 class="text-center">Testimonials</h3>
 			<div class="mt-10 grid grid-cols-1 gap-5 md:grid-cols-2 lg:gap-10">
 				{#each TESTIMONIALS as { description, author, logo }}
-					<div class="flex flex-col rounded-md border border-grey-100 bg-white px-6 py-8 md:px-9 md:py-14 gap-y-5">
+					<div
+						class="flex flex-col gap-y-5 rounded-md border border-grey-100 bg-white px-6 py-8 md:px-9 md:py-14"
+					>
 						<div class="flex flex-row items-center gap-x-5">
 							<div class="h-10 w-10 overflow-hidden rounded-full">
 								<img src={logo} alt={logo} class="h-full w-full object-contain" />

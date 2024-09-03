@@ -50,7 +50,7 @@ export const INTEGRATED_WITH: CarouselEntry[] = [
 	},
 	{
 		src: "/assets/government/afa.png"
-	},
+	}
 ];
 
 export const CONSORTIUM_QUOTES: CarouselEntry[] = [

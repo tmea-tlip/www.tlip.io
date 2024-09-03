@@ -55,7 +55,7 @@
 
 <section class="bg-blue-300 py-20" {id}>
 	<div class="container flex flex-col justify-between text-center text-white lg:flex-row lg:text-left">
-		<div class="w-full py-20 lg:mr-7 gap-6">
+		<div class="w-full gap-6 py-20 lg:mr-7">
 			{#if $page.url.pathname !== "/faq"}
 				<h1 class="flex justify-center text-36 capitalize md:text-48 lg:justify-start">
 					{HEADING.title}

@@ -65,7 +65,7 @@
 			<img src="/assets/logo-TLIP.svg" alt="TLIP logo" id="logo" />
 		</a>
 		<div class="order-3 my-auto hidden lg:inline-block">
-			<Button {...mailLink} as="link" classes="[&_span]:shrink-0"/>
+			<Button {...mailLink} as="link" classes="[&_span]:shrink-0" />
 		</div>
 		<div class="flex flex-1 flex-row justify-end">
 			<!-- Desktop -->

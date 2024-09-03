@@ -5,7 +5,6 @@
 		Benefits,
 		Hero,
 		LaunchWithEase,
-		InAction,
 		OurPartners,
 		BuiltForDevelopers,
 		StandardsCompliance
