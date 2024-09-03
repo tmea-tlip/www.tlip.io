@@ -31,8 +31,7 @@
 				},
 				{
 					label: "Built for developers",
-					url: "/#built-for-developers",
-					external: true
+					url: "/#built-for-developers"
 				},
 				{
 					label: "Standard compliance",
@@ -54,15 +53,15 @@
 				},
 				{
 					label: "Videos",
-					url: "/about-us#videos",
+					url: "/about-us#videos"
 				},
 				{
 					label: "TLIP Wiki",
 					url: "https://docs.tlip.io/",
 					external: true
-				},
+				}
 			]
-		},
+		}
 	];
 </script>
 

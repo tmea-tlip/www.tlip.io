@@ -19,8 +19,7 @@
 	];
 
 	const HEADING: Heading = {
-		title: "Any questions?",
-		description: "New to TLIP and full of questions?"
+		title: "Any questions?"
 	};
 	const HEADING_FAQS: Heading = {
 		title: "Still Have Questions?",
@@ -56,14 +55,16 @@
 
 <section class="bg-blue-300 py-20" {id}>
 	<div class="container flex flex-col justify-between text-center text-white lg:flex-row lg:text-left">
-		<div class="w-full py-20 lg:mr-7">
+		<div class="w-full gap-6 py-20 lg:mr-7">
 			{#if $page.url.pathname !== "/faq"}
-				<h1 class="mb-6 flex justify-center text-36 capitalize md:text-48 lg:justify-start">
+				<h1 class="flex justify-center text-36 capitalize md:text-48 lg:justify-start">
 					{HEADING.title}
 				</h1>
-				<p>{HEADING.description}</p>
+				{#if HEADING.description}
+					<p>{HEADING.description}</p>
+				{/if}
 			{:else}
-				<h1 class="mb-6 flex justify-center text-36 capitalize md:text-48 lg:justify-start">
+				<h1 class="flex justify-center text-36 capitalize md:text-48 lg:justify-start">
 					{HEADING_FAQS.title}
 				</h1>
 				<p>{HEADING_FAQS.description}</p>
@@ -73,7 +74,7 @@
 				{#if $page.url.pathname !== "/faq"}
 					{#each BUTTONS as button}
 						<div class="mx-auto mb-6 w-1/2 uppercase last:mb-0 md:mb-0">
-							<Button classes="text-16 font-bold h-14" {...button} secondary />
+							<Button classes="text-16 font-bold h-14 [&_span]:shrink-0" {...button} secondary />
 						</div>
 					{/each}
 					<a
@@ -94,7 +95,7 @@
 					</a>
 				{:else}
 					<div class="mx-auto mb-6 w-1/2 uppercase last:mb-0 md:mb-0 lg:mx-0">
-						<Button classes="text-16 font-bold h-14" {...BUTTONS[1]} secondary />
+						<Button classes="text-16 font-bold h-14 [&_span]:shrink-0" {...BUTTONS[1]} secondary />
 					</div>
 				{/if}
 			</div>
