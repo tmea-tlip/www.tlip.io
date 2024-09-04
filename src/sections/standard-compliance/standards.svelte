@@ -82,6 +82,12 @@
 				>.
 			</li>
 			<li>
+				Addresses, identifiers, transactions, essences, and hashes (including Merkle Tree hashes) are generated using (generally) the <a
+					href="https://datatracker.ietf.org/doc/html/rfc7693.html"
+					target="_blank">Blake2b-256 hash function</a
+				>.
+			</li>
+			<li>
 				The data integrity of verifiable credentials is maintained through the EdDSA signature scheme, with IETF
 				JWK used for public key representation in DID documents (<a
 					href="https://www.rfc-editor.org/info/rfc7517"
