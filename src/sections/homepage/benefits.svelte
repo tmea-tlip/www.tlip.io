@@ -1,12 +1,26 @@
 <script lang="ts">
+	import { page } from "$app/stores";
 	import { onMount } from "svelte";
 	import { Icon } from "$components";
 
 	export let id: string;
 
-	const HEADINGS = {
+	interface Card {
+		title: string;
+		subsections: Subsection[];
+	}
+	interface Subsection {
+		id: string;
+		title: string;
+		description: string;
+		icon: {
+			name: string;
+		};
+	}
+
+	const CARDS: Card = {
 		title: "What are the Benefits?",
-		cards: [
+		subsections: [
 			{
 				id: "for-exporters",
 				title: "For exporters",
@@ -42,61 +56,45 @@
 		]
 	};
 
-	let selectedCard = HEADINGS.cards[0];
+	let selectedCard: Subsection = CARDS.subsections[0];
 
-	const selectCardFromQuery = () => {
-		const urlParams = new URLSearchParams(window.location.search);
-		const cardId = urlParams.get("card");
+	$: console.log("selectedCard", selectedCard);
+	$: console.log("$page", $page);
 
-		if (cardId) {
-			const card = HEADINGS.cards.find(c => c.id === cardId);
-			if (card) {
-				selectedCard = card;
-			}
-		}
+	const handleCardClick = (card: Subsection) => {
+		selectedCard = card;
+		document?.getElementById("benefits")?.scrollIntoView({ behavior: "smooth" });
 	};
 
-	const scrollToBenefits = () => {
-		const benefitsSection = document?.getElementById(id);
-		if (benefitsSection) {
-			benefitsSection.scrollIntoView({ behavior: "smooth" });
-		}
+	const handleNavClick = (cardId: string) => {
+		selectedCard = CARDS.subsections.find(card => card.id === cardId) ?? CARDS.subsections[0];
 	};
 
 	onMount(() => {
-		selectCardFromQuery();
-		scrollToBenefits();
-
-		window.addEventListener("popstate", () => {
-			selectCardFromQuery();
-			scrollToBenefits();
-		});
+		const urlParams = new URLSearchParams(window.location.hash.replace("#", ""));
+		const cardId = urlParams.get("card");
+		if (cardId) {
+			handleNavClick(cardId);
+		}
 	});
-
-	const handleCardClick = card => {
-		selectedCard = card;
-		const url = `?card=${card.id}#${id}`;
-		window.history.pushState({}, "", url);
-		selectCardFromQuery();
-		scrollToBenefits();
-	};
 </script>
 
 <section {id}>
 	<div class="container py-24 lg:py-28">
-		<h2 class="mb-9 text-center text-36 md:mb-12 lg:mb-16 lg:text-left">{HEADINGS.title}</h2>
+		<h2 class="mb-9 text-center text-36 md:mb-12 lg:mb-16 lg:text-left">{CARDS.title}</h2>
 		<div class="grid grid-cols-1 gap-5 lg:grid-cols-2">
 			<div class="space-y-4">
-				{#each HEADINGS.cards as card}
+				{#each CARDS.subsections as card}
 					<button
-						class="flex flex-row justify-start w-full cursor-pointer border rounded-lg p-4 {selectedCard.id === card.id
+						class="flex w-full cursor-pointer flex-row justify-start rounded-lg border p-4 {selectedCard.id ===
+						card.id
 							? "border-blue-500"
 							: "border-gray-300"}"
 						on:click={() => handleCardClick(card)}
 					>
-						<div class="flex justify-start gap-x-2 items-center w-full">
+						<div class="flex w-full items-center justify-start gap-x-2">
 							<Icon {...card.icon} class="mr-4" />
-							<div class="flex text-start flex-col">
+							<div class="flex flex-col text-start">
 								<h4 class="font-bold">{card.title}</h4>
 								<p>{card.description}</p>
 							</div>
@@ -104,8 +102,8 @@
 					</button>
 				{/each}
 			</div>
-			<div class="border rounded-lg border-gray-300 p-4">
-				<p>{selectedCard.description}</p>
+			<div class="rounded-lg border border-gray-300 p-4">
+				<p>{selectedCard.title}</p>
 			</div>
 		</div>
 	</div>
