@@ -18,7 +18,25 @@
 				},
 				{
 					label: "Benefits",
-					url: "/#benefits"
+					url: "/#benefits",
+					entries: [
+						{
+							label: "For exporters",
+							url: "/#for-exporters"
+						},
+						{
+							label: "For freight forwarders",
+							url: "/#for-freight-forwarders"
+						},
+						{
+							label: "For governments",
+							url: "/#for-governments"
+						},
+						{
+							label: "For importers",
+							url: "/#for-importers"
+						}
+					]
 				}
 			]
 		},

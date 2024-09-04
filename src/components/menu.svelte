@@ -20,7 +20,7 @@
 
 <ul
 	transition:slide={{ duration: 200 }}
-	class={`${classes} flex flex-col items-stretch justify-stretch lg:border lg:border-gray-300 lg:shadow-lg`}
+	class={`${classes} flex flex-col items-stretch justify-stretch lg:border lg:border-gray-300 lg:shadow-lg w-fit`}
 	use:clickOutside={() => {
 		if (Date.now() - visibleTime > 300) {
 			dispatchClick();
@@ -51,6 +51,13 @@
 					{item.label}
 				</a>
 			{/if}
+			{#if item.entries}
+				<div class="flex flex-col gap-2">
+						{#each item.entries as entry}
+						<a class=" w-full rounded py-3 px-6 hover:bg-gray-100 hover:text-green-400" href={entry.url}>- {entry.label}</a>
+						{/each}
+				</div>
+			{/if}
 		</li>
 	{/each}
 </ul>
@@ -64,6 +71,6 @@
 		@apply list-none;
 		@apply bg-white;
 		@apply rounded;
-		width: 200px;
+		@apply min-w-[200px];
 	}
 </style>
