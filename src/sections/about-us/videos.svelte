@@ -17,7 +17,8 @@
 	};
 </script>
 
-<section {id} class="pb-16 pt-24 lg:pb-28 lg:pt-40">
+<section {id} class="pb-16 pt-24 lg:py-28 flex flex-col gap-20">
+	<h3 class="text-center leading-125 tracking-0.02">Videos</h3>
 	<div class="lg:items-left container flex flex-col items-center gap-10 lg:flex-row">
 		{#each items.cards as { video, description, title }}
 			<div class="flex aspect-video h-full w-full flex-col gap-y-8 last:mr-0 lg:mb-0 lg:mr-20 lg:w-1/2">
