@@ -5,10 +5,7 @@
 
 <Hero
 	heading={{
-		section: "About Us",
-		title: "Discover the future of global trade",
-		description:
-			"Launched in 2020, TLIP by IOTA Foundation and TradeMark Africa transforms global trade with secure, efficient data exchange, modernizing outdated processes and enhancing transparency."
+		title: "Unlocking cross-border trade data exchange"
 	}}
 	color="text-grey-500"
 	{id}
