@@ -22,19 +22,19 @@
 					entries: [
 						{
 							label: "For exporters",
-							url: "/#for-exporters"
+							url: "/#benefits?card=for-exporters"
 						},
 						{
 							label: "For freight forwarders",
-							url: "/#for-freight-forwarders"
+							url: "/#benefits?card=for-freight-forwarders"
 						},
 						{
 							label: "For governments",
-							url: "/#for-governments"
+							url: "/#benefits?card=for-governments"
 						},
 						{
 							label: "For importers",
-							url: "/#for-importers"
+							url: "/#benefits?card=for-importers"
 						}
 					]
 				}
