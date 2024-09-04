@@ -12,11 +12,8 @@
 			</p>
 			<p>
 				Explore the
-				<a
-					class="text-blue-500"
-					href="https://docs.tlip.io"
-					target="_blank"
-					rel="noopener noreferrer">TLIP Documentation</a
+				<a class="text-blue-500" href="https://docs.tlip.io" target="_blank" rel="noopener noreferrer"
+					>TLIP Documentation</a
 				>
 				for more information.
 			</p>

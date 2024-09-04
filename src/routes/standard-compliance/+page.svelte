@@ -1,8 +1,8 @@
 <script lang="ts">
 	import { ObservedRoute } from "$components";
 	import type { Section } from "$lib";
-	import { Standards, Hero } from "$sections/standard-compliance";
 	import { HaveAnyQuestions } from "$sections/shared";
+	import { Standards, Hero } from "$sections/standard-compliance";
 
 	const sections: Section[] = [
 		{
