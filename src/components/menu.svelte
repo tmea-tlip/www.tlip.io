@@ -20,7 +20,7 @@
 
 <ul
 	transition:slide={{ duration: 200 }}
-	class={`${classes} flex flex-col items-stretch justify-stretch lg:border lg:border-gray-300 lg:shadow-lg w-fit`}
+	class={`${classes} flex w-fit flex-col items-stretch justify-stretch lg:border lg:border-gray-300 lg:shadow-lg`}
 	use:clickOutside={() => {
 		if (Date.now() - visibleTime > 300) {
 			dispatchClick();
@@ -53,12 +53,16 @@
 			{/if}
 			{#if item.entries}
 				<div class="flex flex-col gap-2">
-						{#each item.entries as entry}
-						<a class=" w-full rounded py-3 px-6 hover:bg-gray-100 hover:text-green-400" href={entry.url} on:click|preventDefault={e => {
-							dispatchClick(e);
-							scrollIntoView(e.currentTarget);
-						}}>- {entry.label}</a>
-						{/each}
+					{#each item.entries as entry}
+						<a
+							class=" w-full rounded px-6 py-3 hover:bg-gray-100 hover:text-green-400"
+							href={entry.url}
+							on:click|preventDefault={e => {
+								dispatchClick(e);
+								scrollIntoView(e.currentTarget);
+							}}>- {entry.label}</a
+						>
+					{/each}
 				</div>
 			{/if}
 		</li>

@@ -17,25 +17,7 @@
 				},
 				{
 					label: "Benefits",
-					url: "/#benefits",
-					// entries: [
-					// 	{
-					// 		label: "For exporters",
-					// 		url: "/#benefits?card=for-exporters"
-					// 	},
-					// 	{
-					// 		label: "For freight forwarders",
-					// 		url: "/#benefits?card=for-freight-forwarders"
-					// 	},
-					// 	{
-					// 		label: "For governments",
-					// 		url: "/#benefits?card=for-governments"
-					// 	},
-					// 	{
-					// 		label: "For importers",
-					// 		url: "/#benefits?card=for-importers"
-					// 	}
-					// ]
+					url: "/#benefits"
 				}
 			]
 		},

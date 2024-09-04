@@ -61,9 +61,7 @@ export function scrollIntoView(target: HTMLAnchorElement) {
 
 			const url = new URL(href, window.location.href);
 			const urlHash = url.hash;
-			const [sectionId, queryString] = urlHash.includes('?')
-				? urlHash.split('?')
-				: [urlHash, ""];
+			const [sectionId] = urlHash.includes("?") ? urlHash.split("?") : [urlHash, ""];
 
 			const sectionIdParts = sectionId.split("#");
 			if (sectionId && sectionIdParts.length === 2) {
@@ -80,13 +78,13 @@ export function scrollIntoView(target: HTMLAnchorElement) {
 							}
 						}, 300);
 					})
-					.catch(() => { });
+					.catch(() => {});
 			} else {
 				goto(target.href)
 					.then(() => {
 						window.scrollTo(0, 0);
 					})
-					.catch(() => { });
+					.catch(() => {});
 			}
 		}
 	}
