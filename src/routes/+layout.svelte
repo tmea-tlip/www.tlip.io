@@ -1,7 +1,6 @@
 <script lang="ts">
 	import { Footer, Header } from "$components";
 	import type { NavigationMenu } from "$lib";
-	// import { scrollIntoView } from "$lib/utils";
 	import "../scss/index.scss";
 
 	const navigationMenu: NavigationMenu[] = [

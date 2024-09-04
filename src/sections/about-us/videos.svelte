@@ -17,7 +17,7 @@
 	};
 </script>
 
-<section {id} class="pb-16 pt-24 lg:py-28 flex flex-col gap-20">
+<section {id} class="flex flex-col gap-20 pb-16 pt-24 lg:py-28">
 	<h2 class="mb-9 text-center text-36">Videos</h2>
 	<div class="lg:items-left container flex flex-col items-center gap-10 lg:flex-row">
 		{#each items.cards as { video, description, title }}
@@ -29,11 +29,11 @@
 					</video>
 				{/if}
 				<div class="flex flex-col gap-1 lg:gap-3">
-				<h4 class="text-center lg:text-left">
-					{title}
-				</h4>
-				<p class="text-center lg:text-left">{description}</p>
-			</div>
+					<h4 class="text-center lg:text-left">
+						{title}
+					</h4>
+					<p class="text-center lg:text-left">{description}</p>
+				</div>
 			</div>
 		{/each}
 	</div>

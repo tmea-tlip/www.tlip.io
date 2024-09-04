@@ -82,9 +82,9 @@
 				>.
 			</li>
 			<li>
-				Addresses, identifiers, transactions, essences, and hashes (including Merkle Tree hashes) are generated using (generally) the <a
-					href="https://datatracker.ietf.org/doc/html/rfc7693.html"
-					target="_blank">Blake2b-256 hash function</a
+				Addresses, identifiers, transactions, essences, and hashes (including Merkle Tree hashes) are generated
+				using (generally) the <a href="https://datatracker.ietf.org/doc/html/rfc7693.html" target="_blank"
+					>Blake2b-256 hash function</a
 				>.
 			</li>
 			<li>
