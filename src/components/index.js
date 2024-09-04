@@ -11,3 +11,4 @@ export { default as ListLoader } from "./list-loader.svelte";
 export { default as Paginator } from "./paginator.svelte";
 export { default as PaginatorPage } from "./paginator-page.svelte";
 export { default as Hero } from "./hero.svelte";
+export { default as Info } from "./info.svelte";
