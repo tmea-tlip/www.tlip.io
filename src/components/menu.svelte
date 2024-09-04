@@ -54,7 +54,10 @@
 			{#if item.entries}
 				<div class="flex flex-col gap-2">
 						{#each item.entries as entry}
-						<a class=" w-full rounded py-3 px-6 hover:bg-gray-100 hover:text-green-400" href={entry.url}>- {entry.label}</a>
+						<a class=" w-full rounded py-3 px-6 hover:bg-gray-100 hover:text-green-400" href={entry.url} on:click|preventDefault={e => {
+							dispatchClick(e);
+							scrollIntoView(e.currentTarget);
+						}}>- {entry.label}</a>
 						{/each}
 				</div>
 			{/if}

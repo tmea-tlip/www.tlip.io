@@ -1,7 +1,9 @@
 <script lang="ts">
+	import { browser } from "$app/environment";
 	import { page } from "$app/stores";
-	import { onMount } from "svelte";
 	import { Icon } from "$components";
+	import { onMount } from "svelte";
+	import { goto } from "$app/navigation";
 
 	export let id: string;
 
@@ -58,24 +60,32 @@
 
 	let selectedCard: Subsection = CARDS.subsections[0];
 
-	$: console.log("selectedCard", selectedCard);
-	$: console.log("$page", $page);
-
 	const handleCardClick = (card: Subsection) => {
 		selectedCard = card;
 		document?.getElementById("benefits")?.scrollIntoView({ behavior: "smooth" });
 	};
 
-	const handleNavClick = (cardId: string) => {
-		selectedCard = CARDS.subsections.find(card => card.id === cardId) ?? CARDS.subsections[0];
-	};
+	function updateSelectedCard(): void {
+		if(browser) {
+			const url = new URL($page.url);
+			const hash = url.hash;
+			const [sectionId, queryString] = hash.includes('?') 
+				? hash.split('?') 
+				: [hash, ""];
 
-	onMount(() => {
-		const urlParams = new URLSearchParams(window.location.hash.replace("#", ""));
-		const cardId = urlParams.get("card");
-		if (cardId) {
-			handleNavClick(cardId);
+			const queryParams = queryString ? new URLSearchParams(queryString) : null;
+			const cardParam = queryParams?.get('card');
+			if (cardParam) {
+				selectedCard = CARDS.subsections.find(card => card.id === cardParam) ?? CARDS.subsections[0];
+			} else {
+				selectedCard = CARDS.subsections[0];
+			}
 		}
+	}
+
+	$: $page, updateSelectedCard();
+	onMount(() => {
+		updateSelectedCard();
 	});
 </script>
 

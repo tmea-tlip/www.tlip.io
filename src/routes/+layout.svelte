@@ -1,7 +1,6 @@
 <script lang="ts">
 	import { Footer, Header } from "$components";
 	import type { NavigationMenu } from "$lib";
-	// import { scrollIntoView } from "$lib/utils";
 	import "../scss/index.scss";
 
 	const navigationMenu: NavigationMenu[] = [
@@ -19,24 +18,24 @@
 				{
 					label: "Benefits",
 					url: "/#benefits",
-					entries: [
-						{
-							label: "For exporters",
-							url: "/#benefits?card=for-exporters"
-						},
-						{
-							label: "For freight forwarders",
-							url: "/#benefits?card=for-freight-forwarders"
-						},
-						{
-							label: "For governments",
-							url: "/#benefits?card=for-governments"
-						},
-						{
-							label: "For importers",
-							url: "/#benefits?card=for-importers"
-						}
-					]
+					// entries: [
+					// 	{
+					// 		label: "For exporters",
+					// 		url: "/#benefits?card=for-exporters"
+					// 	},
+					// 	{
+					// 		label: "For freight forwarders",
+					// 		url: "/#benefits?card=for-freight-forwarders"
+					// 	},
+					// 	{
+					// 		label: "For governments",
+					// 		url: "/#benefits?card=for-governments"
+					// 	},
+					// 	{
+					// 		label: "For importers",
+					// 		url: "/#benefits?card=for-importers"
+					// 	}
+					// ]
 				}
 			]
 		},
