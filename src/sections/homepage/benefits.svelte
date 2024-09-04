@@ -170,10 +170,9 @@
 			<div class="hidden grow flex-col space-y-4 lg:flex">
 				{#each SECTIONS.subsections as card}
 					<button
-						class="flex w-full grow cursor-pointer flex-row justify-start rounded-lg p-4 {selectedCard.id ===
-						card.id
-							? "bg-blue-200/30"
-							: "border border-blue-200/30"}"
+						class={`flex w-full grow cursor-pointer flex-row justify-start rounded-lg p-4 ${
+							selectedCard.id === card.id ? "bg-blue-200/30" : "border border-blue-200/30"
+						}`}
 						on:click={() => handleCardClick(card)}
 					>
 						<div class="flex w-full flex-row items-start justify-start gap-x-4">
