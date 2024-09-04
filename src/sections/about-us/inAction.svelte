@@ -16,9 +16,7 @@
 </script>
 
 <section {id} class="pb-16 pt-24 lg:pb-28 lg:pt-40">
-	<div class="container">
-		<div>
-			<div class="lg:items-left flex flex-col items-center lg:flex-row">
+			<div class="container lg:items-left flex flex-col items-center lg:flex-row gap-10">
 				{#each items.cards as { video, description }}
 					<div class="flex aspect-video h-full w-full flex-col gap-y-6 last:mr-0 lg:mb-0 lg:mr-20 lg:w-1/2">
 						{#if video}
@@ -31,8 +29,6 @@
 					</div>
 				{/each}
 			</div>
-		</div>
-	</div>
 </section>
 
 <style lang="scss">

@@ -28,7 +28,7 @@
 	];
 </script>
 
-<section class="container flex flex-col gap-20 py-24 md:pb-36 md:pt-32 lg:gap-40" {id}>
+<section class="container flex flex-col gap-20 py-24 md:pb-36 md:pt-32 lg:gap-32" {id}>
 	<p class="leading-6 tracking-0.04">
 		In 2020, the IOTA Foundation joined forces with
 		<a
