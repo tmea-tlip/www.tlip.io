@@ -11,7 +11,7 @@
 			title: "Our Technology",
 			description:
 				"At TLIP's core lies the robust foundation of <a href='https://www.iota.org' target='_blank' class='text-green-500 underline'>IOTA</a>’s open-source distributed ledger technology (DLT). Leveraging DLT’s inherent qualities  – transparency, traceability, and immutability – TLIP is designed to foster trust and integrity in shared data.",
-			src: "https://placecats.com/millie/400/300"
+			src: "/assets/about-us/collaboration.png"
 		},
 		{
 			title: "Pilot Programs and Trials",
@@ -23,7 +23,7 @@
 			title: "The Consortium",
 			description:
 				"The TLIP platform was developed by TradeMark Africa in partnership with the IOTA Foundation, drawing on insights gained from implementations in Kenya and the United Kingdom. Recognising the need for a global consortium to ensure widespread adoption, <a href='https://www.trademarkafrica.com' target='_blank' class='text-green-500 underline'>TradeMark Africa</a>, the <a href='https://www.iota.org' target='_blank' class='text-green-500 underline'>IOTA Foundation</a>, the <a href='https://www.weforum.org' target='_blank' class='text-green-500 underline'>World Economic Forum</a>, the <a href='https://www.export.org.uk' target='_blank' class='text-green-500 underline'>Chartered Institute of Export & International Trade</a>, the <a href='https://www.tradefacilitation.org' target='_blank' class='text-green-500 underline'>Global Alliance for Trade Facilitation</a>, and the <a href='https://institute.global' target='_blank' class='text-green-500 underline'>Tony Blair Institute for Global Change</a> signed a Collaboration Agreement to jointly develop and expand the TLIP infrastructure and governance framework.",
-			src: "https://placecats.com/millie/400/300"
+			src: "/assets/about-us/consortium.png"
 		}
 	];
 </script>
@@ -54,7 +54,7 @@
 						<p>{@html item.description}</p>
 					</div>
 				</div>
-				<div class="flex flex-1 items-center overflow-hidden rounded-lg">
+				<div class="flex flex-1 items-center overflow-hidden rounded-lg bg-blue-300/20">
 					<img src={item.src} alt={item.title} class="w-full object-contain" />
 				</div>
 			</div>

@@ -167,11 +167,11 @@
 				{/each}
 			</div>
 			<!-- Desktop Section -->
-			<div class="hidden grow flex-col space-y-4 lg:flex">
+			<div class="hidden flex-col space-y-4 lg:flex">
 				{#each SECTIONS.subsections as card}
 					<button
-						class={`flex w-full grow cursor-pointer flex-row justify-start rounded-lg p-4 ${
-							selectedCard.id === card.id ? "bg-blue-200/30" : "border border-blue-200/30"
+						class={`flex w-full cursor-pointer flex-row justify-start rounded-lg p-4 ${
+							selectedCard.id === card.id ? "border border-blue-200/30 bg-blue-200/30" : "border border-blue-200/30"
 						}`}
 						on:click={() => handleCardClick(card)}
 					>
@@ -185,8 +185,8 @@
 					</button>
 				{/each}
 			</div>
-			<div class="col-span-2 hidden rounded-lg border border-blue-200/30 p-8 lg:block">
-				<div class="flex flex-col gap-10">
+			<div class="col-span-2 hidden rounded-lg border border-blue-200/30 p-6 lg:block">
+				<div class="flex flex-col gap-8">
 					{#each selectedCard.cards as card}
 						<div class="flex flex-col gap-2">
 							<h4 class="text-28 leading-110 tracking-0.02">{card.title}</h4>

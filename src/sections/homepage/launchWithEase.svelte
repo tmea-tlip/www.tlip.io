@@ -3,7 +3,7 @@
 </script>
 
 <section class="container py-20 md:pb-36 md:pt-32" {id}>
-	<h2 class="mb-9 text-center text-36">Launch with ease</h2>
+	<h2 class="mb-9 text-center text-36">Launch with Ease</h2>
 	<p class="mx-auto mb-16 max-w-2xl text-center leading-6 tracking-0.04">
 		TLIP offers supply chain businesses the tools to create quick, effective client experiences without designing
 		consignment data sharing flows from scratch. TLIP UI provides a sleek consignment creation and sharing flow that
