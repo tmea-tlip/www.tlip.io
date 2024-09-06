@@ -6,7 +6,7 @@
 
 <Hero
 	heading={{
-		title: "Digital trade docs from government agencies within seconds",
+		title: "Digital trade docs from government in seconds",
 		subtitle: "Access documents instantly via TLIP’s integration with the Kenya Revenue Authority, KenTrade, and KEPHIS",
 		description:
 			"Supported documents: Export Declaration, Certificate of Export, Phytosanitary Certificate, Export Certificate."
