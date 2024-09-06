@@ -54,7 +54,7 @@
 						<p>{@html item.description}</p>
 					</div>
 				</div>
-				<div class="flex flex-1 items-center overflow-hidden rounded-lg bg-blue-300/20">
+				<div class="flex flex-1 items-center overflow-hidden rounded-lg bg-blue-300/40">
 					<img src={item.src} alt={item.title} class="w-full object-contain" />
 				</div>
 			</div>
