@@ -26,7 +26,7 @@
 	<div
 		class={`container z-10 flex h-full w-full flex-col items-center ${hasSlots ? "justify-center" : ""} lg:flex-row lg:gap-5`}
 	>
-		<div class={`w-full flex-1 text-center ${hasSlots ? "w-full lg:w-2/5" : "text-left"} lg:text-left`}>
+		<div class={`w-full flex-1 text-center ${hasSlots ? "w-full lg:w-3/5" : "text-left"} lg:text-left`}>
 			{#if heading?.section}
 				<h6 class="lgtext-20 mb-2 text-16 {color} metropolis-700">{heading.section}</h6>
 			{/if}
@@ -34,11 +34,11 @@
 				<h1 class="mb-6 text-28 lg:text-48 {color} metropolis-600">{heading.title}</h1>
 			{/if}
 			{#if heading?.subtitle}
-				<h6 class="mb-6 text-18 lg:text-24 {color} metropolis-700">{heading.subtitle}</h6>
+				<h6 class="mb-6 text-18 lg:text-24 lg:max-w-lg {color} metropolis-700">{heading.subtitle}</h6>
 			{/if}
 			{#if heading?.description}
 				<h4
-					class={`${color} lg:max-w-md ${heading.description.length > 200 ? "text-16" : "text-16 lg:text-24"} metropolis-400 whitespace-pre-line`}
+					class={`${color} lg:max-w-lg ${heading.description.length > 200 ? "text-16" : "text-16 lg:text-24"} metropolis-400 whitespace-pre-line`}
 				>
 					{@html heading.description}
 				</h4>
@@ -54,7 +54,7 @@
 			{/if}
 		</div>
 		{#if hasSlots}
-			<div class="flex w-auto items-center justify-center lg:w-3/5 lg:justify-end">
+			<div class="flex w-auto items-center justify-center lg:w-2/5 lg:justify-end">
 				<slot />
 			</div>
 		{/if}

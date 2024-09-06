@@ -22,14 +22,14 @@
 			]
 		},
 		{
-			label: "How TLIP works",
+			label: "How TLIP Works",
 			entries: [
 				{
-					label: "Launch with ease",
+					label: "Launch with Ease",
 					url: "/#launch-with-ease"
 				},
 				{
-					label: "Built for developers",
+					label: "Built for Developers",
 					url: "/#built-for-developers"
 				},
 				{

@@ -135,29 +135,29 @@
 	};
 </script>
 
-<section {id}>
+<section {id} class="bg-green-500 text-white">
 	<div class="container flex flex-col gap-10 py-20 lg:py-28">
-		<h2 class="text-center text-36 lg:text-left">{SECTIONS.title}</h2>
+		<h2 class="text-center text-48">{SECTIONS.title}</h2>
 		<div class="flex flex-col gap-5 lg:grid lg:grid-cols-3">
 			<!-- Mobile Section -->
 			<div class="space-y-8 lg:hidden">
 				{#each SECTIONS.subsections as subsection}
-					<div class="space-y-6 rounded-lg border border-blue-200/30 p-6 lg:hidden">
+					<div class="space-y-6 rounded-lg border border-green-200/20 p-6 lg:hidden">
 						<div class="flex items-start gap-x-2">
-							<Icon {...subsection.icon} />
+							<Icon {...subsection.icon} fill="#DBE4DA"/>
 							<div class="text-start">
 								<h3 class="text-xl font-bold">{subsection.title}</h3>
 								<p>{subsection.description}</p>
 							</div>
 						</div>
-						<hr class="border border-blue-200/30" />
+						<hr class="border border-green-200/20" />
 						<div class="space-y-4">
 							{#each subsection.cards as card}
 								<div class="flex flex-col gap-2">
 									<h4 class="leading-110 tracking-0.02">
 										{card.title}
 									</h4>
-									<p class="leading-150 tracking-0.02 text-grey-500">
+									<p class="leading-150 tracking-0.02 text-grey-100">
 										{card.description}
 									</p>
 								</div>
@@ -167,16 +167,16 @@
 				{/each}
 			</div>
 			<!-- Desktop Section -->
-			<div class="hidden grow flex-col space-y-4 lg:flex">
+			<div class="hidden flex-col space-y-4 lg:flex">
 				{#each SECTIONS.subsections as card}
 					<button
-						class={`flex w-full grow cursor-pointer flex-row justify-start rounded-lg p-4 ${
-							selectedCard.id === card.id ? "bg-blue-200/30" : "border border-blue-200/30"
+						class={`flex w-full cursor-pointer flex-row justify-start rounded-lg p-4 ${
+							selectedCard.id === card.id ? "border border-green-200/20 bg-green-200/20" : "border border-green-200/20"
 						}`}
 						on:click={() => handleCardClick(card)}
 					>
-						<div class="flex w-full flex-row items-start justify-start gap-x-4">
-							<Icon {...card.icon} />
+						<div class="flex w-full flex-row items-center justify-start gap-x-4">
+							<Icon {...card.icon} fill="#DBE4DA"/>
 							<div class="flex flex-col gap-1 text-start">
 								<h4 class="font-bold">{card.title}</h4>
 								<p>{card.description}</p>
@@ -185,12 +185,12 @@
 					</button>
 				{/each}
 			</div>
-			<div class="col-span-2 hidden rounded-lg border border-blue-200/30 p-8 lg:block">
-				<div class="flex flex-col gap-10">
+			<div class="col-span-2 hidden rounded-lg border border-green-200/20 p-6 lg:block">
+				<div class="flex flex-col gap-8">
 					{#each selectedCard.cards as card}
 						<div class="flex flex-col gap-2">
 							<h4 class="text-28 leading-110 tracking-0.02">{card.title}</h4>
-							<div class="leading-150 tracking-0.02 text-grey-500">{card.description}</div>
+							<div class="leading-150 tracking-0.02 text-grey-100">{card.description}</div>
 						</div>
 					{/each}
 				</div>

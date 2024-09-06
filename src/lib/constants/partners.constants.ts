@@ -35,6 +35,9 @@ export const COMMERCIAL_PARTNERS: CarouselEntry[] = [
 	},
 	{
 		src: "/assets/partners/airflo.png"
+	},
+	{
+		src: "/assets/partners/dfg-kenya.png"
 	}
 ];
 

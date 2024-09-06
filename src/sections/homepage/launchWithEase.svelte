@@ -1,16 +1,26 @@
 <script lang="ts">
+	import { Button } from "$components";
+
 	export let id: string;
 </script>
 
 <section class="container py-20 md:pb-36 md:pt-32" {id}>
-	<h2 class="mb-9 text-center text-36">Launch with ease</h2>
-	<p class="mx-auto mb-16 max-w-2xl text-center leading-6 tracking-0.04">
-		TLIP offers supply chain businesses the tools to create quick, effective client experiences without designing
-		consignment data sharing flows from scratch. TLIP UI provides a sleek consignment creation and sharing flow that
-		works seamlessly across browsers, keeping you up-to-date with no extra coding needed.
+	<h2 class="mb-9 text-center text-36">Launch with Ease</h2>
+	<p class="mx-auto mb-8 max-w-2xl text-center leading-6 tracking-0.04">
+		TLIP App provides supply chain businesses easy access via the web browser. All functions can be seamlessly
+		integrated into corporate or government systems via TLIP API.
 	</p>
-	<video class="image-shadow aspect-video h-full w-full object-cover" muted controls preload="metadata">
-		<source src="https://media.giphy.com/media/JIX9t2j0ZTN9S/giphy.mp4" type="video/mp4" />
+	<div class="flex justify-center">
+		<Button classes="mb-16" title="TLIP Wiki" url="https://docs.tlip.io/" isExternal />
+	</div>
+	<video
+		class="image-shadow aspect-video h-full w-full object-cover"
+		muted
+		controls
+		preload="metadata"
+		poster="/assets/posters/TLIP_Documentary_2020_poster.png"
+	>
+		<source src="https://files.iota.org/media/TLIP_Documentary_2020.mp4" type="video/mp4" />
 		<track kind="captions" />
 	</video>
 </section>

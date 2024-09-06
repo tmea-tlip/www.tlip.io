@@ -101,8 +101,6 @@
 				>.
 			</li>
 		</ul>
-
-		<p slot="conclusion">Read our whitepaper for more details.</p>
 	</Info>
 	<Info>
 		<h3 slot="title">Legal Standards</h3>

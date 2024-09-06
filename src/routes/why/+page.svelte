@@ -2,7 +2,7 @@
 	import { ObservedRoute } from "$components";
 	import type { Section } from "$lib";
 	import { HaveAnyQuestions } from "$sections/shared";
-	import { Hero, Reasons, Challenges } from "$sections/why";
+	import { Hero, Reasons, Digitalising } from "$sections/why";
 
 	const sections: Section[] = [
 		{
@@ -14,8 +14,8 @@
 			id: "reasons"
 		},
 		{
-			component: Challenges,
-			id: "challenges"
+			component: Digitalising,
+			id: "digitalising"
 		},
 		{
 			component: HaveAnyQuestions,
