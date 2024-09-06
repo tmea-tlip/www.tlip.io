@@ -34,11 +34,11 @@
 				<h1 class="mb-6 text-28 lg:text-48 {color} metropolis-600">{heading.title}</h1>
 			{/if}
 			{#if heading?.subtitle}
-				<h6 class="mb-6 text-18 lg:text-24 {color} metropolis-700">{heading.subtitle}</h6>
+				<h6 class="mb-6 text-18 lg:text-24 lg:max-w-lg {color} metropolis-700">{heading.subtitle}</h6>
 			{/if}
 			{#if heading?.description}
 				<h4
-					class={`${color} lg:max-w-md ${heading.description.length > 200 ? "text-16" : "text-16 lg:text-24"} metropolis-400 whitespace-pre-line`}
+					class={`${color} lg:max-w-lg ${heading.description.length > 200 ? "text-16" : "text-16 lg:text-24"} metropolis-400 whitespace-pre-line`}
 				>
 					{@html heading.description}
 				</h4>

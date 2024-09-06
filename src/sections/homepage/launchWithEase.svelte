@@ -13,8 +13,14 @@
 	<div class="flex justify-center">
 		<Button classes="mb-16" title="TLIP Wiki" url="https://docs.tlip.io/" isExternal />
 	</div>
-	<video class="image-shadow aspect-video h-full w-full object-cover" muted controls preload="metadata">
-		<source src="https://media.giphy.com/media/JIX9t2j0ZTN9S/giphy.mp4" type="video/mp4" />
+	<video
+		class="image-shadow aspect-video h-full w-full object-cover"
+		muted
+		controls
+		preload="metadata"
+		poster="/assets/posters/TLIP_Documentary_2020_poster.png"
+	>
+		<source src="https://files.iota.org/media/TLIP_Documentary_2020.mp4" type="video/mp4" />
 		<track kind="captions" />
 	</video>
 </section>
