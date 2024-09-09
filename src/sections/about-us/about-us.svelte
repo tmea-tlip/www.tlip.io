@@ -17,7 +17,7 @@
 			title: "Pilot Programs and Trials",
 			description:
 				"Kenya to Netherlands Flower Trade: TLIP was tested in pilot programs for the flower trade, helping to cover supply chain gaps and providing a single source of truth for key trade documents.<br/><br/>Ecosystem of Trust Trials: As part of the UK government’s <a href='https://www.gov.uk/government/publications/2025-uk-border-strategy' target='_blank' class='text-green-500 underline'>2025 Border Strategy</a>, TLIP was used to capture supply chain documentation across various trade flows, including coffee, tea, flowers, frozen fish, and canned food. Learn more about the Ecosystem of Trust trials <a href='https://www.gov.uk/government/publications/the-ecosystem-of-trust-evaluation-report-2023#:~:text=Details,in%20the%202025%20Border%20Strategy.' target='_blank' class='text-green-500 underline'>here.</a>",
-			src: "https://placecats.com/millie/400/300"
+			src: "/assets/about-us/pilot-programs.png"
 		},
 		{
 			title: "The Consortium",
