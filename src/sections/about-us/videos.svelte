@@ -8,19 +8,14 @@
 				video: "https://files.iota.org/media/TLIP_Documentary_2020.mp4",
 				description: "The benefits of TLIP are demonstrated by a shipment of flowers from Nairobi, Kenya, to Royal FloraHolland in the Netherlands.",
 				poster: "/assets/posters/TLIP_Documentary_2020_poster.png"
-			},
-			{
-				title: "Video Title",
-				video: "https://media.giphy.com/media/JIX9t2j0ZTN9S/giphy.mp4",
-				description: "Cat ipsum dolor sit amet, run at 3am for get scared by doggo"
 			}
 		]
 	};
 </script>
 
-<section {id} class="flex flex-col gap-20 pb-16 pt-24 lg:py-28">
+<section {id} class="flex flex-col gap-16 pb-16 pt-24 lg:py-28">
 	<h2 class="mb-9 text-center text-36">Videos</h2>
-	<div class="lg:items-left container flex flex-col items-center gap-10 lg:flex-row">
+	<div class="justify-center container flex flex-col items-center gap-10 lg:flex-row">
 		{#each items.cards as { video, description, title, poster }}
 			<div class="flex aspect-video h-full w-full flex-col gap-y-8 last:mr-0 lg:mb-0 lg:mr-20 lg:w-1/2">
 				{#if video}
