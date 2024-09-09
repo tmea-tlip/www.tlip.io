@@ -6,7 +6,6 @@
 		Hero,
 		LaunchWithEase,
 		OurPartners,
-		BuiltForDevelopers,
 		StandardsCompliance
 	} from "$sections/homepage";
 	import IntegratedWith from "$sections/homepage/integratedWith.svelte";
@@ -32,10 +31,6 @@
 		{
 			component: LaunchWithEase,
 			id: "launch-with-ease"
-		},
-		{
-			component: BuiltForDevelopers,
-			id: "built-for-developers"
 		},
 		{
 			component: StandardsCompliance,

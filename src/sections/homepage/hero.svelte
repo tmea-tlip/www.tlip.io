@@ -14,7 +14,7 @@
 	buttons={[
 		{
 			title: "Book a demo",
-			url: "mailto:tlip@iota.org"
+			url: "mailto:support@tlip.io"
 		}
 	]}
 	style=""
