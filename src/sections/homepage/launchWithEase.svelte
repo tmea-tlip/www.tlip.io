@@ -81,7 +81,7 @@
       <h4>Code Example</h4>
       <pre>
         <code>
-          {`const axios = require('axios');\n\n// Base URL for TLIP API\n\nconst BASE_URL = 'https://api.tlip.io/v1';\n\n// Function to authorize and get the token\n${functionAuthorize}\n\n// Function to create a new user\n${functionCreateUser}\n\n// Function to login an existing user\n${functionLoginUser}\n\n// Example usage\n${exampleUsage}`}
+          {`\n\nconst axios = require('axios');\n\n// Base URL for TLIP API\n\nconst BASE_URL = 'https://api.tlip.io/v1';\n\n// Function to authorize and get the token\n${functionAuthorize}\n\n// Function to create a new user\n${functionCreateUser}\n\n// Function to login an existing user\n${functionLoginUser}\n\n// Example usage\n${exampleUsage}`}
         </code>
       </pre>
     </div>
@@ -99,15 +99,10 @@
 
 <style lang="scss">
   pre {
-    @apply bg-gray-100 rounded text-sm overflow-x-auto;
-    padding: 0 16px;
-    margin: 0;
-    white-space: pre;
+    @apply bg-gray-100 rounded text-sm overflow-x-auto px-4 whitespace-pre;
   }
 
   code {
-    @apply text-gray-800 text-sm;
-    display: block;
-    white-space: pre-wrap;
+    @apply text-gray-800 block whitespace-pre-wrap text-14 -mt-10;
   }
 </style>
