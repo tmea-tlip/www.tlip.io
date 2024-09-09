@@ -11,7 +11,7 @@
 		integrated into corporate or government systems via TLIP API.
 	</p>
 	<div class="flex justify-center">
-		<Button classes="mb-16" title="TLIP Wiki" url="https://docs.tlip.io/" isExternal />
+		<Button classes="mb-16" title="Read API Docs" url="https://docs.tlip.io/" isExternal />
 	</div>
 	<video
 		class="image-shadow aspect-video h-full w-full object-cover"
