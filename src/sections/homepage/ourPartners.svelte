@@ -2,21 +2,6 @@
 	import { COMMERCIAL_PARTNERS, GOVERNMENT_PARTNERS } from "$lib";
 
 	export let id: string;
-
-	const TESTIMONIALS = [
-		{
-			description:
-				"Cat ipsum dolor sit amet, run at 3am for get scared by doggo also cucumerro spend all night ensuring people don't sleep sleep all day for stare at wall turn and meow stare at wall some more meow again continue staring.",
-			author: "Author Name",
-			logo: "https://placecats.com/millie/300/300"
-		},
-		{
-			description:
-				"Cat ipsum dolor sit amet, run at 3am for get scared by doggo also cucumerro spend all night ensuring people don't sleep sleep all day for stare at wall turn and meow stare at wall some more meow again continue staring.",
-			author: "Author Name",
-			logo: "https://placecats.com/millie/300/300"
-		}
-	];
 </script>
 
 <section class="container py-20 lg:py-28" {id}>
