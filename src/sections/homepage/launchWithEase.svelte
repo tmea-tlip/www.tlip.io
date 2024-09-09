@@ -90,7 +90,7 @@
       <p>Ensure you have Axios installed in your project. You can install it using:</p>
       <pre>
         <code>
-          npm install axios
+          {"\n\nnpm install axios"}
         </code>
       </pre>
     </div>
@@ -99,10 +99,10 @@
 
 <style lang="scss">
   pre {
-    @apply bg-gray-100 rounded text-sm overflow-x-auto px-4 whitespace-pre;
+    @apply bg-gray-100 rounded text-sm overflow-x-auto px-8 whitespace-pre;
   }
 
   code {
-    @apply text-gray-800 block whitespace-pre-wrap text-14 -mt-10;
+    @apply text-gray-800 block whitespace-pre-wrap text-14 -mt-6;
   }
 </style>
