@@ -1,5 +1,7 @@
 <script lang="ts">
+	// eslint-disable-next-line import/default
 	import Highlight, { LineNumbers } from "svelte-highlight";
+	// eslint-disable-next-line import/default
 	import javascript from "svelte-highlight/languages/javascript";
 	import { Button } from "$components";
 	import "svelte-highlight/styles/grayscale-light.css";
@@ -67,7 +69,7 @@ const TLIP_API = {
 <section class="container flex flex-col gap-10 py-20 md:pt-32 lg:gap-16 lg:pb-36" {id}>
 	<div class="flex flex-col gap-6 lg:flex-row lg:gap-10">
 		<div class="flex flex-col gap-6 lg:w-1/2 lg:gap-10">
-			<div class="flex flex-col gap-6 ">
+			<div class="flex flex-col gap-6">
 				<h2 class="text-center text-36 lg:text-left">Launch with Ease</h2>
 				<p class="leading-6 tracking-0.04">
 					TLIP App provides supply chain businesses easy access via the web browser. All functions can be
