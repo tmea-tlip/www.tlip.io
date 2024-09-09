@@ -31,7 +31,7 @@
 	];
 </script>
 
-<section class="container flex flex-col py-24 md:pb-36 md:pt-32" {id}>
+<section class="container flex flex-col py-20 lg:py-24" {id}>
 	<div>
 		<h2 class="mb-9 text-center text-36">Integrated with</h2>
 		<Carousel items={INTEGRATED_WITH}></Carousel>

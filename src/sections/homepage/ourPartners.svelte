@@ -19,9 +19,8 @@
 	];
 </script>
 
-<section class="container py-24" {id}>
+<section class="container py-20 lg:py-28" {id}>
 	<h2 class="mb-9 text-center text-36">Our Partners</h2>
-	<div class="flex flex-col gap-28">
 		<div class="grid flex-1 grid-cols-2 gap-5 md:grid-cols-3 lg:grid-cols-6">
 			{#each GOVERNMENT_PARTNERS.concat(COMMERCIAL_PARTNERS) as item}
 				<div class="flex aspect-square flex-col">
@@ -35,26 +34,5 @@
 					{/if}
 				</div>
 			{/each}
-		</div>
-		<div>
-			<h3 class="text-center">Testimonials</h3>
-			<div class="mt-10 grid grid-cols-1 gap-5 md:grid-cols-2 lg:gap-10">
-				{#each TESTIMONIALS as { description, author, logo }}
-					<div
-						class="flex flex-col gap-y-5 rounded-md border border-grey-100 bg-white px-6 py-8 md:px-9 md:py-14"
-					>
-						<div class="flex flex-row items-center gap-x-5">
-							<div class="h-10 w-10 overflow-hidden rounded-full">
-								<img src={logo} alt={logo} class="h-full w-full object-contain" />
-							</div>
-							<h4>{author}</h4>
-						</div>
-						<div class="leading-150 tracking-0.04 text-grey-500">
-							{description}
-						</div>
-					</div>
-				{/each}
-			</div>
-		</div>
 	</div>
 </section>
