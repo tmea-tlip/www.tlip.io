@@ -29,10 +29,6 @@
 					url: "/#launch-with-ease"
 				},
 				{
-					label: "Built for Developers",
-					url: "/#built-for-developers"
-				},
-				{
 					label: "Standard compliance",
 					url: "/standard-compliance"
 				}

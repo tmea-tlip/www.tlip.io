@@ -78,31 +78,10 @@ const TLIP_API = {
 				<div class="flex justify-center lg:justify-start">
 					<Button title="Read API Docs" url="https://docs.tlip.io/" isExternal />
 				</div>
-				<p class="leading-6 tracking-0.04">
-					This document provides an example of how to interact with the TLIP API using JavaScript and Axios.
-				</p>
-			</div>
-			<div class="flex flex-col gap-2">
-				<h4>The base URL for the TLIP API is:</h4>
-				<a
-					href="https://api.tlip.io"
-					target="_blank"
-					rel="noopener noreferrer"
-					class="text-green-500 underline"
-				>
-					https://api.tlip.io
-				</a>
-			</div>
-			<div class="flex flex-col gap-2">
-				<h4>Notes</h4>
-				<p>Ensure you have Axios installed in your project. You can install it using:</p>
-				<Highlight language={javascript} code="npm install axios" let:highlighted>
-					<LineNumbers {highlighted} hideBorder --line-number-color="#00874C" />
-				</Highlight>
 			</div>
 		</div>
 		<div class="flex h-full flex-col justify-between gap-6 lg:w-1/2">
-			<div class="flex flex-col gap-2 lg:max-h-[620px]">
+			<div class="flex flex-col gap-2 max-h-[420px]">
 				<h4>Code Example</h4>
 				<Highlight language={javascript} {code} let:highlighted>
 					<LineNumbers {highlighted} hideBorder --line-number-color="#00874C" />

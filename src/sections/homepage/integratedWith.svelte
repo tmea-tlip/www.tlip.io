@@ -5,7 +5,7 @@
 
 	const CARDS = [
 		{
-			title: "All trade permits in one place",
+			title: "All trade documents in one place",
 			description:
 				"Store and access all your consignment data and documents easily. Create reports quickly with just a few clicks.",
 			icon: {
