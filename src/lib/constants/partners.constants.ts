@@ -25,85 +25,34 @@ export const GOVERNMENT_PARTNERS: CarouselEntry[] = [
 
 export const COMMERCIAL_PARTNERS: CarouselEntry[] = [
 	{
-		src: "/assets/partners/mcp.png"
-	},
-	{
 		src: "/assets/partners/royal-flora-holland.png"
-	},
-	{
-		src: "/assets/partners/dfds.png"
 	},
 	{
 		src: "/assets/partners/kenya-airways.png"
 	},
 	{
-		src: "/assets/partners/mansys.png"
-	},
-	{
-		src: "/assets/partners/sct.png"
-	},
-	{
-		src: "/assets/partners/tapa.png"
-	},
-	{
-		src: "/assets/partners/coriolis.png"
-	},
-	{
-		src: "/assets/partners/dpworld.png"
-	},
-	{
-		src: "/assets/partners/beyond-now.png"
-	},
-	{
-		src: "/assets/partners/katlas.png"
-	},
-	{
-		src: "/assets/partners/premier-nutrition.png"
-	},
-	{
-		src: "/assets/partners/cns.png"
-	},
-	{
-		src: "/assets/partners/geodis.png"
-	},
-	{
-		src: "/assets/partners/university-of-surrey.png"
-	},
-	{
-		src: "/assets/partners/british-coffee-association.png"
-	},
-	{
-		src: "/assets/partners/ras.png"
+		src: "/assets/partners/sian-flowers.png"
 	},
 	{
 		src: "/assets/partners/airflo.png"
+	},
+	{
+		src: "/assets/partners/dfg-kenya.png"
 	}
 ];
 
-export const CONSORTIUM_MEMBERS: CarouselEntry[] = [
+export const INTEGRATED_WITH: CarouselEntry[] = [
 	{
-		label: "Trademark Africa",
-		src: "/assets/consortium/trademark-africa.png"
+		src: "/assets/government/kra.png"
 	},
 	{
-		label: "IOTA Foundation",
-		src: "/assets/consortium/iota-foundation.png"
+		src: "/assets/government/kentrade.png"
 	},
 	{
-		label: "Global Alliance for Trade Facilitation",
-		src: "/assets/consortium/global-alliance-for-trade-facilitation.png"
+		src: "/assets/government/kephis.png"
 	},
 	{
-		label: "Chartered Institute of Export and International Trade",
-		src: "/assets/consortium/chartered-institute-of-export.png"
-	},
-	{
-		label: "Tony Blair Institute for Global Change",
-		src: "/assets/consortium/tony-blair-institute.png"
-	},
-	{
-		label: "World Economic Forum",
-		src: "/assets/consortium/world-economic-forum.png"
+		src: "/assets/government/afa.png"
 	}
 ];
 

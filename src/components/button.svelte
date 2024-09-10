@@ -23,7 +23,7 @@
 		class:plain
 		class={classes}
 	>
-		<span class="flex-shrink-0">{title}</span>
+		<span>{title}</span>
 	</a>
 {/if}
 

@@ -11,12 +11,6 @@
 		description:
 			"Global trade today has a problem. Paper based trade documentation required for cross border exchange is slow, error prone and expensive."
 	}}
-	buttons={[
-		{
-			title: "Contact us",
-			url: "mailto:tlip@iota.org"
-		}
-	]}
 	style="background:#3CB878"
 	color="text-grey-500"
 	{id}

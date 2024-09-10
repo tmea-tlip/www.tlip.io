@@ -4,13 +4,11 @@
 	import {
 		Benefits,
 		Hero,
-		HowDoesTLIPWork,
-		InAction,
-		Consortium,
-		Ecosystem,
-		WhatIsTLIP,
-		WhyTLIP
+		LaunchWithEase,
+		OurPartners,
+		StandardsCompliance
 	} from "$sections/homepage";
+	import IntegratedWith from "$sections/homepage/integratedWith.svelte";
 	import { HaveAnyQuestions } from "$sections/shared";
 
 	const sections: Section[] = [
@@ -19,32 +17,24 @@
 			id: "hero"
 		},
 		{
-			component: Consortium,
-			id: "consortium"
+			component: IntegratedWith,
+			id: "integrated-with"
 		},
 		{
-			component: WhatIsTLIP,
-			id: "what-is-tlip"
-		},
-		{
-			component: WhyTLIP,
-			id: "why-tlip"
-		},
-		{
-			component: HowDoesTLIPWork,
-			id: "how-does-it-work"
-		},
-		{
-			component: InAction,
-			id: "in-action"
+			component: OurPartners,
+			id: "our-partners"
 		},
 		{
 			component: Benefits,
 			id: "benefits"
 		},
 		{
-			component: Ecosystem,
-			id: "ecosystem"
+			component: LaunchWithEase,
+			id: "launch-with-ease"
+		},
+		{
+			component: StandardsCompliance,
+			id: "standards-compliance"
 		},
 		{
 			component: HaveAnyQuestions,

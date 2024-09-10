@@ -59,9 +59,13 @@ export function scrollIntoView(target: HTMLAnchorElement) {
 			sideMenuOpen.set(false);
 			document.body.classList.remove("overflow-y-hidden");
 
-			const parts = href.split("#");
-			if (parts.length === 2) {
-				const targetId = `#${parts[1]}`;
+			const url = new URL(href, window.location.href);
+			const urlHash = url.hash;
+			const [sectionId] = urlHash.includes("?") ? urlHash.split("?") : [urlHash, ""];
+
+			const sectionIdParts = sectionId.split("#");
+			if (sectionId && sectionIdParts.length === 2) {
+				const targetId = `#${sectionIdParts[1]}`;
 				goto(target.href, { noScroll: true })
 					.then(() => {
 						scrollTimeout = window.setTimeout(() => {

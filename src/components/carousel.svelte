@@ -58,7 +58,7 @@
 					>
 						{#if item.src}
 							<div
-								class="flex items-center rounded border p-2"
+								class="flex items-center rounded p-2"
 								style:width={`${itemWidth}px`}
 								style:height={`${itemWidth}px`}
 							>

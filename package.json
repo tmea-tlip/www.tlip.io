@@ -79,6 +79,7 @@
 		"googleapis": "^133.0.0",
 		"marked": "^12.0.0",
 		"pino": "^8.18.0",
+		"svelte-highlight": "^7.7.0",
 		"swiper": "^11.0.6",
 		"url-metadata": "^3.5.4",
 		"vite-plugin-markdown": "^2.2.0"

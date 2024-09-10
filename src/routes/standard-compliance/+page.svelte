@@ -2,7 +2,7 @@
 	import { ObservedRoute } from "$components";
 	import type { Section } from "$lib";
 	import { HaveAnyQuestions } from "$sections/shared";
-	import { Hero, Reasons, Digitalising } from "$sections/why";
+	import { Standards, Hero } from "$sections/standard-compliance";
 
 	const sections: Section[] = [
 		{
@@ -10,12 +10,8 @@
 			id: "hero"
 		},
 		{
-			component: Reasons,
-			id: "reasons"
-		},
-		{
-			component: Digitalising,
-			id: "digitalising"
+			component: Standards,
+			id: "standards"
 		},
 		{
 			component: HaveAnyQuestions,
