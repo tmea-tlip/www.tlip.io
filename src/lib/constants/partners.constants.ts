@@ -2,7 +2,14 @@ import type { CarouselEntry } from "$lib";
 
 /* eslint-disable jsdoc/require-jsdoc */
 
+
 export const GOVERNMENT_PARTNERS: CarouselEntry[] = [
+	{
+		src: "/assets/main/iota.png"
+	},
+	{
+		src: "/assets/main/tma.png"
+	},
 	{
 		src: "/assets/government/kra.png"
 	},
