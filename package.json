@@ -14,10 +14,6 @@
 		"url": "https://github.com/tmea-tlip/www.tlip.io.git"
 	},
 	"license": "Apache-2.0",
-	"engines": {
-		"node": ">=14",
-		"npm": ">=7"
-	},
 	"scripts": {
 		"dev": "vite dev",
 		"build": "vite build",
