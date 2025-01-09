@@ -23,13 +23,12 @@
 <section {id} class="flex flex-col gap-16 pb-16 pt-24 lg:py-28">
 	<h2 class="mb-9 text-center text-36">Videos</h2>
 	<div class="container flex flex-col items-center justify-center gap-10">
-		{#each items.cards as { video, description, title, poster, isYouTube }}
-			<div class="flex flex-col items-center justify-center gap-y-8 lg:w-1/2">
+		{#each items.cards as { video, description, title, poster, isYouTube }, idx}
+			<div class={`flex flex-col items-center gap-5 lg:flex-row lg:gap-20 ${idx % 2 ? "lg:flex-row-reverse" : ""}`}>
 				{#if video}
 					{#if isYouTube}
 						<iframe
-							width="100%"
-							height="432"
+							class="lg:w-full w-2/3 h-80"
 							src={video}
 							{title}
 							frameborder="0"
@@ -39,7 +38,7 @@
 						></iframe>
 					{:else}
 						<video
-							class="image-shadow h-full w-full object-cover"
+							class="lg:w-full lg:object-cover w-2/3 h-80"
 							muted
 							controls
 							preload="metadata"
