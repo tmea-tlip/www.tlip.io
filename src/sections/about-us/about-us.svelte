@@ -10,7 +10,8 @@
 		{
 			title: "Our Technology",
 			description:
-				"At TLIP's core lies the robust foundation of <a href='https://www.iota.org' target='_blank' class='text-green-500 underline'>IOTA</a>’s open-source distributed ledger technology (DLT). Leveraging DLT’s inherent qualities  – transparency, traceability, and immutability – TLIP is designed to foster trust and integrity in shared data.",
+				"TLIP leverages the <a href='http://www.twin.org/' target='_blank' class='text-green-500 underline'>Trade Worldwide Information Network </a>’s open-source digital infrastructure to simplify trade and logistics processes through API integrations. It allows users to share and manage real-time trade data directly from the source, eliminating the need for paper-based workflows.<br/><br/>TWIN is built on <a href='https://www.iota.org/' target='_blank' class='text-green-500 underline'>IOTA</a>'s distributed ledger technology, which ensures data immutability, transparency, and traceability",
+
 			src: "/assets/about-us/collaboration.png"
 		},
 		{
@@ -18,12 +19,6 @@
 			description:
 				"Kenya to Netherlands Flower Trade: TLIP was tested in pilot programs for the flower trade, helping to cover supply chain gaps and providing a single source of truth for key trade documents.<br/><br/>Ecosystem of Trust Trials: As part of the UK government’s <a href='https://www.gov.uk/government/publications/2025-uk-border-strategy' target='_blank' class='text-green-500 underline'>2025 Border Strategy</a>, TLIP was used to capture supply chain documentation across various trade flows, including coffee, tea, flowers, frozen fish, and canned food. Learn more about the Ecosystem of Trust trials <a href='https://www.gov.uk/government/publications/the-ecosystem-of-trust-evaluation-report-2023#:~:text=Details,in%20the%202025%20Border%20Strategy.' target='_blank' class='text-green-500 underline'>here.</a>",
 			src: "/assets/about-us/pilot-programs.png"
-		},
-		{
-			title: "The Consortium",
-			description:
-				"The TLIP platform was developed by TradeMark Africa in partnership with the IOTA Foundation, drawing on insights gained from implementations in Kenya and the United Kingdom. Recognising the need for a global consortium to ensure widespread adoption, <a href='https://www.trademarkafrica.com' target='_blank' class='text-green-500 underline'>TradeMark Africa</a>, the <a href='https://www.iota.org' target='_blank' class='text-green-500 underline'>IOTA Foundation</a>, the <a href='https://www.weforum.org' target='_blank' class='text-green-500 underline'>World Economic Forum</a>, the <a href='https://www.export.org.uk' target='_blank' class='text-green-500 underline'>Chartered Institute of Export & International Trade</a>, the <a href='https://www.tradefacilitation.org' target='_blank' class='text-green-500 underline'>Global Alliance for Trade Facilitation</a>, and the <a href='https://institute.global' target='_blank' class='text-green-500 underline'>Tony Blair Institute for Global Change</a> signed a Collaboration Agreement to jointly develop and expand the TLIP infrastructure and governance framework.",
-			src: "/assets/about-us/signing.jpg"
 		}
 	];
 </script>
