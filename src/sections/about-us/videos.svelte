@@ -4,6 +4,12 @@
 	const items = {
 		cards: [
 			{
+				title: "TLIP is revolutionising global trade through digitalisation",
+				video: "https://www.youtube.com/embed/TW3HtMXOzJA?si=-Kk3J_H-5WNrTx7n",
+				isYouTube: true,
+				description: "Hear firsthand accounts from traders, customs officials, TradeMark Africa, trade facilitation agencies and IOTA about how TLIP is redefining global trade and setting a new benchmark for efficiency and transparency."
+			},
+			{
 				title: "Flowers from Kenya to Holland",
 				video: "https://files.iota.org/media/TLIP_Documentary_2020.mp4",
 				description:
@@ -11,10 +17,10 @@
 				poster: "/assets/posters/TLIP_Documentary_2020_poster.png"
 			},
 			{
-				title: "TLIP is revolutionising global trade through digitalisation",
-				video: "https://www.youtube.com/embed/TW3HtMXOzJA?si=-Kk3J_H-5WNrTx7n",
+				title: "Step-by-step Guide",
+				video: "https://www.youtube.com/embed/fY5Ab6t72eM?si=cUPceF-9GYq-tfXn",
 				isYouTube: true,
-				description: "Hear firsthand accounts from traders, customs officials, TradeMark Africa, trade facilitation agencies and IOTA about how TLIP is redefining global trade and setting a new benchmark for efficiency and transparency."
+				description: "Watch this video for a step-by-step guide on how to use TLIP. Learn how to navigate the platform, streamline trade processes, and make the most of its features."
 			}
 		]
 	};
