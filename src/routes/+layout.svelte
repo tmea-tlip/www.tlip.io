@@ -29,7 +29,7 @@
 					url: "/#launch-with-ease"
 				},
 				{
-					label: "Standards compliance",
+					label: "Standards Compliance",
 					url: "/standard-compliance"
 				}
 			]
