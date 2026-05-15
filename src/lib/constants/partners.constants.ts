@@ -20,7 +20,10 @@ export const GOVERNMENT_PARTNERS: CarouselEntry[] = [
 		src: "/assets/government/kentrade.png"
 	},
 	{
-		src: "/assets/government/usaid.png"
+		src: "/assets/partners/EU.png"
+	},
+	{
+		src: "/assets/partners/UK.png"
 	},
 	{
 		src: "/assets/government/mofa-netherlands.png"
