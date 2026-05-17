@@ -18,7 +18,7 @@
 			},
 			{
 				title: "Step-by-step Guide",
-				video: "https://www.youtube.com/embed/fY5Ab6t72eM?si=cUPceF-9GYq-tfXn",
+				video: "https://www.youtube.com/embed/CCNYzF0HV6E?si=NjcXQzoYUPYfknXR",
 				isYouTube: true,
 				description: "Watch this video for a step-by-step guide on how to use TLIP. Learn how to navigate the platform, streamline trade processes, and make the most of its features."
 			}
