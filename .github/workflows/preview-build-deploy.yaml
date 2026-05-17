@@ -8,6 +8,10 @@ concurrency:
   group: ${{ github.workflow }}-${{ github.ref }}
   cancel-in-progress: true
 
+env:
+  VERCEL_PROJECT_ID: ${{ secrets.VERCEL_PROJECT_ID }}
+  VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID }}  
+
 jobs:
   build-deploy:
     runs-on: ubuntu-latest
@@ -33,17 +37,12 @@ jobs:
       - name: Run Dist
         run: npm run dist
 
-      # Install older version of Vercel CLI until this issue is fixed
-      # https://github.com/BetaHuhn/deploy-to-vercel-action/issues/393
-      - name: Install Vercel CLI
-        run: npm install -g vercel@22.0.1
-
+	  # Deploy To vercel and output the deployment URL as a GitHub output from the step
       - name: Deploy to Vercel
-        uses: BetaHuhn/deploy-to-vercel-action@v1.10.0
-        with:
-          GITHUB_TOKEN: ${{ secrets.GH_PAT }}
-          VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
-          VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID }}
-          VERCEL_PROJECT_ID: ${{ secrets.VERCEL_PROJECT_ID }}
-          VERCEL_SCOPE: ${{ secrets.VERCEL_SCOPE }}
-          PRODUCTION: false
+        id: deploy
+        run: |
+          DEPLOYMENT_URL=$(vercel deploy \
+          --token=${{ secrets.VERCEL_TOKEN }} \
+          --scope=${{ secrets.VERCEL_SCOPE }})
+          echo "deployment-url=$DEPLOYMENT_URL" >> $GITHUB_OUTPUT
+
