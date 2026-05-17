@@ -1,4 +1,4 @@
-name: www.tlip.io Preview Build and Deploy
+name: Preview Build and Deploy
 
 on:
   workflow_dispatch:
@@ -11,7 +11,7 @@ concurrency:
 
 env:
   VERCEL_PROJECT_ID: ${{ secrets.VERCEL_PROJECT_ID }}
-  VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID }}  
+  VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID }}
 
 jobs:
   build-deploy:
@@ -38,7 +38,7 @@ jobs:
       - name: Run Dist
         run: npm run dist
 
-	  # Deploy To vercel and output the deployment URL as a GitHub output from the step
+      # Deploy To vercel and output the deployment URL as a GitHub output from the step
       - name: Deploy to Vercel
         id: deploy
         run: |
@@ -46,4 +46,3 @@ jobs:
           --token=${{ secrets.VERCEL_TOKEN }} \
           --scope=${{ secrets.VERCEL_SCOPE }})
           echo "deployment-url=$DEPLOYMENT_URL" >> $GITHUB_OUTPUT
-
