@@ -25,14 +25,12 @@ jobs:
     if: "!contains(github.event.head_commit.message, '[skip ci]')"
     steps:
       - name: Checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6
         with:
           fetch-depth: 0
 
-      # Install older version of Vercel CLI until this issue is fixed
-      # https://github.com/BetaHuhn/deploy-to-vercel-action/issues/393
       - name: Install Vercel CLI
-        run: npm install -g vercel@22.0.1
+        run: npm install -g vercel
 
       # Deploy To vercel and output the deployment URL as a GitHub output from the step
       - name: Deploy to Vercel
